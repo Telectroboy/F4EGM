@@ -1,38 +1,17 @@
 ---
-title: Hello World
+title: Bienvenue sur Radio&Tech - F4EGM
+date: 2026-02-04 12:00:00
+categories: BlaBla
+tags: [f4egm, blog]
 ---
-Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
 
-## Quick Start
+Bienvenue sur **Radio&Tech - F4EGM**.
 
-### Create a new post
+Ce blog accompagne le [forum F4EGM](https://f4egm.forumactif.com/) : articles, tutoriels et liens autour de la radio amateur, du SDR, de l’électronique, de la domotique, des antennes et des logiciels.
 
-``` bash
-$ hexo new "My New Post"
-```
+- **À propos** : [page F4EGM / QRZ](https://www.qrz.com/db/F4EGM)
+- **Forum** : [f4egm.forumactif.com](https://f4egm.forumactif.com/)
 
-More info: [Writing](https://hexo.io/docs/writing.html)
+Vous pouvez ajouter des billets en créant des fichiers dans `source/_posts/`, y mettre des photos dans le dossier du même nom, et des liens vers vos dépôts GitHub. Voir le README du dépôt sur GitHub pour le détail (ajout de billets, photos, commentaires).
 
-### Run server
-
-``` bash
-$ hexo server
-```
-
-More info: [Server](https://hexo.io/docs/server.html)
-
-### Generate static files
-
-``` bash
-$ hexo generate
-```
-
-More info: [Generating](https://hexo.io/docs/generating.html)
-
-### Deploy to remote sites
-
-``` bash
-$ hexo deploy
-```
-
-More info: [Deployment](https://hexo.io/docs/one-command-deployment.html)
+73, F4EGM

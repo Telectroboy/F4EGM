@@ -1,18 +1,23 @@
 {
-  "name": "hexo-site",
-  "version": "0.0.0",
+  "name": "radio-tech-f4egm",
+  "version": "1.0.0",
   "private": true,
+  "description": "Blog Radio&Tech - F4EGM (Hexo + GitHub Pages)",
   "scripts": {
     "build": "hexo generate",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
-    "server": "hexo server"
+    "server": "hexo server",
+    "new": "hexo new",
+    "import:forum": "node scripts/import-forum.js",
+    "import:qrz": "node scripts/import-qrz.js"
   },
   "hexo": {
-    "version": ""
+    "version": "8.0.0"
   },
   "dependencies": {
     "hexo": "^8.0.0",
+    "hexo-deployer-git": "^4.0.0",
     "hexo-generator-archive": "^2.0.0",
     "hexo-generator-category": "^2.0.0",
     "hexo-generator-index": "^4.0.0",
@@ -22,5 +27,8 @@
     "hexo-renderer-stylus": "^3.0.1",
     "hexo-server": "^3.0.0",
     "hexo-theme-landscape": "^1.0.0"
+  },
+  "devDependencies": {
+    "cheerio": "^1.0.0"
   }
 }
