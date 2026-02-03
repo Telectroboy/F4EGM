@@ -9,8 +9,8 @@ author: F4EGM
 language: fr
 timezone: Europe/Paris
 
-# URL GitHub Pages (remplacez USERNAME par votre compte GitHub)
-url: https://USERNAME.github.io/F4EGM
+# URL GitHub Pages (remplacez Telectroboy par votre compte GitHub)
+url: https://Telectroboy.github.io/F4EGM
 root: /F4EGM/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -81,7 +81,7 @@ theme: landscape
 # 2. Aller sur https://giscus.app/ et remplir repo_id + category_id
 giscus:
   enable: true
-  repo: USERNAME/F4EGM
+  repo: Telectroboy/F4EGM
   repo_id: ""            # ID du dépôt (giscus.app)
   category: Announcements
   category_id: ""        # ID de la catégorie Discussions
@@ -95,6 +95,6 @@ giscus:
 # Déploiement GitHub Pages (hexo-deployer-git)
 deploy:
   type: git
-  repo: https://github.com/USERNAME/F4EGM.git
+  repo: https://github.com/Telectroboy/F4EGM.git
   branch: gh-pages
   message: "Deploy: {{ now('YYYY-MM-DD HH:mm:ss') }}"
