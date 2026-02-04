@@ -5,4 +5,3 @@ categories: Domotique
 tags: [forum, f4egm]
 ---
 
-*[Voir le sujet sur le forum](https://f4egm.forumactif.com/d10900959-groupe-electrogene)*

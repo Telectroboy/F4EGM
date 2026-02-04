@@ -1,23 +1,13 @@
 /**
- * Import exhaustif du forum F4EGM (forumactif.com) vers des billets Hexo.
- * - Découvre tous les sujets depuis toutes les sections du forum
- * - Récupère tous les messages de chaque sujet (y compris pagination)
- * - Extrait et télécharge toutes les images, remplace par chemins locaux
- * - Nettoie le contenu (profils utilisateur, doublons, texte inutile)
- *
- * Usage : npm run import:forum  (depuis la racine du projet)
- * Nécessite : Node.js 18+, npm install cheerio
+ * Import F4EGM — NETTOYAGE FORT : supprime absolument TOUT ce qui ressemble à un artefact forum
+ * (profils, likes, signatures, « AdminAdmin », "Je n’aime pas", bio, etc) après conversion Markdown.
+ * Seul le texte utile & images, blocs codes sont conservés.
  */
-
 const BASE = 'https://f4egm.forumactif.com';
 const OUT_DIR = 'source/_posts';
 const IMAGES_DIR = 'source/images/imported';
-
 const fs = require('fs');
 const path = require('path');
-
-// Sections du forum (URL relative → nom catégorie pour Hexo)
-// Les URLs peuvent varier ; la page d'accueil est aussi parcourue pour trouver tous les sujets.
 const FORUM_SECTIONS = [
   { url: '/f1-sdr', category: 'SDR' },
   { url: '/f2-electronique', category: 'Electronique' },
@@ -28,72 +18,75 @@ const FORUM_SECTIONS = [
   { url: '/c1-associations', category: 'Petites Annonces' },
 ];
 
-// Patterns à retirer du contenu pour un affichage propre
+// Regex vraiment agressives, en multi-pass
 const CLEAN_PATTERNS = [
-  /\bAdmin\s*Admin\b/gi,
-  /\bMessages\s*:\s*\d+/gi,
-  /\bDate\s*d'?inscription\s*:\s*[\d\/\s\-\.]+/gi,
-  /\bAge\s*:\s*\d+/gi,
-  /\bLocalisation\s*:\s*[A-Z0-9]+/gi,
-  /\bMessages\s*:\s*\d+Date\s*d'?inscription[^A-Z]*/gi,
-  /J'?aime\s*Je n'?aime pas/gi,
-  /Partager cet article sur\s*:/gi,
-  /Contenu sponsorisé/gi,
+  /Admin\s*Admin((\r?\n.+)*?lien\+.*)?/gim,
+  /Messages?\s*[:：]\s*\d+/gi,
+  /Date d'?inscription\s*[:：][^\n\r]*/gi,
+  /Age\s*[:：]\s*\d+/gi,
+  /Localisation\s*[:：][^\n\r]*/gi,
+  /J'?aime\s*\d?\s*(Je n'?aime pas)?/gi,
+  /Je n'?aime pas/gi,
+  /aime ce message/gi,
+  /Partager cet article sur\s*:?/gi,
+  /Contenu sponsoris[éeé]/gi,
   /S'?enregistrer pour répondre|Se connecter pour répondre/gi,
-  /^\s*#\s*Commentaires\s*$/gm,
-  /^\s*\+\s*$/gm,
-  /\s*\[\s*Re:\s*[^\]]+\]\s*\(\s*[^)]+#\d+\s*\)/g,
+  /\[Re:[^\]]*\]\([^\)]+\)/gi,
+  /(?:\n|^)[|=]{2,}.+?(?:\n|$)/g,
+  /Voir le deal.*?\n/gi,
+  /-\d+%.+?Voir le deal/gi,
+  /((^|\n)lien\+[^\n]*\n?)/gi,
+  /(^|\n)((Je )?n'?aime pas|J'?aime)[^\n]*\n/gi
 ];
-
 const IMAGE_EXT = /\.(jpe?g|png|gif|webp|bmp|svg)(\?.*)?$/i;
 
 async function fetchHtml(url) {
   const u = url.startsWith('http') ? url : BASE + url;
-  const res = await fetch(u, {
-    headers: { 'User-Agent': 'F4EGM-Hexo-Import/1.0 (https://github.com/Telectroboy/F4EGM)' },
-  });
+  const res = await fetch(u, { headers: { 'User-Agent': 'Import-F4EGM-Hexo' } });
   if (!res.ok) throw new Error(`HTTP ${res.status}: ${u}`);
   return res.text();
 }
-
+function loadCheerio() {
+  try { return require('cheerio'); } catch (e) { console.error('npm install cheerio'); process.exit(1); }
+}
 async function downloadFile(url) {
   const u = url.startsWith('http') ? url : BASE + (url.startsWith('/') ? url : '/' + url);
-  const res = await fetch(u, {
-    headers: { 'User-Agent': 'F4EGM-Hexo-Import/1.0' },
-  });
+  const res = await fetch(u, { headers: { 'User-Agent': 'Import-F4EGM-Hexo' } });
   if (!res.ok) throw new Error(`HTTP ${res.status}: ${u}`);
   return Buffer.from(await res.arrayBuffer());
 }
-
-function loadCheerio() {
-  try {
-    return require('cheerio');
-  } catch (e) {
-    console.error('Installez cheerio : npm install cheerio');
-    process.exit(1);
-  }
-}
-
 function escapeFrontMatter(s) {
   if (typeof s !== 'string') return '';
   return s.replace(/[\r\n]/g, ' ').replace(/"/g, '\\"').trim();
 }
-
 function slugify(s) {
-  return s
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-|-$/g, '');
+  return s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 }
-
-function cleanText(text) {
+function superCleanText(text) {
   let out = String(text || '');
-  for (const re of CLEAN_PATTERNS) out = out.replace(re, '');
-  return out.replace(/\n{3,}/g, '\n\n').replace(/\s{2,}/g, ' ').trim();
+  // Multi-pass nettoyage sur tout le texte
+  for (let pass = 0; pass < 3; pass++) {
+    for (const re of CLEAN_PATTERNS) out = out.replace(re, '');
+  }
+  // Supprime les lignes restantes vides ou ne contenant que bruit
+  out = out.replace(/^(\s*\n)+/gm, '').replace(/[\n ]{3,}/g, '\n\n').trim();
+  // Vire toute ligne ne contenant QUE "Admin", "lien+ ...", ou n'étant qu'un mot-clé bruit
+  out = out.split('\n').filter((line) => {
+    const l = line.trim();
+    if (!l) return false;
+    if (/^admin(admin)?$/i.test(l)) return false;
+    if (/^lien\+/i.test(l)) return false;
+    if (l.match(/^messages? : \d+$/i)) return false;
+    if (l.match(/date d'?inscription/i)) return false;
+    if (/age ?[:：]/i.test(l)) return false;
+    if (/localisation ?[:：]/i.test(l)) return false;
+    if (/je n'?aime pas|j'?aime|aime ce message/i.test(l)) return false;
+    if (/^\s*$/i.test(l)) return false;
+    return true;
+  }).join('\n');
+  // Final squeeze
+  return out.replace(/^(\s*\n)+/gm, '').replace(/[\n ]{3,}/g, '\n\n').trim();
 }
-
 function parseDate(str) {
   if (!str) return null;
   const s = str.trim();
@@ -105,8 +98,6 @@ function parseDate(str) {
   if (d3) return `${d3[3]}-${d3[2]}-${d3[1].padStart(2, '0')}`;
   return null;
 }
-
-/** Extrait les liens de sujets depuis une page HTML (index ou section) */
 function extractTopicLinksFromPage($, html, defaultCategory) {
   const root = $.load(html);
   const links = [];
@@ -121,25 +112,17 @@ function extractTopicLinksFromPage($, html, defaultCategory) {
   });
   return links;
 }
-
-/** Découvre tous les liens de sujets depuis une section du forum */
 async function discoverTopicLinks($, section) {
   try {
     const html = await fetchHtml(section.url);
     return extractTopicLinksFromPage($, html, section.category);
-  } catch (e) {
-    return [];
-  }
+  } catch (e) { return []; }
 }
-
-/** Récupère l’URL absolue d’une image (lien ou img src) */
 function resolveImageUrl(href) {
   if (!href || href.startsWith('data:')) return null;
   if (href.startsWith('http')) return href;
   return BASE + (href.startsWith('/') ? href : '/' + href);
 }
-
-/** Télécharge une image et retourne le chemin relatif pour le billet (dans images/imported/slug/) */
 async function downloadImage(url, topicSlug, index) {
   const parsed = new URL(url, BASE);
   const pathname = parsed.pathname;
@@ -153,30 +136,31 @@ async function downloadImage(url, topicSlug, index) {
   fs.writeFileSync(filePath, buf);
   return `/images/imported/${topicSlug}/${safeName}`;
 }
-
-/** Convertit le HTML d’un message en Markdown propre, extrait les images, les télécharge, remplace les URLs */
-async function htmlToMarkdown(html, baseUrl, topicSlug, $, imageIndexRef) {
+async function htmlToMarkdown(html, topicSlug, $, imageIndexRef) {
   if (!html || !html.trim()) return '';
   const root = $.load(html);
-
   root('script, style').remove();
-  const contentEl = root.root();
-
+  // Code hexo/markdown
+  let text = root.root().html() || '';
+  // Regex : blocs forum [code], puis balises <pre> et <code>
+  text = text
+    .replace(/\[code\]([\s\S]*?)\[\/code\]/gi, (m, code) => '\n```\n' + code.replace(/<br\s*\/?>(\n)?/g, '\n').trim() + '\n```\n')
+    .replace(/<pre[^>]*>([\s\S]*?)<\/pre>/gi, (m, code) => '\n```\n' + code.trim() + '\n```\n')
+    .replace(/<code[^>]*>([\s\S]*?)<\/code>/gi, (m, code) => '\n```\n' + code.trim() + '\n```\n');
+  // Images forumactif & liens images
   const imageUrls = [];
-  contentEl.find('img[src]').each((_, el) => {
+  root('img[src]').each((_, el) => {
     const src = root(el).attr('src');
     const full = resolveImageUrl(src);
     if (full && !imageUrls.includes(full)) imageUrls.push(full);
   });
-  contentEl.find('a[href]').each((_, el) => {
+  root('a[href]').each((_, el) => {
     const href = root(el).attr('href');
     if (href && IMAGE_EXT.test(href)) {
       const full = resolveImageUrl(href);
       if (full && !imageUrls.includes(full)) imageUrls.push(full);
     }
   });
-
-  let text = contentEl.html() || '';
   for (const imgUrl of imageUrls) {
     const idx = imageIndexRef.current++;
     try {
@@ -188,95 +172,43 @@ async function htmlToMarkdown(html, baseUrl, topicSlug, $, imageIndexRef) {
       console.warn('  Image non téléchargée:', imgUrl.slice(0, 60) + '...');
     }
   }
-
-  text = text
-    .replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, '')
-    .replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi, '');
-  text = text.replace(/<img\b[^>]*src="([^"]+)"[^>]*(?:alt="([^"]*)")?[^>]*>/gi, (_, src, alt) => `![${(alt || 'image').trim()}](${src})`);
-  text = convertLinksToMarkdown(text, baseUrl);
-  text = text
-    .replace(/<br\s*\/?>/gi, '\n')
-    .replace(/<\/p>/gi, '\n')
-    .replace(/<p\b[^>]*>/gi, '\n')
-    .replace(/<pre\b[^>]*>/gi, '\n```\n')
-    .replace(/<\/pre>/gi, '\n```\n')
-    .replace(/<code\b[^>]*>/gi, '`')
-    .replace(/<\/code>/gi, '`')
-    .replace(/<strong\b[^>]*>|<\/strong>/gi, '**')
-    .replace(/<b\b[^>]*>|<\/b>/gi, '**')
-    .replace(/<em\b[^>]*>|<\/em>/gi, '*')
-    .replace(/<i\b[^>]*>|<\/i>/gi, '*')
-    .replace(/<[^>]+>/g, '')
-    .replace(/&nbsp;/g, ' ')
-    .replace(/&amp;/g, '&')
-    .replace(/&lt;/g, '<')
-    .replace(/&gt;/g, '>')
-    .replace(/&quot;/g, '"')
-    .replace(/\n{3,}/g, '\n\n')
-    .trim();
-  return cleanText(text);
+  text = text.replace(/<img\b[^>]*>/gi, ''); // on vire les <img> non traitées
+  // Conversion des liens : garde le contenu texte, vire URL
+  text = text.replace(/<a\s+href="[^"]+"[^>]*>([\s\S]*?)<\/a>/gi, '$1');
+  text = text.replace(/<[^>]+>/g, ''); // vire tout HTML restant
+  text = text.replace(/\n{3,}/g, '\n\n');
+  return superCleanText(text);
 }
-
 function escapeRe(s) {
   return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
-
-function convertLinksToMarkdown(html, baseUrl) {
-  return html.replace(/<a\s+href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/gi, (_, href, label) => {
-    const url = href.startsWith('http') ? href : (href.startsWith('/') ? BASE + href : baseUrl + href);
-    const text = (label || '').replace(/<[^>]+>/g, '').trim() || url;
-    if (IMAGE_EXT.test(url)) return `![image](${url})`;
-    return `[${text}](${url})`;
-  });
-}
-
-/** Parse une page de sujet : titre + tous les messages (posts) */
 function parseTopicPage(html, $) {
   const root = $.load(html);
   const titleEl = root('h2.topic-title a, .topictitle, h1, .title').first();
   const title = titleEl.text().trim() || 'Sans titre';
-
   const posts = [];
   const postBlocks = root('.post, .row, .blockpost, [class*="post"]');
   if (postBlocks.length === 0) {
     const contentEl = root('.content, .postbody .content').first();
-    const authorEl = root('.author, .postauthor').first();
-    const dateEl = root('.author .date, .posted_since, .dates').first();
     const html = contentEl.html() || '';
-    const author = (authorEl.text() || '').trim();
-    const dateStr = (dateEl.text() || '').trim();
-    posts.push({ author: cleanText(author), date: parseDate(dateStr), contentHtml: html });
+    posts.push({ contentHtml: html });
   } else {
     postBlocks.each((_, block) => {
       const el = root(block);
       const contentEl = el.find('.content, .postbody .content, .post-body').first();
       if (contentEl.length === 0) return;
-      const authorEl = el.find('.author, .postauthor, .username').first();
-      const dateEl = el.find('.date, .posted_since, .dates').first();
-      let author = (authorEl.text() || '').trim();
-      let dateStr = (dateEl.text() || '').trim();
-      author = cleanText(author);
       const contentHtml = contentEl.html() || '';
       if (!contentHtml.trim()) return;
-      posts.push({ author, date: parseDate(dateStr), contentHtml });
+      posts.push({ contentHtml });
     });
   }
-
   if (posts.length === 0) {
     const bodyEl = root('.content, .postbody .content, .post').first();
-    posts.push({
-      author: 'Admin',
-      date: null,
-      contentHtml: bodyEl.html() || '',
-    });
+    posts.push({ contentHtml: bodyEl.html() || '' });
   }
-
-  const firstDate = posts[0]?.date;
-  const topicDate = firstDate || new Date().toISOString().slice(0, 10);
+  const topicDate = new Date().toISOString().slice(0, 10);
   return { title, topicDate, posts };
 }
-
-/** Récupère toutes les pages d’un sujet (pagination) */
 async function fetchAllTopicPages(topicUrl, $) {
   const pages = [await fetchHtml(topicUrl)];
   const root = $.load(pages[0]);
@@ -294,15 +226,11 @@ async function fetchAllTopicPages(topicUrl, $) {
   }
   return pages;
 }
-
 async function main() {
   const $ = loadCheerio();
   if (!fs.existsSync(OUT_DIR)) fs.mkdirSync(OUT_DIR, { recursive: true });
   if (!fs.existsSync(IMAGES_DIR)) fs.mkdirSync(IMAGES_DIR, { recursive: true });
-
   const topicByUrl = new Map();
-
-  // 1) Page d'accueil : récupérer tous les sujets (catégorie par défaut "Non classé")
   try {
     const indexHtml = await fetchHtml('/');
     const fromIndex = extractTopicLinksFromPage($, indexHtml, 'Non classé');
@@ -311,17 +239,13 @@ async function main() {
   } catch (e) {
     console.warn('Page d\'accueil:', e.message);
   }
-
-  // 2) Chaque section : récupérer les sujets et assigner la catégorie
   for (const section of FORUM_SECTIONS) {
     const links = await discoverTopicLinks($, section);
     for (const l of links) topicByUrl.set(l.url, l);
     if (links.length) console.log('Section', section.url, '→', links.length, 'sujet(s)');
   }
-
   const unique = [...topicByUrl.values()];
   console.log('Total sujets à importer:', unique.length);
-
   for (let i = 0; i < unique.length; i++) {
     const topic = unique[i];
     if (i > 0) await new Promise((r) => setTimeout(r, 400));
@@ -329,42 +253,27 @@ async function main() {
       const slug = slugify(topic.url.replace(/^\/[td]\d+-?/, '').replace(/^\d+-/, '')) || 'sujet';
       const topicSlug = slug || 'imported';
       console.log('Import:', topic.url, '→', topicSlug);
-
-      // Récupérer toutes les pages du sujet (pagination) puis tous les messages
       const pages = await fetchAllTopicPages(topic.url, $);
       const allPosts = [];
       let title = '';
-      let topicDate = '';
-
       for (const pageHtml of pages) {
         const parsed = parseTopicPage(pageHtml, $);
         if (parsed.title) title = parsed.title;
-        if (parsed.topicDate) topicDate = parsed.topicDate;
         for (const p of parsed.posts) {
-          if (p.contentHtml.trim()) allPosts.push(p);
+          if (p.contentHtml && p.contentHtml.trim()) allPosts.push(p.contentHtml);
         }
       }
-      // allPosts contient tous les messages (premier message + toutes les réponses), pas seulement le premier
-
       const imageIndexRef = { current: 0 };
       const parts = [];
       for (let i = 0; i < allPosts.length; i++) {
-        const p = allPosts[i];
-        const md = await htmlToMarkdown(p.contentHtml, BASE + topic.url, topicSlug, $, imageIndexRef);
+        const md = await htmlToMarkdown(allPosts[i], topicSlug, $, imageIndexRef);
         if (!md.trim()) continue;
-        const dateStr = p.date || topicDate;
-        const header = allPosts.length > 1
-          ? `### Message par ${p.author || 'Anonyme'}${dateStr ? `, ${dateStr}` : ''}\n\n`
-          : '';
-        parts.push(header + md);
+        parts.push(md);
       }
-
-      const body = parts.join('\n\n---\n\n');
-      const forumLink = BASE + topic.url;
-      const footer = `\n\n---\n*Article importé du [forum F4EGM](${forumLink})*`;
-      const fullBody = body.trim() ? body + footer : `*[Voir le sujet sur le forum](${forumLink})*`;
-
-      const date = topicDate || new Date().toISOString().slice(0, 10);
+      // Nettoyage final du billet entier (multi-pass pour supprimer tout résidu).
+      let body = parts.join('\n\n');
+      body = superCleanText(body);
+      const date = new Date().toISOString().slice(0,10);
       const filename = path.join(OUT_DIR, `${date}-${topicSlug}.md`);
       const frontMatter = [
         '---',
@@ -374,9 +283,8 @@ async function main() {
         'tags: [forum, f4egm]',
         '---',
         '',
-        fullBody,
+        body,
       ].join('\n');
-
       fs.writeFileSync(filename, frontMatter, 'utf8');
       console.log('  →', filename);
     } catch (err) {
@@ -385,5 +293,4 @@ async function main() {
   }
   console.log('Import terminé.');
 }
-
 main();
