@@ -1,6 +1,6 @@
 /**
  * Récupère les infos publiques du profil QRZ F4EGM et met à jour la page À propos.
- * Usage : node scripts/import-qrz.js
+ * Usage : npm run import:qrz  (ou node scripts/import/import-qrz.js depuis la racine)
  *
  * QRZ limite les infos sans connexion : indicatif, pays, QSL. Le reste reste "Login required".
  */

@@ -1,7 +1,7 @@
 /**
  * Import des sujets du forum F4EGM (forumactif.com) vers des billets Hexo.
  * Nécessite Node.js 18+ et : npm install cheerio
- * Usage : node scripts/import-forum.js
+ * Usage : npm run import:forum  (ou node scripts/import/import-forum.js depuis la racine)
  *
  * Les billets sont créés dans source/_posts/ avec les catégories du forum.
  * Les liens vers le forum sont conservés en fin d'article.

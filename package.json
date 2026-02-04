@@ -9,11 +9,11 @@
     "deploy": "hexo deploy",
     "server": "hexo server",
     "new": "hexo new",
-    "import:forum": "node scripts/import-forum.js",
-    "import:qrz": "node scripts/import-qrz.js"
+    "import:forum": "node scripts/import/import-forum.js",
+    "import:qrz": "node scripts/import/import-qrz.js"
   },
   "hexo": {
-    "version": "8.0.0"
+    "version": "8.1.1"
   },
   "dependencies": {
     "hexo": "^8.0.0",
