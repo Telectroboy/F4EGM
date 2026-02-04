@@ -31,6 +31,16 @@ Ouvrir [http://localhost:4000](http://localhost:4000).
 
 ---
 
+## Bandeau de navigation
+
+En haut du site : **Home** (accueil), **Bienvenue** (message de bienvenue), puis les **catégories** (SDR, Electronique, Domotique, etc.). L’ordre des catégories se règle dans `_config.yml` → `nav_banner.categories_order`. La page Bienvenue est dans `source/bienvenue/index.md`.
+
+## Ordre chronologique
+
+Les billets sont affichés **par ordre chronologique** (plus ancien en premier) sur l’accueil, les archives et les pages de catégories (`index_generator`, `archive_generator`, `category_generator` → `order_by: date`).
+
+---
+
 ## Déploiement sur GitHub Pages
 
 1. Créez un dépôt **GitHub** (ex. `F4EGM`) et poussez ce projet.
@@ -112,6 +122,7 @@ Le script :
 - **Récupère tous les messages** de chaque sujet (premier message + réponses), y compris les pages suivantes (pagination).
 - **Télécharge toutes les images** : extrait les liens vers les photos, les enregistre dans `source/images/imported/<slug-sujet>/` et remplace les URLs par des chemins locaux pour un affichage sur le blog.
 - **Nettoie le contenu** : retire les blocs de profil (Admin, Messages : 69, Date d’inscription, Age, Localisation, etc.), « J’aime / Je n’aime pas », « Partager cet article », « Contenu sponsorisé », et autres éléments inutiles pour un affichage plus propre.
+- **Tous les messages** : pour chaque sujet, le script récupère **toutes les pages** (pagination) et **tous les messages** (premier post + toutes les réponses), pas seulement le premier message.
 
 Les billets sont créés dans `source/_posts/` avec la catégorie appropriée. Vous pouvez ajuster les sections du forum dans `scripts/import/import-forum.js` (constante `FORUM_SECTIONS`).
 

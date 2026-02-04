@@ -330,6 +330,7 @@ async function main() {
       const topicSlug = slug || 'imported';
       console.log('Import:', topic.url, '→', topicSlug);
 
+      // Récupérer toutes les pages du sujet (pagination) puis tous les messages
       const pages = await fetchAllTopicPages(topic.url, $);
       const allPosts = [];
       let title = '';
@@ -343,6 +344,7 @@ async function main() {
           if (p.contentHtml.trim()) allPosts.push(p);
         }
       }
+      // allPosts contient tous les messages (premier message + toutes les réponses), pas seulement le premier
 
       const imageIndexRef = { current: 0 };
       const parts = [];

@@ -44,11 +44,27 @@ highlight:
   auto_detect: false
   wrap: true
 
-# Accueil
+# Accueil — ordre chronologique (plus ancien en premier)
 index_generator:
   path: ''
   per_page: 10
-  order_by: -date
+  order_by: date
+
+# Bandeau de navigation (Home, Bienvenue, puis catégories)
+nav_banner:
+  enable: true
+  # Ordre : Home, Bienvenue, puis catégories (même ordre que category_map)
+  categories_order:
+    - SDR
+    - Electronique
+    - Domotique
+    - Mécanique
+    - Antennes
+    - Logiciels
+    - BlaBla
+    - "Technique/propag./calculs"
+    - "Petites Annonces"
+    - "Non classé"
 
 # Catégories (alignées sur le forum F4EGM)
 default_category: Non classé
@@ -62,12 +78,19 @@ category_map:
   BlaBla: blabla
   "Technique/propag./calculs": technique
   "Petites Annonces": annonces
+  "Non classé": non-classe
 
 # Métadonnées
 meta_generator: true
 date_format: YYYY-MM-DD
 time_format: HH:mm:ss
 updated_option: mtime
+
+# Archives et catégories — ordre chronologique (plus ancien en premier)
+archive_generator:
+  order_by: date
+category_generator:
+  order_by: date
 
 # Pagination
 per_page: 10
