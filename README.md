@@ -100,15 +100,20 @@ En Markdown dans le billet :
 
 ## Import depuis le forum F4EGM
 
-Pour regénérer des billets à partir des sujets du forum :
+Pour importer **exhaustivement** les sujets du forum en billets Hexo :
 
 ```bash
 npm run import:forum
 ```
 
-- Utilise les sujets listés dans `scripts/import-forum.js`.
-- Crée ou met à jour des `.md` dans `source/_posts/` avec la bonne catégorie.
-- Vous pouvez modifier la liste des sujets (URL, catégorie, slug) dans ce script.
+Le script :
+
+- **Découvre tous les sujets** : parcourt la page d’accueil du forum et les sections configurées (SDR, Electronique, Domotique, etc.).
+- **Récupère tous les messages** de chaque sujet (premier message + réponses), y compris les pages suivantes (pagination).
+- **Télécharge toutes les images** : extrait les liens vers les photos, les enregistre dans `source/images/imported/<slug-sujet>/` et remplace les URLs par des chemins locaux pour un affichage sur le blog.
+- **Nettoie le contenu** : retire les blocs de profil (Admin, Messages : 69, Date d’inscription, Age, Localisation, etc.), « J’aime / Je n’aime pas », « Partager cet article », « Contenu sponsorisé », et autres éléments inutiles pour un affichage plus propre.
+
+Les billets sont créés dans `source/_posts/` avec la catégorie appropriée. Vous pouvez ajuster les sections du forum dans `scripts/import/import-forum.js` (constante `FORUM_SECTIONS`).
 
 ---
 
