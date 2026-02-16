@@ -4,7 +4,7 @@ date: 2026-02-16
 author: "F4EGM"
 draft: false
 tags: ["hugo", "github", "github-actions", "ci-cd", "ovh", "devops", "automation"]
-categories: ["Logiciels"]
+
 cover:
   image: "https://gohugo.io/images/hugo-logo-wide.svg"
   alt: "GoHugo"
