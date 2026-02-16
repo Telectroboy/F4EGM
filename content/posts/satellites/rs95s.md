@@ -1,10 +1,12 @@
-+++
-date = "2026-02-12T12:00:00+01:00"
-draft = false
-title = "QMR-KWT-2 (RS95S) — Répéteur FM VHF/UHF : fréquences et suivi en direct"
-tags = ["satellite", "cubesat", "fm", "vhf", "uhf", "amsat", "qmr-kwt-2", "rs95s"]
-categories = ["Satellite"]
-+++
+---
+date: "2026-02-12T12:00:00+01:00"
+draft: false
+title: "QMR-KWT-2 (RS95S) — Répéteur FM VHF/UHF : fréquences et suivi en direct"
+tags: ["satellite", "cubesat", "fm", "vhf", "uhf", "amsat", "qmr-kwt-2", "rs95s"]
+
+cover:
+  image: "https://github.com/user-attachments/assets/7f506c2a-f38a-4c67-82e7-c6fcf356b0c5"
+---
 
 ![QMR-KWT-2](https://i.goopics.net/envghc.jpg)
 
@@ -94,3 +96,4 @@ Simple, accessible et pédagogique, QMR-KWT-2 offre une opportunité idéale pou
 - Expérimentation portable VHF/UHF  
 
 73 et bons contacts satellite !
+
