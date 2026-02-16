@@ -6,9 +6,7 @@ draft: false
 tags: ["hugo", "github", "github-actions", "ci-cd", "ovh", "devops", "automation"]
 
 cover:
-  image: "https://gohugo.io/images/hugo-logo-wide.svg"
-  alt: "GoHugo"
-  caption: "Logo GoHugo"
+  image: "https://github.com/user-attachments/assets/ee7054c8-d49c-4161-9368-5f47c891aae6"
 ---
 
 # Automatiser Hugo avec GitHub Actions vers OVH
