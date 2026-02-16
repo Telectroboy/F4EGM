@@ -1,5 +1,5 @@
 /* ==========================================
-   FOND GLOBAL
+   FOND GLOBAL (toujours visible)
    ========================================== */
 body::before {
     content: "";
@@ -15,37 +15,56 @@ body::before {
 }
 
 /* ==========================================
-   OVERLAY ZONE PRINCIPALE ET NAV
+   OVERLAY SUR LA ZONE D'ÉCRITURE
    ========================================== */
 body .main::before,
 body .nav::before {
     content: "";
     position: absolute;
     inset: 0;
+    border-radius: 12px;
     z-index: -1; /* entre fond et texte */
     backdrop-filter: blur(6px);
-    transition: background-color 0.3s ease; /* transition douce */
-    border-radius: 12px; /* pour .main, idem pour .nav si nécessaire */
+    transition: background-color 0.3s ease;
 }
 
 /* ==========================================
    LIGHT MODE
    ========================================== */
-html[data-theme="light"] .main::before {
-    background-color: rgba(255, 255, 255, 0.45);
+html[data-theme="light"] body .main::before {
+    background-color: rgba(255,255,255,0.4);
 }
-
-html[data-theme="light"] .nav::before {
-    background-color: rgba(255, 255, 255, 0.35);
+html[data-theme="light"] body .nav::before {
+    background-color: rgba(255,255,255,0.3);
 }
 
 /* ==========================================
    DARK MODE
    ========================================== */
-html[data-theme="dark"] .main::before {
-    background-color: rgba(0, 0, 0, 0.55);
+html[data-theme="dark"] body .main::before {
+    background-color: rgba(0,0,0,0.5);
+}
+html[data-theme="dark"] body .nav::before {
+    background-color: rgba(0,0,0,0.4);
 }
 
-html[data-theme="dark"] .nav::before {
-    background-color: rgba(0, 0, 0, 0.45);
+/* ==========================================
+   POSITIONNEMENT RELATIF DES ZONES
+   ========================================== */
+body .main,
+body .nav {
+    position: relative;
+    z-index: 0;
+    border-radius: 12px;
+    padding: 2rem;
+    background: transparent; /* l’overlay ::before gère le flou / couleur */
+}
+
+/* ==========================================
+   TEXTE
+   ========================================== */
+body .main,
+body .nav,
+body .main * {
+    color: var(--primary); /* ou définir selon thème */
 }
