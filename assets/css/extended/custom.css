@@ -1,0 +1,26 @@
+/* Fond uniquement homepage */
+body.home::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url('/images/fondF4EGM.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    z-index: -1;
+    filter: brightness(0.55) contrast(1.1);
+}
+
+/* Effet verre léger pour le contenu */
+body.home .main {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(6px);
+    border-radius: 12px;
+    padding: 2rem;
+}
+
+/* Mode sombre */
+.dark body.home .main {
+    background: rgba(0, 0, 0, 0.75);
+}
