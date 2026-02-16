@@ -4,7 +4,7 @@ draft = false
 title = "Antenne Yagi VHF UHF en mètre Ruban !"
 
 [cover]
-  image = "https://i.goopics.net/ywfptn.jpg"
+  image = "https://github.com/user-attachments/assets/1917b5b8-5070-458d-8f20-e12c2f786962"
   alt = "Antenne Yagi VHF/UHF en mètre ruban"
   caption = "Yagi 3+2 éléments – version mètre ruban"
 +++
@@ -140,3 +140,4 @@ Une solution simple, efficace et robuste pour trafic satellite portable.
 
 Le compromis gain / simplicité est excellent pour du trafic FM.  
 Pour trafic SSB ou faible élévation, une version plus directive pourrait être envisagée.
+
