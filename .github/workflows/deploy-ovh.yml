@@ -1,0 +1,36 @@
+name: Build & Deploy Hugo to OVH
+
+on:
+  push:
+    branches: ["master"]
+
+permissions:
+  contents: read
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: "0.155.3"
+          extended: true
+
+      - name: Build
+        run: hugo --minify
+
+      - name: Deploy to OVH (FTP)
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.OVH_FTP_SERVER }}
+          username: ${{ secrets.OVH_FTP_USERNAME }}
+          password: ${{ secrets.OVH_FTP_PASSWORD }}
+          local-dir: public/
+          server-dir: ${{ secrets.OVH_FTP_DIR }}
