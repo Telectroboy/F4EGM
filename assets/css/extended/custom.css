@@ -1,4 +1,4 @@
-/* Image de fond globale */
+/* Fond d'écran global */
 body::before {
     content: "";
     position: fixed;
@@ -8,44 +8,69 @@ body::before {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    z-index: -2;
-    transition: filter 0.3s ease;
+    z-index: -2; /* sous tout */
+    /* Ne pas appliquer filter ici pour que overlay contrôle luminosité */
 }
 
-/* Filtre de luminosité selon le mode */
-body[data-theme="light"]::before {
-    filter: brightness(1.0) contrast(1.1);
-}
-
-body[data-theme="dark"]::before {
-    filter: brightness(0.45) contrast(1.1);
-}
-
-/* Overlay flou sur zone principale */
+/* Overlay sur la zone principale */
 body .main::before {
     content: "";
     position: absolute;
     inset: 0;
     border-radius: 12px;
-    z-index: -1;
+    z-index: -1; /* entre fond et texte */
     backdrop-filter: blur(6px);
-    background: rgba(255,255,255,0.0); /* transparent pour flou uniquement */
+    transition: background-color 0.3s ease;
+    pointer-events: none; /* pour ne pas bloquer les clics */
 }
 
-/* Overlay flou sur menu */
+/* Overlay sur le menu/header */
 body .nav::before {
     content: "";
     position: absolute;
     inset: 0;
     z-index: -1;
     backdrop-filter: blur(6px);
-    background: rgba(255,255,255,0.0);
+    transition: background-color 0.3s ease;
+    pointer-events: none;
 }
 
-/* Nécessaire pour que l'overlay fonctionne */
-body .main,
-body .nav {
+/* Light mode */
+body[data-theme="light"] .main::before {
+    background-color: rgba(255,255,255,0.45);
+    mix-blend-mode: lighten;
+}
+
+body[data-theme="light"] .nav::before {
+    background-color: rgba(255,255,255,0.35);
+    mix-blend-mode: lighten;
+}
+
+/* Dark mode */
+body[data-theme="dark"] .main::before {
+    background-color: rgba(0,0,0,0.55);
+    mix-blend-mode: darken;
+}
+
+body[data-theme="dark"] .nav::before {
+    background-color: rgba(0,0,0,0.45);
+    mix-blend-mode: darken;
+}
+
+/* Positionnement relatif nécessaire pour overlays */
+body .main, body .nav {
     position: relative;
     z-index: 0;
-    overflow: hidden;
+}
+
+/* Exemple pour code blocks (optional) */
+pre, code {
+    background-color: rgba(255,255,255,0.85);
+    border-radius: 6px;
+    padding: 0.5rem;
+}
+
+body[data-theme="dark"] pre,
+body[data-theme="dark"] code {
+    background-color: rgba(0,0,0,0.75);
 }
