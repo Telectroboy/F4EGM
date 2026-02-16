@@ -1,8 +1,12 @@
-+++
-date = '2026-02-11T12:53:16+01:00'
-draft = false
-title = "Réparation d'un rotor Yaesu G-250"
-+++
+---
+date: '2026-02-15T12:53:16+01:00'
+draft: false
+title: "Réparation d'un rotor Yaesu G-250"
+
+cover:
+  image: "https://github.com/user-attachments/assets/d5002517-ff79-454f-80e7-98196e3275a0"
+
+---
 ## Restauration d’un rotor G-250 – Reconstruction mécanique en impression 3D
 
 Il y a environ 25 ans, ce rotor était installé en haut d’une barre d’acier pleine, supportant une antenne delta loop 3 éléments.  
