@@ -1,23 +1,41 @@
+/* Fond d'écran global */
 body::before {
     content: "";
     position: fixed;
     inset: 0;
     background-image: url(/images/fondF4EGM.png);
     background-size: cover;
-    background-position: 50%;
+    background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    z-index: -1;
+    z-index: -2; /* sous tout */
     filter: brightness(.55) contrast(1.1);
 }
 
-body .main {
-    background: rgba(255,255,255,.85);
-    backdrop-filter: blur(6px);
+/* Overlay pour la zone de texte */
+body .main::before {
+    content: "";
+    position: absolute;
+    inset: 0;
     border-radius: 12px;
-    padding: 2rem;
+    z-index: -1; /* entre fond et texte */
+    backdrop-filter: blur(6px);
 }
 
-body[data-theme="dark"] .main {
-    background: rgba(0,0,0,.75);
+/* Light mode */
+body[data-theme="light"] .main::before {
+    background-color: rgba(255,255,255,0.4); /* léger éclaircissement */
+}
+
+/* Dark mode */
+body[data-theme="dark"] .main::before {
+    background-color: rgba(0,0,0,0.5); /* léger assombrissement */
+}
+
+/* Texte et padding */
+body .main {
+    position: relative; /* nécessaire pour que ::before soit relatif à .main */
+    padding: 2rem;
+    border-radius: 12px;
+    z-index: 0; /* devant overlay */
 }
