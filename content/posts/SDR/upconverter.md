@@ -1,8 +1,11 @@
-+++
-date = '2026-02-11T15:20:00+01:00'
-draft = false
-title = "NOOELEC Ham It Up + pour upconverter + 125MHz pour améliorer la réception de la bande HF!"
-+++
+---
+date: '2026-02-11T15:20:00+01:00'
+draft: false
+title: "NOOELEC Ham It Up + pour upconverter + 125MHz pour améliorer la réception de la bande HF!"
+
+cover:
+  image: "https://github.com/user-attachments/assets/232c5588-596f-4193-8e56-79835c4063cd"
+---
 
 ## HackRF et réception HF : pourquoi l’upconverter change tout
 
