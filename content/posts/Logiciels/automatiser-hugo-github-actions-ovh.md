@@ -3,6 +3,11 @@ title: "Automatiser Hugo avec GitHub Actions vers OVH"
 date: 2026-02-16
 author: "F4EGM"
 tags: ["hugo", "github", "github-actions", "ci-cd", "ovh", "devops", "automation"]
+
+[cover]
+  image: "https://gohugo.io/images/hugo-logo-wide.svg"
+  alt: "GoHugo"
+  caption: "Logo GoHugo"
 ---
 # Automatiser Hugo avec GitHub Actions vers OVH
 
