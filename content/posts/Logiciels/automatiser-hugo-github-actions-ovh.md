@@ -1,14 +1,16 @@
----
-title: "Automatiser Hugo avec GitHub Actions vers OVH"
-date: 2026-02-16
-author: "F4EGM"
-tags: ["hugo", "github", "github-actions", "ci-cd", "ovh", "devops", "automation"]
++++
+title = "Automatiser Hugo avec GitHub Actions vers OVH"
+date = "2026-02-16T21:00:00+01:00"
+author = "F4EGM"
+draft = false
+tags = ["hugo", "github", "github-actions", "ci-cd", "ovh", "devops", "automation"]
+categories = ["Logiciels"]
 
 [cover]
-  image: "https://gohugo.io/images/hugo-logo-wide.svg"
-  alt: "GoHugo"
-  caption: "Logo GoHugo"
----
+  image = "https://gohugo.io/images/hugo-logo-wide.svg"
+  alt = "GoHugo"
+  caption = "Logo GoHugo"
++++
 # Automatiser Hugo avec GitHub Actions vers OVH
 
 ## Contexte
