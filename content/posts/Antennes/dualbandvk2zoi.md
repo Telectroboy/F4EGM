@@ -3,6 +3,11 @@ title: "Antenne Dual-Band High Gain Flower Pot – Réalisation personnelle"
 date: 2026-02-14
 author: "F4EGM"
 tags: ["antenne", "VHF", "UHF", "DIY", "Flower Pot", "RG58", "3D print"]
+
+cover:
+  image: "https://vk2zoi.com/assets/highgain-1.png"
+  alt: "DualBandFlowerPot"
+  caption: "DualBandFlowerPot"
 ---
 
 # Antenne Dual-Band High Gain Flower Pot
