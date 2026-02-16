@@ -12,7 +12,7 @@ Voici une antenne que j’ai réalisée récemment et qui fonctionne **remarquab
  Article original (avec tous les schémas et explications détaillées) :  
 **https://vk2zoi.com/articles/dual-band-high-gain-flower-pot/**
 
-[!Schéma VK2ZOI](https://vk2zoi.com/assets/highgain-1.png)
+[![Schéma VK2ZOI](https://vk2zoi.com/assets/highgain-1.png)]
 
 Je l’utilise **en intérieur** pour attaquer le relais local **F5ZCE** avec un petit poste de **5 W**, et les résultats sont très satisfaisants.
 
@@ -50,7 +50,7 @@ Je ne les reproduis pas ici volontairement : **référez-vous directement à son
 Fichier des pièces 3D :  
 https://cad.onshape.com/documents/3be0b0e486e3c2586735ab91/w/e4e606bfe45fd35704b37fb2/e/7a1ec4b8883fc0cf52e7e41b?renderMode=0&uiState=699070a04fb432e519c7a0a3
 
-[!Aperçu des pièces 3D](https://github.com/user-attachments/assets/fac6c982-8217-454a-afe8-1cfaa1889724)
+[![Aperçu des pièces 3D](https://github.com/user-attachments/assets/fac6c982-8217-454a-afe8-1cfaa1889724)]
 
 
 ---
