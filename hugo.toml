@@ -11,6 +11,7 @@ theme = "PaperMod"
   ShowBreadCrumbs = true
   ShowSearch = true
   ShowPostImage = true
+  customCSS = ["css/extended/custom.css"]
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
