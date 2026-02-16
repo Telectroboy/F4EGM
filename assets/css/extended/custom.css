@@ -1,26 +1,23 @@
-/* Fond uniquement sur la page d’accueil */
-body.page-index::before {
+body::before {
     content: "";
     position: fixed;
     inset: 0;
-    background-image: url('/images/fondF4EGM.png');
+    background-image: url(/images/fondF4EGM.png);
     background-size: cover;
-    background-position: center;
+    background-position: 50%;
     background-repeat: no-repeat;
     background-attachment: fixed;
     z-index: -1;
-    filter: brightness(0.55) contrast(1.1);
+    filter: brightness(.55) contrast(1.1);
 }
 
-/* Effet verre léger pour le contenu */
-body.page-index .main {
-    background: rgba(255, 255, 255, 0.85);
+body .main {
+    background: rgba(255,255,255,.85);
     backdrop-filter: blur(6px);
     border-radius: 12px;
     padding: 2rem;
 }
 
-/* Mode sombre */
-.dark body.page-index .main {
-    background: rgba(0, 0, 0, 0.75);
+body[data-theme="dark"] .main {
+    background: rgba(0,0,0,.75);
 }
