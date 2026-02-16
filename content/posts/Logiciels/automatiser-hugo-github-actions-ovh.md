@@ -1,12 +1,9 @@
-+++
-date = "2026-02-16T21:00:00+01:00"
-draft = false
-title = "Automatiser Hugo avec GitHub Actions vers OVH"
-author = "F4EGM"
-tags = ["hugo", "github", "github-actions", "ci-cd", "ovh", "devops", "automation"]
-categories = ["Logiciels"]
-+++
-
+---
+title: "Automatiser Hugo avec GitHub Actions vers OVH"
+date: 2026-02-16
+author: "F4EGM"
+tags: ["hugo", "github", "github-actions", "ci-cd", "ovh", "devops", "automation"]
+---
 # Automatiser Hugo avec GitHub Actions vers OVH
 
 ## Contexte
