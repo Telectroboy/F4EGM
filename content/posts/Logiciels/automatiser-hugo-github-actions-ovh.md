@@ -8,6 +8,10 @@ tags: ["hugo", "github", "github-actions", "ci-cd", "ovh", "devops", "automation
 
 ## Contexte
 
+Ce site fonctionne avec Hugo
+[![Image](https://gohugo.io/images/hugo-logo-wide.svg)
+https://gohugo.io/
+
 Jusqu'à présent, la mise à jour du site se faisait ainsi :
 
 1.  hugo --minify\
@@ -16,6 +20,11 @@ Jusqu'à présent, la mise à jour du site se faisait ainsi :
 Cela fonctionne, mais ce n'est ni reproductible ni optimal.
 
 Objectif : un simple `git push` doit publier automatiquement le site.
+
+Et donc tout migrer sur GitHub!
+
+![Image](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/GitHub_Invertocat_Logo.svg/250px-GitHub_Invertocat_Logo.svg.png)
+https://github.com/Telectroboy/F4EGM
 
 ------------------------------------------------------------------------
 
@@ -136,7 +145,6 @@ git push
 
 GitHub Actions transforme un site statique Hugo en pipeline CI/CD propre
 :
-
 -   Plus de FTP manuel\
 -   Historique des déploiements\
 -   Synchronisation fiable\
