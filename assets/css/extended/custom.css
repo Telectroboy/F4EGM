@@ -1,5 +1,5 @@
-/* Fond uniquement homepage */
-body.home::before {
+/* Fond uniquement sur la page d’accueil */
+body.page-index::before {
     content: "";
     position: fixed;
     inset: 0;
@@ -13,7 +13,7 @@ body.home::before {
 }
 
 /* Effet verre léger pour le contenu */
-body.home .main {
+body.page-index .main {
     background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(6px);
     border-radius: 12px;
@@ -21,6 +21,6 @@ body.home .main {
 }
 
 /* Mode sombre */
-.dark body.home .main {
+.dark body.page-index .main {
     background: rgba(0, 0, 0, 0.75);
 }
