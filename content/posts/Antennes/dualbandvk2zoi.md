@@ -5,7 +5,7 @@ author: "F4EGM"
 tags: ["antenne", "VHF", "UHF", "DIY", "Flower Pot", "RG58", "3D print"]
 
 cover:
-  image: "https://vk2zoi.com/assets/highgain-1.png"
+  image: "https://github.com/user-attachments/assets/af507df9-42a2-46d2-92a3-da21552632aa"
   alt: "DualBandFlowerPot"
   caption: "DualBandFlowerPot"
 ---
