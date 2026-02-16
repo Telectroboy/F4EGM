@@ -15,7 +15,7 @@ body::before {
 }
 
 /* ==========================================
-   OVERLAY SUR LA ZONE D'ÉCRITURE
+   OVERLAY SUR LA ZONE D'ÉCRITURE + MENU
    ========================================== */
 body .main::before,
 body .nav::before {
@@ -25,27 +25,30 @@ body .nav::before {
     border-radius: 12px;
     z-index: -1; /* entre fond et texte */
     backdrop-filter: blur(6px);
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, -webkit-mask-image 0.3s ease;
+    
+    /* BORDS DÉGRADÉS pour transition douce */
+    -webkit-mask-image: radial-gradient(circle at center, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%);
+    mask-image: radial-gradient(circle at center, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%);
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: cover;
 }
 
 /* ==========================================
    LIGHT MODE
    ========================================== */
-html[data-theme="light"] body .main::before {
-    background-color: rgba(255,255,255,0.4);
-}
+html[data-theme="light"] body .main::before,
 html[data-theme="light"] body .nav::before {
-    background-color: rgba(255,255,255,0.3);
+    background-color: rgba(255,255,255,0.4); /* même luminosité */
 }
 
 /* ==========================================
    DARK MODE
    ========================================== */
-html[data-theme="dark"] body .main::before {
-    background-color: rgba(0,0,0,0.5);
-}
+html[data-theme="dark"] body .main::before,
 html[data-theme="dark"] body .nav::before {
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0,0,0,0.5); /* même luminosité */
 }
 
 /* ==========================================
