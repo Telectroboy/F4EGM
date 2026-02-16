@@ -1,4 +1,4 @@
-/* Fond global */
+/* Image de fond globale */
 body::before {
     content: "";
     position: fixed;
@@ -12,15 +12,16 @@ body::before {
     transition: filter 0.3s ease;
 }
 
-/* Luminosité selon le mode */
+/* Filtre de luminosité selon le mode */
 body[data-theme="light"]::before {
-    filter: brightness(1) contrast(1.1);
-}
-body[data-theme="dark"]::before {
-    filter: brightness(0.5) contrast(1.1);
+    filter: brightness(1.0) contrast(1.1);
 }
 
-/* Overlay flou sur la zone principale */
+body[data-theme="dark"]::before {
+    filter: brightness(0.45) contrast(1.1);
+}
+
+/* Overlay flou sur zone principale */
 body .main::before {
     content: "";
     position: absolute;
@@ -28,20 +29,20 @@ body .main::before {
     border-radius: 12px;
     z-index: -1;
     backdrop-filter: blur(6px);
-    background: rgba(255,255,255,0.0); /* transparent, juste flou */
+    background: rgba(255,255,255,0.0); /* transparent pour flou uniquement */
 }
 
-/* Overlay flou sur le menu */
+/* Overlay flou sur menu */
 body .nav::before {
     content: "";
     position: absolute;
     inset: 0;
     z-index: -1;
     backdrop-filter: blur(6px);
-    background: rgba(255,255,255,0.0); /* transparent */
+    background: rgba(255,255,255,0.0);
 }
 
-/* Position relative nécessaire */
+/* Nécessaire pour que l'overlay fonctionne */
 body .main,
 body .nav {
     position: relative;
