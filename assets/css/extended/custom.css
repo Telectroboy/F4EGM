@@ -1,1 +1,51 @@
-/* Fond d'écran global */ body::before { content: ""; position: fixed; inset: 0; background-image: url(/images/fondF4EGM.png); background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed; z-index: -2; /* sous tout */ filter: brightness(.55) contrast(1.1); } /* Overlay sur la zone principale */ body .main::before { content: ""; position: absolute; inset: 0; border-radius: 12px; z-index: -1; /* entre fond et texte */ backdrop-filter: blur(6px); transition: background-color 0.3s ease; } /* Overlay sur le menu */ body .nav::before { content: ""; position: absolute; inset: 0; z-index: -1; backdrop-filter: blur(6px); transition: background-color 0.3s ease; } /* Light mode */ body[data-theme="light"] .main::before { background-color: rgba(255,255,255,0.4); } body[data-theme="light"] .nav::before { background-color: rgba(255,255,255,0.3); } /* Dark mode */ body[data-theme="dark"] .main::before { background-color: rgba(0,0,0,0.5); } body[data-theme="dark"] .nav::before { background-color: rgba(0,0,0,0.4); } /* Positionnement relatif nécessaire */ body .main, body .nav { position: relative; z-index: 0; }
+/* ==========================================
+   FOND GLOBAL
+   ========================================== */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url(/images/fondF4EGM.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    z-index: -2; /* sous tout */
+    filter: brightness(.55) contrast(1.1);
+}
+
+/* ==========================================
+   OVERLAY ZONE PRINCIPALE ET NAV
+   ========================================== */
+body .main::before,
+body .nav::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1; /* entre fond et texte */
+    backdrop-filter: blur(6px);
+    transition: background-color 0.3s ease; /* transition douce */
+    border-radius: 12px; /* pour .main, idem pour .nav si nécessaire */
+}
+
+/* ==========================================
+   LIGHT MODE
+   ========================================== */
+html[data-theme="light"] .main::before {
+    background-color: rgba(255, 255, 255, 0.45);
+}
+
+html[data-theme="light"] .nav::before {
+    background-color: rgba(255, 255, 255, 0.35);
+}
+
+/* ==========================================
+   DARK MODE
+   ========================================== */
+html[data-theme="dark"] .main::before {
+    background-color: rgba(0, 0, 0, 0.55);
+}
+
+html[data-theme="dark"] .nav::before {
+    background-color: rgba(0, 0, 0, 0.45);
+}
