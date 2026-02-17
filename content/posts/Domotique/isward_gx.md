@@ -1,9 +1,12 @@
 ---
 title: "ISWARD GX : Reverse Engineering et amélioration complète"
-date: 2026-02-17
+date: '2026-02-17T23:53:16+01:00'
 description: "Analyse complète de la tondeuse autonome ISWARD GX : hardware, firmware, ROS, modifications matérielles et conseils pratiques."
 tags: ["ISWARD GX", "Jetson Nano", "AI Vision", "CAD", "Hardware", "Tondeuse autonome", "ROS", "Maintenance"]
 draft: false
+
+cover:
+  image: "https://github.com/user-attachments/assets/6e8a572b-53ad-4fc8-907e-551b87e1c364"
 ---
 
 # ISWARD-GX : Reverse Engineering et améliorations complètes
