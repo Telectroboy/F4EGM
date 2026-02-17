@@ -203,7 +203,7 @@ Au-delà des chiffres, un contest radioclub reste avant tout :
 La Coupe du REF est aussi un moment fédérateur pour les clubs français.
 
 L'équipe de 2024 dans l'Ardennais
-![PhotoArdennais](https://remeng.rosselcdn.net/sites/default/files/dpistyles_v2/rem_16_9_1124w/2024/03/01/node_574868/13925402/public/2024/03/01/13192979.jpeg?itok=IfGgj1gh1709320418)
+![PhotoArdennais](https://github.com/user-attachments/assets/ca5a66e2-2242-4ebe-9bca-6f83cd819949)
 https://www.lardennais.fr/id574868/article/2024-03-01/championnat-de-france-radioamateurs-les-ardennais-recus-5-sur-5-record-la-cle
 
 ---
