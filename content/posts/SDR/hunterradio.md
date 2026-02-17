@@ -3,7 +3,7 @@ title: "Analog Radio Hunter : un scanner RF intelligent basé sur GNU Radio et F
 date: 2026-02-17
 draft: false
 author: "F4EGM"
-tags: ["sdr", "rtl-sdr", "gnu-radio", "rf", "scanner", "airspy", "hackrf", "radioamateur"]
+tags: ["SDR","rtl-sdr", "gnu-radio", "rf", "scanner", "airspy", "hackrf", "radioamateur"]
 
 cover:
   image: "https://github.com/user-attachments/assets/0a663ac7-554d-47f3-940b-e5edb5e6b688"
