@@ -251,5 +251,7 @@ Pour qui pratique le monitoring analogique ou l’exploration VHF/UHF, c’est u
 
 ---
 
+73 F4EGM
+
 73  
 F4EGM
