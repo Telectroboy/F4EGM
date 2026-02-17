@@ -6,8 +6,7 @@ author: "F4EGM"
 tags: ["f4kjp", "radioclub", "coupe du ref", "contest", "hf", "telephonie", "championnat de france"]
 
 cover:
-  image:"https://github.com/user-attachments/assets/9d624e68-a327-40e4-a049-350525488692"
-
+  image: "https://github.com/user-attachments/assets/9d624e68-a327-40e4-a049-350525488692"
 ---
 
 # F4KJP en Coupe du REF 2026  
