@@ -1,7 +1,7 @@
 ---
 title: "F4KJP en Coupe du REF 2026 – Deuxième partie HF Téléphonie"
 date: 2026-02-17
-draft: true
+draft: false
 author: "F4EGM"
 tags: ["f4kjp", "radioclub", "coupe du ref", "contest", "hf", "telephonie", "championnat de france"]
 ---
