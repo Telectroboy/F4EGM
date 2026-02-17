@@ -11,7 +11,7 @@ cover:
 
 # ISWARD-GX : Reverse Engineering et améliorations complètes
 
-<img width="253" height="199" alt="ISWARD GX" src="https://github.com/user-attachments/assets/3e77a95c-205e-45f0-8980-3dda9b150b8c" />
+![ISWARD GX](https://github.com/user-attachments/assets/3e77a95c-205e-45f0-8980-3dda9b150b8c)
 
 Je travaille sur la tondeuse autonome **ISWARD GX** dans une démarche de **reverse engineering**. L’objectif est de comprendre le système complet, d’optimiser le matériel et le logiciel, et d’améliorer la fiabilité globale.  
 
@@ -39,9 +39,9 @@ Je travaille sur la tondeuse autonome **ISWARD GX** dans une démarche de **reve
 
 La roue originale a été remplacée par une version **38 mm paramétrique**, facile à adapter. Elle peut être imprimée en **3D** ou fabriquée autrement.
 
-<img width="253" height="250" alt="Roue paramétrique ISWARD GX" src="https://github.com/user-attachments/assets/c37feb1b-4303-4921-9250-c08fcda7b3ff" />
-<img width="300" height="300" alt="Roue ISWARD GX vue" src="https://github.com/user-attachments/assets/94806798-2ad2-40fd-9a71-2fe2f7339b90" />
-<img width="442" height="360" alt="Roue ISWARD GX CAD" src="https://github.com/user-attachments/assets/c9a4c2b6-a2eb-4a21-8291-4eaf1910e8a6" />
+![Roue paramétrique ISWARD GX](https://github.com/user-attachments/assets/c37feb1b-4303-4921-9250-c08fcda7b3ff)
+![Roue ISWARD GX vue](https://github.com/user-attachments/assets/94806798-2ad2-40fd-9a71-2fe2f7339b90)
+![Roue ISWARD GX CAD](https://github.com/user-attachments/assets/c9a4c2b6-a2eb-4a21-8291-4eaf1910e8a6)
 
 > **Alerte pratique :** Vérifier la fixation et l’alignement des roues pour éviter l’usure prématurée ou la dérive de trajectoire.
 
@@ -94,7 +94,7 @@ Exemples de topics ROS essentiels :
 
 L’ISWARD GX utilise un capteur **ORBBEC** pour la vision 3D et la navigation autonome. Compatible ROS, il gère reconnaissance d’objets et cartographie en temps réel.
 
-<img width="400" height="641" alt="Capteur ORBBEC ISWARD GX" src="https://github.com/user-attachments/assets/deed0f72-5783-4a03-a669-ff73b80670d0" />
+![Capteur ORBBEC ISWARD GX](https://github.com/user-attachments/assets/deed0f72-5783-4a03-a669-ff73b80670d0)
 
 > **Ressource :** Vérifier régulièrement le firmware du capteur pour compatibilité avec ROS.
 
@@ -106,7 +106,7 @@ Le ventilateur d’origine était **bruyant et peu fiable**, provoquant surchauf
 
 ✅ J’ai remplacé le ventilateur par un **DC 4010 24V double roulement à billes** : résultat **immédiat**, plus silencieux et durable.
 
-<img width="300" height="250" alt="Ventilateur DC 4010" src="https://github.com/user-attachments/assets/6840c778-7cc5-4f62-afa7-2202f49e4b71" />
+![Ventilateur DC 4010](https://github.com/user-attachments/assets/6840c778-7cc5-4f62-afa7-2202f49e4b71)
 
 > **Alerte maintenance :** Toujours surveiller la température du Jetson Nano après modification ou upgrade du ventilateur.
 
