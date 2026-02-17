@@ -4,10 +4,14 @@ date: '2026-02-17T19:53:18+01:00'
 draft: false
 author: "F4EGM"
 tags: ["f4kjp", "radioclub", "coupe du ref", "contest", "hf", "telephonie", "championnat de france"]
+
+cover:
+  image:"https://github.com/user-attachments/assets/9d624e68-a327-40e4-a049-350525488692"
+
 ---
 
 # F4KJP en Coupe du REF 2026  
-![bannieresite](http://f4kjp.free.fr/image/banniere.2.jpg)
+![bannieresite](https://github.com/user-attachments/assets/6d771174-b951-4e19-85d7-13af128a2fae)
 http://f4kjp.free.fr/
 
 ![LogoF4KJP](https://www.prix-les-mezieres.fr/sites/default/files/medias/logo_officiel_sierra_alpha_dx_group_-_f4kjp.jpg)
