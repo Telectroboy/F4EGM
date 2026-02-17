@@ -180,6 +180,7 @@ Le piège : la fréquence perturbatrice peut être bien plus haute que la fréqu
 ## Hackaday : guide très accessible (avec vidéo)
 
 En complément, Hackaday a publié un guide “simple” (et utile) sur le blindage, avec une vidéo :
+![shieldandPluto](https://github.com/user-attachments/assets/ed226fd9-c7b0-412a-8221-ba55e0f8a1fc)
 
 https://hackaday.com/2026/02/16/a-basic-guide-to-shielding/
 
