@@ -4,7 +4,7 @@ date: 2026-02-17
 draft: false
 author: "F4EGM"
 tags: ["sdr", "xsdr", "waveletlab", "lms7002m", "ad9363", "gnuradio", "mimo", "rf"]
-categories: ["SDR"]
+
 cover:
   image: "https://github.com/user-attachments/assets/957f49e7-be52-484f-abaa-49b19e561143"
   alt: "xSDR M.2 Software Defined Radio"
