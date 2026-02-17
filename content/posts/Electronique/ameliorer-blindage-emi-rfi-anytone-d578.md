@@ -4,11 +4,20 @@ date: 2026-02-17
 draft: false
 author: "F4EGM"
 tags: ["emi", "rfi", "cem", "shielding", "rf", "anytone", "d578uv", "blindage", "radioamateur"]
+
+cover:
+  image: "https://github.com/user-attachments/assets/da532fa9-7f34-4f47-8bc2-282db5fad018"
 ---
 
 # Améliorer le blindage interne de nos postes : EMI, RFI et gain réel en sensibilité
 
 Je souhaite améliorer les blindages internes de mes postes qui ne sont pas (ou pas assez) protégés contre les **EMI** et **RFI** internes. Dit autrement : le poste est à la fois **récepteur** (donc “victime”) et **source** d’énergie électromagnétique parasite… dans le même boîtier.
+
+[!EMIRFI](https://github.com/user-attachments/assets/769adcd7-d641-4779-86da-8b4724db349f)
+
+Ici, un article simple à lire en Français: 
+https://www.eabel.com/fr/blindage-emi-rfi-pour-boitiers-electriques/
+
 
 Dans un appareil moderne (Anytone D578, etc.), on trouve en permanence :
 
@@ -19,6 +28,9 @@ Dans un appareil moderne (Anytone D578, etc.), on trouve en permanence :
 - des étages de puissance (PA) et leurs harmoniques.
 
 Tout cela cohabite dans un volume réduit, avec des plans de masse parfois partagés, des nappes/câbles internes, et des blindages mécaniques “minimum viable”. Résultat : **du bruit interne peut remonter le plancher de bruit**, dégrader la dynamique, et faire perdre de la sensibilité… sans qu’on s’en rende compte, parce que “ça marche quand même”.
+
+Toutes ces zones en jaune pourraient accuellir un blindage!
+[!PCB D578](https://github.com/user-attachments/assets/400ae96d-6791-4ac1-a22c-f3eaaeddcf61)
 
 ---
 
@@ -107,8 +119,6 @@ C’est pour ça que les solutions industrielles utilisent :
 
 Si on fait correctement le travail, on peut viser un gain du type :
 
-If done properly, this will result in a 2 dB noise reduction on VHF sur l'Anytone D578, raising sensitivity by the same amount.
-
 2 dB peuvent sembler faibles, mais en pratique :
 
 - 2 dB de bruit en moins = 2 dB de SNR en plus (à signal constant),
@@ -122,12 +132,12 @@ Ce n’est pas un miracle, c’est juste de la physique : on baisse le plancher 
 ## Solutions industrielles prêtes à l’emploi
 
 Je me suis appuyé sur l’article DigiKey suivant, qui explique précisément l’intérêt des blindages standards et la différence entre prototypage et production :
+https://www.digikey.fr/fr/articles/use-the-right-off-the-shelf-metal-to-shield-against-emi-rfi
+[!Blindage](https://github.com/user-attachments/assets/9240e6a6-39ee-4aad-bb10-2b65aa312a46)
 
-https://www.digikey.fr/fr/articles/use-the-right-off-the-shelf-metal-to-shield-against-emi-rfi?srsltid=AfmBOorKg1MciXaGdcwawkJ13ZnViH4iMnhfd-4V1zQ_hzJ1grAj3GlC
-
-Et un exemple de produit (Würth Elektronik) :
-
+Et un exemple de produit (Würth Elektronik), c'est un kit prêt à couper et plier pour s'adapter à toutes les tailles:
 https://www.digikey.fr/fr/products/detail/w%C3%BCrth-elektronik/360002/10468233
+
 
 L’article rappelle un point important : bricoler un blindage en cuivre / FR‑4 plaqué peut fonctionner pour “tester”, mais c’est souvent :
 
@@ -189,6 +199,10 @@ Würth propose aussi un document pédagogique :
 https://www.we-online.com/en/components/products/ABC_OF_SHIELDING_ENGLISH
 
 C’est typiquement le genre de ressource à garder sous le coude : on y trouve des notions très concrètes sur les matériaux, les méthodes, les erreurs classiques et les compromis.
+
+Une autre page web ici très bien écrite:
+https://castle-compliance.com/understanding-shielding-effectiveness-data/
+[!effectivness](https://castle-compliance.com/wp-content/uploads/2026/01/Shielding-Effectiveness-Performance-Curve-1024x558.jpg)
 
 ---
 
