@@ -233,6 +233,147 @@ L’application mérite clairement d’être suivie.
 Je continue les tests sous iOS et publierai un retour plus technique après plusieurs semaines d’usage réel.
 
 ---
+NEWS NEWS NEWS
+---
+## Mise à jour – 17 février 2026 – 15h39
+
+Quelques minutes après la publication de cet article, une nouvelle version TestFlight a été publiée :
+
+**Version 1.0.0 (Build 2)**
+
+Cette mise à jour apporte plusieurs changements importants, dont un point majeur initialement prévu pour une version ultérieure.
+
+---
+
+### Audio en arrière-plan désormais disponible
+
+~~Background Audio prévu dans une version ultérieure~~
+
+L’audio en arrière-plan est désormais activé dès cette version beta.
+
+Il est maintenant possible :
+
+- de verrouiller l’écran,
+- d’utiliser d’autres applications,
+- de laisser l’iPhone en veille,
+
+tout en conservant la lecture audio active depuis KiwiSDR, OpenWebRX, WebSDR ou FM-DX.
+
+Pour un usage terrain (veille longue durée, supervision ADRASEC, monitoring HF ou VHF en mobilité), cela change complètement l’expérience utilisateur. L’application devient réellement exploitable en écoute continue.
+
+---
+
+### Correctif du mode silencieux (Silent Switch Fix)
+
+Echo se comporte désormais comme une application média standard.
+
+Même si le commutateur Sonnerie/Silencieux de l’iPhone est activé, l’audio continue de fonctionner correctement.
+
+Cela corrige un comportement gênant qui pouvait faire croire à un dysfonctionnement lors d’une première utilisation.
+
+---
+
+### Amélioration de la fiabilité audio
+
+Plusieurs corrections ont été apportées :
+
+- suppression de coupures audio intermittentes,
+- correction d’interruptions inattendues du flux,
+- amélioration globale de la stabilité.
+
+Les premiers tests montrent une meilleure continuité de lecture, notamment sur des sessions longues.
+
+---
+
+## Améliorations de la carte et des serveurs
+
+### Correction des clusters sur la carte
+
+Avant :  
+> Cliquer sur un groupe de serveurs situés au même endroit ne produisait aucune action.
+
+Désormais :  
+Un appui sur un cluster ouvre une vue listant les serveurs disponibles à cet emplacement.
+
+Cette correction améliore fortement l’ergonomie dans les zones à forte densité de récepteurs (États-Unis, Allemagne, Europe centrale, etc.).
+
+---
+
+### Cohérence visuelle
+
+Correction d’une incohérence de couleurs entre :
+
+- les pins affichées sur la carte,
+- la légende correspondante.
+
+Un détail, mais important pour la lisibilité.
+
+---
+
+### Toast de connexion enrichi
+
+La notification « Connected » est désormais plus informative et propose une nouvelle option :
+
+- ouverture directe de l’URL originale du serveur dans le navigateur.
+
+Cela peut être utile pour :
+
+- accéder aux extensions natives OpenWebRX ou KiwiSDR,
+- comparer l’affichage Web et l’affichage Echo,
+- diagnostiquer un comportement serveur.
+
+---
+
+### Vérification des serveurs personnalisés
+
+Ajout d’un mécanisme de validation des URL lors de l’ajout d’un serveur personnalisé.
+
+L’application vérifie désormais que l’URL correspond bien à un endpoint SDR valide avant de l’enregistrer.
+
+Pour nous, dans le contexte des OpenWebRX utilisés à l’ADRASEC08, c’est particulièrement pertinent afin d’éviter les erreurs de configuration.
+
+---
+
+## Correctifs et améliorations d’interface
+
+### Manual Tuner
+
+Corrections :
+
+- résolution du problème de taille de la fenêtre sur iPad,
+- correction du comportement sur Mac Apple Silicon.
+
+~~Fenêtre du tuner trop petite~~
+
+Ajout :
+
+- possibilité d’effacer l’historique des fréquences récemment utilisées.
+
+---
+
+### Gestion des favoris
+
+Il est désormais possible d’ajouter un serveur en favori même lorsque l’on est déjà connecté à un autre serveur favori.
+
+Ce changement simplifie la gestion rapide de plusieurs stations importantes en parallèle.
+
+---
+
+## Impact pratique pour nos usages ADRASEC
+
+Avec cette mise à jour, Echo passe d’un client prometteur à un outil réellement exploitable sur le terrain.
+
+Les points déterminants sont :
+
+- audio en arrière-plan fonctionnel,
+- stabilité améliorée,
+- meilleure gestion cartographique,
+- validation des serveurs personnalisés.
+
+Dans un contexte de supervision mobile de nos OpenWebRX, notamment lors d’exercices ou d’activités terrain, cette évolution est significative.
+
+Nous continuons les tests sous TestFlight et documenterons les retours d’expérience au fur et à mesure des prochaines versions.
+
 
 73  
 F4EGM
