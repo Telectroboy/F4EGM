@@ -1,13 +1,12 @@
 ---
 title: "Echo : un client iOS natif pour KiwiSDR, OpenWebRX et WebSDR"
 date: 2026-02-17
-draft: true
+draft: false
 author: "F4EGM"
 tags: ["ios", "kiwisdr", "openwebrx", "websdr", "rtl-sdr", "adrasec", "echo"]
 
 cover:
-  image: "https://github.com/user-attachments/assets/e59b3bbd-6eea-4bc5-8892-8143805da62a"
-
+  image: "https://github.com/user-attachments/assets/7034a6bd-1b71-469b-a4e6-f89b48896137"
 ---
 
 # Echo : le récepteur radio universel pour iOS
@@ -18,6 +17,8 @@ Une nouvelle application attire fortement l’attention dans le monde du SDR acc
 https://www.rtl-sdr.com/echo-a-native-ios-client-for-kiwisdr-openwebrx/
 
 L’application est actuellement en **beta via TestFlight**, et je fais partie de l’équipe qui la teste sous iOS.
+
+![screenshot](https://github.com/user-attachments/assets/e59b3bbd-6eea-4bc5-8892-8143805da62a)
 
 Dans notre contexte ADRASEC08, cela pourrait devenir un outil extrêmement intéressant pour exploiter nos serveurs **OpenWebRX** sur le terrain.
 
