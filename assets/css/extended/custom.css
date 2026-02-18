@@ -89,3 +89,113 @@ body .nav,
 body .main * {
     color: var(--primary); /* ou définir selon thème */
 }
+
+
+/*AJOUT GRILLE ET mode HERE*/
+/* Largeur confort sur desktop */
+.main {
+  max-width: 1400px;
+}
+
+/* =========================
+   HERO (1er post / dernier)
+   ========================= */
+
+/* PaperMod met un "first-entry" pour le post mis en avant */
+.first-entry {
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 14px 36px rgba(0,0,0,0.12);
+  margin-bottom: 28px;
+}
+
+/* Cover du hero */
+.first-entry .entry-cover img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Titre du hero un peu plus "magazine" */
+.first-entry .entry-header h2 {
+  font-size: 1.6rem;
+  line-height: 1.15;
+}
+
+/* Extrait du hero */
+.first-entry .entry-content {
+  font-size: 1.05rem;
+  opacity: 0.95;
+}
+
+/* =========================
+   GRID (liste des posts)
+   ========================= */
+
+/* Le conteneur des entrées en mode grille */
+.main .post-entry:not(.first-entry) {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  align-items: stretch;
+}
+
+/* Chaque carte (article) */
+.main .post-entry:not(.first-entry) > article {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.10);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.main .post-entry:not(.first-entry) > article:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 34px rgba(0,0,0,0.14);
+}
+
+/* Cover des cartes */
+.main .post-entry:not(.first-entry) .entry-cover img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Titre des cartes */
+.main .post-entry:not(.first-entry) .entry-header h2 {
+  font-size: 1.05rem;
+  line-height: 1.25;
+}
+
+/* Extrait des cartes : clamp pour un rendu propre */
+.main .post-entry:not(.first-entry) .entry-content {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;      /* 3 lignes d'extrait */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  opacity: 0.9;
+}
+
+/* =========================
+   Responsive
+   ========================= */
+
+@media (max-width: 1200px) {
+  .main .post-entry:not(.first-entry) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .first-entry .entry-cover img {
+    height: 300px;
+  }
+}
+
+@media (max-width: 720px) {
+  .main .post-entry:not(.first-entry) {
+    grid-template-columns: 1fr;
+  }
+  .first-entry .entry-cover img {
+    height: 220px;
+  }
+}
+
