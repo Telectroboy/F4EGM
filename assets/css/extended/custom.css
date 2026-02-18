@@ -97,6 +97,9 @@ body .main * {
   max-width: 1400px;
 }
 
+main.main > .post-entry {
+  display: grid;
+}
 /* =========================
    HERO (1er post / dernier)
    ========================= */
