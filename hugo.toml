@@ -12,6 +12,7 @@ theme = "PaperMod"
   ShowSearch = true
   ShowPostImage = true
   customCSS = ["css/extended/custom.css"]
+  layout = "grid"
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
