@@ -12,8 +12,8 @@ theme = "PaperMod"
   ShowSearch = true
   ShowPostImage = true
   customCSS = ["css/extended/custom.css"]
-  ShowShareButtons: true
-  ShowPostNavLinks: true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
   
 [outputs]
   home = ["HTML", "RSS", "JSON"]
