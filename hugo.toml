@@ -4,16 +4,15 @@ title = "Radio&Tech - F4EGM"
 theme = "PaperMod"
 
 [params]
-  ShowToc = true
-  TocOpen = true
+  ShowToc = false
+  TocOpen = false
   ShowReadingTime = true
   ShowCodeCopyButtons = true
   ShowBreadCrumbs = true
   ShowSearch = true
   ShowPostImage = true
   customCSS = ["css/extended/custom.css"]
-  layout = "grid"
-
+  
 [outputs]
   home = ["HTML", "RSS", "JSON"]
 
