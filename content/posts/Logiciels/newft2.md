@@ -5,7 +5,7 @@ draft: false
 tags: ["FT2", "WSJT-X", "Modes numériques", "HF", "Contest", "Digital"]
 
 cover:
-  image: (https://github.com/user-attachments/assets/3b46d35f-ed52-47fa-b63a-0c9377d9750a)
+  image: "https://github.com/user-attachments/assets/3b46d35f-ed52-47fa-b63a-0c9377d9750a"
 
 ---
 
@@ -155,7 +155,7 @@ FT2 semble clairement positionné pour :
 
 Il ne vise pas à remplacer FT8 pour les conditions marginales, le QRP extrême ou les environnements à fort bruit local.
 
-[WaterFall Simulation]("https://github.com/user-attachments/assets/d6f76d14-9942-48ab-9059-bce542ce1c8a")
+[WaterFall Simulation](https://github.com/user-attachments/assets/d6f76d14-9942-48ab-9059-bce542ce1c8a)
 
 
 ---
