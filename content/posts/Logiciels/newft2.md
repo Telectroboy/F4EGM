@@ -121,6 +121,9 @@ Le lien pour le téléchargement ou l’information est :
 
 À ce stade, il ne s’agit pas d’un logiciel officiellement intégré aux dépôts publics classiques de WSJT-X.
 
+![PSKReporter](https://github.com/user-attachments/assets/4b1db5b0-fc27-43cb-9c5d-f8eadcb9b05a)
+
+
 ---
 
 # Réactions et débats sur Reddit
@@ -155,7 +158,7 @@ FT2 semble clairement positionné pour :
 
 Il ne vise pas à remplacer FT8 pour les conditions marginales, le QRP extrême ou les environnements à fort bruit local.
 
-[WaterFall Simulation](https://github.com/user-attachments/assets/d6f76d14-9942-48ab-9059-bce542ce1c8a)
+![WaterFall Simulation](https://github.com/user-attachments/assets/d6f76d14-9942-48ab-9059-bce542ce1c8a)
 
 
 ---
