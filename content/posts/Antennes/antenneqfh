@@ -1,0 +1,174 @@
+---
+title: "Réalisation d'une antenne QFH (Quadrafilaire) pour 137 MHz"
+date: 2026-02-19
+draft: true
+tags: ["antenne", "QFH", "NOAA", "METEOR", "137 MHz", "satellites météo", "radioamateur"]
+description: "Construction pas à pas d’une antenne QFH (quadrafilaire hélicoïdale) pour la réception des satellites météo NOAA et METEOR sur 137 MHz."
+
+cover:
+  image: 
+---
+
+# Réalisation d'une antenne QFH (Quadrafilaire)
+
+L’antenne **QFH (Quadrifilar Helix)** est un aérien de type **hélicoïdal** particulièrement adapté à la réception des satellites météo défilants.
+
+Elle est ici dimensionnée pour la bande des **137 MHz**, fréquence utilisée par les satellites météo **:contentReference[oaicite:0]{index=0}** et **:contentReference[oaicite:1]{index=1}**.
+
+Il s’agit d’une antenne de référence si vous avez décidé de vous lancer dans la réception d’images météo par satellites en APT ou LRPT. Son diagramme quasi omnidirectionnel en polarisation circulaire permet une excellente réception des satellites en orbite polaire, sans avoir besoin de rotor.
+
+---
+
+## Principe de l’antenne QFH
+
+La QFH est composée de **deux boucles hélicoïdales** superposées et déphasées de 90°, alimentées en quadrature.  
+
+Cette géométrie permet :
+
+- Une **polarisation circulaire** adaptée aux satellites météo  
+- Un **diagramme hémisphérique** couvrant l’ensemble du ciel  
+- Une bonne réjection des signaux proches de l’horizon  
+
+---
+
+## Matériel nécessaire
+
+Pour la fabrication, il vous faudra :
+
+- 2 mètres de tube PVC sanitaire renforcé Ø 40 mm  
+- 5 mètres de tube cuivre Ø 6 mm ou 8 mm  
+- 8 coudes en cuivre (Ø 6 ou 8 mm selon votre choix)  
+- 1 boîte de dérivation à 4 entrées  
+- 1 manchon PVC Ø 40 mm  
+- 1 bouchon PVC Ø 40 mm  
+- 4 vis inox de 40 mm  
+- Câble coaxial type RG58  
+
+---
+
+## Dimensions retenues (137 MHz)
+
+Deux cadres sont réalisés :
+
+- 1 rectangle de **200 x 900 mm**
+- 1 rectangle de **200 x 1000 mm**
+
+Ces deux cadres formeront les deux hélices une fois montés sur le mât PVC.
+
+Les perçages dans le mât doivent être réalisés :
+
+- À **90 cm** sous l’axe des tubes supérieurs  
+- Puis perpendiculairement à **100 cm**  
+
+Utiliser un foret correspondant au diamètre du tube cuivre choisi (6 ou 8 mm).
+
+---
+
+##  Étapes de fabrication
+
+###  Préparation du sommet
+
+L’antenne est alimentée **par le haut**, dans la boîte de dérivation.
+
+- Coller le manchon sur le tube PVC  
+- Coller le bouchon au sommet  
+- Fixer la boîte de dérivation sur le bouchon à l’aide des 4 vis inox  
+
+Les vis doivent être suffisamment longues pour assurer :
+
+- La fixation mécanique
+- Le maintien des extrémités des tubes cuivre à l’intérieur de la boîte
+
+---
+
+###  Mise en place des cadres
+
+En fonction de la taille de vos coudes cuivre :
+
+- Coupez les sections nécessaires
+- Assemblez les deux rectangles (200x900 mm et 200x1000 mm)
+
+⚠️ Important :  
+Les trous dans le mât doivent être parfaitement alignés avec les axes des tubes avant collage définitif.
+
+---
+
+###  Réalisation du point d’alimentation
+
+Astuce économique :  
+Récupérez **deux lamelles en laiton** sur une ancienne pile plate 4,5 V.
+
+- Percez-les afin de pouvoir fixer les extrémités d’un grand et d’un petit cadre sur chacune  
+- Ces deux lamelles constituent le **point d’alimentation**
+
+Le câble coaxial :
+
+- Est introduit par le haut dans le mât  
+- Est soudé sur ces lamelles  
+- Ressort par un trou percé à **150 mm sous l’axe supérieur**
+
+---
+
+###  Réalisation du balun
+
+Le coaxial est enroulé en **4 spires** autour du tube PVC (Ø 40 mm).
+
+Ce bobinage agit comme un **balun de courant** et limite les courants de gaine.
+
+Fixation :
+
+- Colle chaude
+- Puis descente du coaxial le long du mât
+- Maintien avec ruban isolant (type Chatterton)
+
+---
+
+##  Améliorations possibles
+
+###  Ajout d’un préamplificateur (LNA)
+
+L’ajout d’un LNA à la base de l’antenne permet de gagner environ **20 dB**.
+
+C’est particulièrement utile si :
+
+- Votre câble coaxial est long  
+- Votre SDR manque un peu de sensibilité  
+
+La station est alors connectée **via le préampli**.
+
+---
+
+###  Finition esthétique et protection
+
+- Peinture type **aluminium martelé** pour un aspect métallique  
+- Vernis sur les tubes cuivre pour limiter l’oxydation  
+
+Le résultat est bien plus esthétique sur un pylône qu’un simple tube PVC blanc.
+
+---
+
+##  Pourquoi choisir une QFH ?
+
+✔ Idéale pour la réception des satellites météo  
+✔ Pas besoin de rotor  
+✔ Excellente couverture du ciel  
+✔ Construction simple et économique  
+✔ Performances éprouvées  
+
+C’est une antenne parfaitement adaptée à un récepteur SDR type RTL-SDR dédié à la réception des satellites météo défilants.
+
+---
+
+##  Conclusion
+
+La QFH reste une valeur sûre pour la réception des satellites météo sur 137 MHz.  
+
+Simple à construire, peu coûteuse et extrêmement efficace, elle constitue souvent la première “vraie” antenne satellite d’un radioamateur passionné d’imagerie météo.
+
+---
+
+**Et maintenant… à vous de jouer !** 
+
+---
+
+*Source d’inspiration : leradioscope.fr*
