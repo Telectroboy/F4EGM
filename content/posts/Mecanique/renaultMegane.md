@@ -6,7 +6,8 @@ draft: false
 tags: [Renault, EESM, moteur électrique, reverse engineering, roulements, Zoe, Megane E-Tech]
 
 cover:
-  image:
+  image: "https://github.com/user-attachments/assets/a24381a3-f2ae-4913-8b94-981d93136882"
+
 ---
 
 # Analyse technique – Roulements et balais sur les moteurs EESM Renault
@@ -251,6 +252,10 @@ Il le devient quand on le conçoit comme tel.
 Je n'ai pas exploré l'éléctronique mais il semblerait qu'il y a à faire!
 ![Electronique](https://github.com/user-attachments/assets/14639943-e1e5-45db-aaef-44a7d32e9165)
 
+
+Sources:
+- EVClinic via Facebook pour l'analyse critique et réparabilité.
+- Munro sur YouTube https://www.youtube.com/watch?v=BFmp9ODkCA8 pour l'analyse technique
 
 ---
 
