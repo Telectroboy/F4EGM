@@ -5,7 +5,7 @@ draft: false
 tags: ["radioamateur", "F4KJP", "Coupe du REF", "HF", "80m", "40m", "contest"]
 
 cover:
-  image:"https://github.com/user-attachments/assets/3c4ce546-e14e-4973-94a2-88894e04ffd8"
+  image: "https://github.com/user-attachments/assets/3c4ce546-e14e-4973-94a2-88894e04ffd8"
 
 ---
 
