@@ -1,6 +1,6 @@
 ---
 title: "HORSE H12, huile 0W20 et hybridation E-Tech : communication brillante, réalités mécaniques plus nuancées"
-date: 2026-02-20T18:30:00+01:00
+date: 2026-02-24T12:35:00+01:00
 draft: false
 tags: ["renault", "horse", "h12", "hybride", "e-tech", "0w20", "moteur thermique", "rendement"]
 
