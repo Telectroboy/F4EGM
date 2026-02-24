@@ -5,8 +5,7 @@ draft: false
 tags: ["radioamateur", "F4KJP", "Coupe du REF", "HF", "80m", "40m", "contest"]
 
 cover:
-  image: "https://github.com/user-attachments/assets/3c4ce546-e14e-4973-94a2-88894e04ffd8"
-
+  image: "https://github.com/user-attachments/assets/c4c8cff6-9cf1-4d88-92ce-ca06ed1c5c53"
 ---
 
 ## Participation de F4KJP à la Coupe du REF Phonie HF – 21 & 22 février 2026
