@@ -3,6 +3,10 @@ title: "F4KJP – Coupe du REF Phonie HF 2026 : 36 heures d’endurance radio"
 date: 2026-02-23T18:00:00+01:00
 draft: true
 tags: ["radioamateur", "F4KJP", "Coupe du REF", "HF", "80m", "40m", "contest"]
+
+cover:
+  image:"https://github.com/user-attachments/assets/3c4ce546-e14e-4973-94a2-88894e04ffd8"
+
 ---
 
 ## Participation de F4KJP à la Coupe du REF Phonie HF – 21 & 22 février 2026
