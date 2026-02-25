@@ -1,17 +1,20 @@
 ---
 title: "SWR, puissance réfléchie et pertes réelles : ce qui se passe vraiment"
-date: 2026-02-25
-draft: true
+date: 2026-02-25T12:58:10
+draft: false
 tags: ["radioamateur", "SWR", "VSWR", "ligne de transmission", "RF", "impédance", "tuner", "FT-991"]
 categories: ["Théorie RF"]
 summary: "Comprendre pourquoi « puissance réfléchie » ne veut pas dire « puissance perdue », ce que mesure vraiment la mismatch loss, et pourquoi un transceiver moderne peut réduire sa puissance en cas de mauvaise adaptation."
+
+cover:
+  image: "https://github.com/user-attachments/assets/cd61def0-89b1-4b26-939e-5d3858055817"
 
 ---
 
 # SWR, puissance réfléchie et pertes réelles  
 ## Ce qui se passe vraiment (et pourquoi ça contredit souvent les idées reçues)
 
-![Illustration — « The SWR Myth » (RF.Guru)](https://cdn.shopify.com/s/files/1/0605/4402/4764/files/theswrmyth.webp?v=1756293650)
+[!illustration](https://github.com/user-attachments/assets/ced9f760-b089-427c-8277-3152e1d76f0e)
 
 ---
 
@@ -25,7 +28,7 @@ Ce raccourci mélange en réalité **trois notions** qui ne décrivent pas la m�
 - **La puissance réfléchie** : c’est une partie de l’onde qui n’a pas été absorbée à la charge et qui repart vers la source ; tant que rien ne dissipe cette énergie, elle n’est pas “perdue”, elle est simplement **en circulation**.
 - **La “mismatch loss”** : dans la pratique, beaucoup l’utilisent comme un “pourcentage perdu à cause du SWR”, alors que la source IZ2UUF explique explicitement que cette valeur représente surtout l’**incapacité d’un générateur idéal à délivrer sa puissance maximale en cas de désadaptation**, ce qui est très différent d’une dissipation dans la ligne.
 
-Si tu ne sépares pas ces trois niveaux, tu arrives forcément à des contradictions entre ce que disent les formules “de tableau” et ce que tu observes sur un transceiver réel (par exemple ton FT‑991 qui baisse sa puissance quand l’impédance est mauvaise).
+Si tu ne sépares pas ces trois niveaux, tu arrives forcément à des contradictions entre ce que disent les formules “de tableau” et ce que tu observes sur un transceiver réel (par exemple ton Yaesu qui baisse sa puissance quand l’impédance est mauvaise).
 
 ---
 
@@ -56,6 +59,8 @@ La **fraction de puissance réfléchie à la charge** (dans le modèle d’ondes
 Donc oui : si SWR = 3:1, alors \( |\Gamma| = 0.5 \) et \( |\Gamma|^2 = 0.25 \), ce que rappelle aussi le PDF ZS6WR.
 
 Mais ce résultat ne dit encore **rien** sur “où va” cette puissance réfléchie, ni sur “combien est réellement perdu”.
+
+[!coubres](https://github.com/user-attachments/assets/f1da44c9-f031-49cd-b338-faf8d05395f2)
 
 ---
 
