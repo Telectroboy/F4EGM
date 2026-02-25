@@ -2,8 +2,8 @@
 title: "SWR, puissance réfléchie et pertes réelles : ce qui se passe vraiment"
 date: 2026-02-25
 draft: false
+math: true
 tags: ["radioamateur", "SWR", "VSWR", "ligne de transmission", "RF", "impédance", "tuner", "Yaesu"]
-
 cover:
   image: "https://github.com/user-attachments/assets/550d5007-a1e9-4ff4-83af-692939e62c78"
 ---
@@ -34,26 +34,26 @@ Si tu ne sépares pas ces trois niveaux, tu arrives forcément à des contradict
 On prend une ligne de transmission d’impédance caractéristique \(Z_0\) (typiquement 50 Ω) et une charge \(Z_L\) (l’antenne au point d’alimentation, ou un montage de test).
 
 Le **coefficient de réflexion** au niveau de la charge est :
-
-\[
+$$
 \Gamma_L = \frac{Z_L - Z_0}{Z_L + Z_0}
-\]
+$$
 
 En amplitude (valeur absolue), le SWR est :
 
-\[
+$$
 SWR = \frac{1 + |\Gamma_L|}{1 - |\Gamma_L|}
 \qquad \Longleftrightarrow \qquad
 |\Gamma_L| = \frac{SWR - 1}{SWR + 1}
-\]
+$$
 
 La **fraction de puissance réfléchie à la charge** (dans le modèle d’ondes de puissance) est :
 
-\[
+$$
 \frac{P_r}{P_f} = |\Gamma_L|^2
-\]
+$$
 
-Donc oui : si SWR = 3:1, alors \( |\Gamma| = 0.5 \) et \( |\Gamma|^2 = 0.25 \), ce que rappelle aussi le PDF ZS6WR.
+Donc oui : si $SWR = 3:1$, alors $|\Gamma| = 0.5$ et $|\Gamma|^2 = 0.25$.
+
 
 Mais ce résultat ne dit encore **rien** sur “où va” cette puissance réfléchie, ni sur “combien est réellement perdu”.
 
