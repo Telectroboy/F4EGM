@@ -74,5 +74,19 @@ icon = "/images/papermod_header_logo_f4egm.png"
     name = "Associations"
     url = "/posts/Associations/"
     weight = 100
-	
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+    [markup.goldmark.extensions]
+      table = true
+
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['$$','$$'], ['\\[','\\]']]
+          inline = [['$','$'], ['\\(','\\)']]
 	
