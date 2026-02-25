@@ -1,6 +1,6 @@
 ---
 title: "SWR, puissance réfléchie et pertes réelles : ce qui se passe vraiment"
-date: 2026-02-25T13:07
+date: 2026-02-25
 draft: false
 tags: ["radioamateur", "SWR", "VSWR", "ligne de transmission", "RF", "impédance", "tuner", "Yaesu"]
 
