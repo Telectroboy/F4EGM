@@ -57,7 +57,7 @@ Donc oui : si $SWR = 3:1$, alors $|\Gamma| = 0.5$ et $|\Gamma|^2 = 0.25$.
 
 Mais ce résultat ne dit encore **rien** sur “où va” cette puissance réfléchie, ni sur “combien est réellement perdu”.
 
-[!coubres](https://github.com/user-attachments/assets/f1da44c9-f031-49cd-b338-faf8d05395f2)
+![courbes](https://github.com/user-attachments/assets/f1da44c9-f031-49cd-b338-faf8d05395f2)
 
 ---
 
