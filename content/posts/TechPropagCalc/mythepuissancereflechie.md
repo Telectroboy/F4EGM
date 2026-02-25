@@ -1,13 +1,11 @@
 ---
 title: "SWR, puissance réfléchie et pertes réelles : ce qui se passe vraiment"
-date: 2026-02-25T12:58:10
+date: 2026-02-25T13:07
 draft: false
-tags: ["radioamateur", "SWR", "VSWR", "ligne de transmission", "RF", "impédance", "tuner", "FT-991"]
-summary: "Comprendre pourquoi « puissance réfléchie » ne veut pas dire « puissance perdue », ce que mesure vraiment la mismatch loss, et pourquoi un transceiver moderne peut réduire sa puissance en cas de mauvaise adaptation."
+tags: ["radioamateur", "SWR", "VSWR", "ligne de transmission", "RF", "impédance", "tuner", "Yaesu"]
 
 cover:
-  image: "https://github.com/user-attachments/assets/cd61def0-89b1-4b26-939e-5d3858055817"
-
+  image: "https://github.com/user-attachments/assets/550d5007-a1e9-4ff4-83af-692939e62c78"
 ---
 
 # SWR, puissance réfléchie et pertes réelles  
