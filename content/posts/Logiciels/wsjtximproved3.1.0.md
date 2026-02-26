@@ -11,20 +11,20 @@ tags: ["radioamateur", "WSJT-X", "FT8", "FT4", "FT2", "numérique", "weak-signal
 ## Où trouver WSJT-X Improved 3.1.0
 
 Les binaires (Windows / Linux / macOS / Raspberry Pi + sources) sont ici :  
-https://sourceforge.net/projects/wsjt-x-improved/files/WSJT-X_v3.1.0/  :contentReference[oaicite:0]{index=0}
+https://sourceforge.net/projects/wsjt-x-improved/files/WSJT-X_v3.1.0/ 
 
 ## Avant d’installer (recommandé)
 
 Le changelog recommande :
 - de faire une **sauvegarde** de `WSJT-X.ini` et `wsjtx_log.adi`
-- et d’installer la 3.1.0 dans un **nouveau dossier** (ex : `C:\WSJT\wsjtx-310`) :contentReference[oaicite:1]{index=1}
+- et d’installer la 3.1.0 dans un **nouveau dossier** (ex : `C:\WSJT\wsjtx-310`) 
 
 ## Nouveautés principales (3.1.0 260226 vs 3.0.0 251212)
 
 ### 1) FT2 : un nouveau mode “ultra-rapide” (expérimental)
-- **FT2** est un mode **77 bits** avec une période **TR de 3,75 s** (soit **2× plus rapide que FT4**) :contentReference[oaicite:2]{index=2}  
-- Il est annoncé comme **open-source**, compatible “à l’antenne” avec l’implémentation FT2 d’IU8LMC **sans réutilisation de son code** :contentReference[oaicite:3]{index=3}  
-- Le mainteneur précise que FT2 reste **expérimental** (pas certain qu’il soit conservé) :contentReference[oaicite:4]{index=4}  
+- **FT2** est un mode **77 bits** avec une période **TR de 3,75 s** (soit **2× plus rapide que FT4**) 
+- Il est annoncé comme **open-source**, compatible “à l’antenne” avec l’implémentation FT2 d’IU8LMC **sans réutilisation de son code**   
+- Le mainteneur précise que FT2 reste **expérimental** (pas certain qu’il soit conservé)  
 
 *(Même si FT2 est une bonne idée en soi, ça reste à valider en usage réel : décodage, réussite des QSOs, intérêt vs FT4.)*
 
@@ -34,40 +34,40 @@ Nouveauté importante : prise en charge de QSOs entre stations utilisant des ind
 - composés ↔ composés,
 - non standard ↔ composé,
 - non standard ↔ /P,
-- et aussi **deux indicatifs standards** chacun avec suffixes (/P /M /R etc.). :contentReference[oaicite:5]{index=5}
-
+- et aussi **deux indicatifs standards** chacun avec suffixes (/P /M /R etc.).
+  
 Notes pratiques :
-- **les deux stations** doivent utiliser WSJT-X Improved 3.1 (ou logiciel compatible) :contentReference[oaicite:6]{index=6}
-- le WSJT-X “standard” peut partir en **boucle AutoSeq** sur ces formats :contentReference[oaicite:7]{index=7}
+- **les deux stations** doivent utiliser WSJT-X Improved 3.1 (ou logiciel compatible) 
+- le WSJT-X “standard” peut partir en **boucle AutoSeq** sur ces formats 
 
 ### 3) MAP65 : nouvelle techno (taille réduite, code FORTRAN modernisé)
-- `map65.exe` annoncé à **< 1/4** de sa taille précédente, avec objectif d’améliorer la stabilité :contentReference[oaicite:8]{index=8}  
-- **Attention** : les builds **OFC** gardent l’ancienne version MAP65 (code éprouvé 3.0.0) :contentReference[oaicite:9]{index=9}
+- `map65.exe` annoncé à **< 1/4** de sa taille précédente, avec objectif d’améliorer la stabilité   
+- **Attention** : les builds **OFC** gardent l’ancienne version MAP65 (code éprouvé 3.0.0) 
 
 ### 4) Divers + Hamlib 5
 Exemples :
-- option pour **skipper les décodes a8** (décodeur FT8 multithread) :contentReference[oaicite:10]{index=10}  
-- band hopping : intervalle **1 min / 2 min** :contentReference[oaicite:11]{index=11}  
-- option log : enregistrer la **fréquence dial** plutôt que la fréquence TX :contentReference[oaicite:12]{index=12}  
-- support de la série **Hamlib 5** :contentReference[oaicite:13]{index=13}  
+- option pour **skipper les décodes a8** (décodeur FT8 multithread) 
+- band hopping : intervalle **1 min / 2 min** 
+- option log : enregistrer la **fréquence dial** plutôt que la fréquence TX 
+- support de la série **Hamlib 5** 
 
 ## FYI : Decodium et licence WSJT-X (GPLv3)
 
 Il est parfaitement **autorisé** de créer un dérivé de WSJT-X **si on respecte la GPL**.
 
 Le point soulevé publiquement (résumé) :
-- Des messages relayés indiquent qu’une distribution binaire de “Decodium” (dérivé de WSJT-X/WSJT-X Improved) **sans publication du code source correspondant** serait **non conforme GPLv3**. :contentReference[oaicite:14]{index=14}  
-- Rappel GPLv3 : quand on **“convey”** un logiciel (distribution), on doit fournir l’accès au **“Corresponding Source”** selon les conditions de la licence. :contentReference[oaicite:15]{index=15}  
+- Des messages relayés indiquent qu’une distribution binaire de “Decodium” (dérivé de WSJT-X/WSJT-X Improved) **sans publication du code source correspondant** serait **non conforme GPLv3**. 
+- Rappel GPLv3 : quand on **“convey”** un logiciel (distribution), on doit fournir l’accès au **“Corresponding Source”** selon les conditions de la licence.  
 
 Lien de discussion (Valley Hams) :  
-https://groups.google.com/g/valleyhams/c/6s-QeUk6V2c :contentReference[oaicite:16]{index=16}
+https://groups.google.com/g/valleyhams/c/6s-QeUk6V2c 
 
 ## Conseils rapides de mise à jour
 
-1. Sauvegarder `WSJT-X.ini` + `wsjtx_log.adi` :contentReference[oaicite:17]{index=17}  
-2. Installer WSJT-X Improved 3.1.0 dans un nouveau répertoire :contentReference[oaicite:18]{index=18}  
-3. Choisir ton “layout” (standard / AL / widescreen) dans les téléchargements :contentReference[oaicite:19]{index=19}  
-4. Si tu utilises MAP65 : vérifier si tu préfères build **OFC** (ancien MAP65) ou non-OFC (nouvelle techno MAP65) :contentReference[oaicite:20]{index=20}  
+1. Sauvegarder `WSJT-X.ini` + `wsjtx_log.adi`   
+2. Installer WSJT-X Improved 3.1.0 dans un nouveau répertoire 
+3. Choisir ton “layout” (standard / AL / widescreen) dans les téléchargements
+4. Si tu utilises MAP65 : vérifier si tu préfères build **OFC** (ancien MAP65) ou non-OFC (nouvelle techno MAP65)
 
 ## Retours terrain FT2 (Facebook)
 
@@ -82,9 +82,9 @@ Source : posts Facebook (liens à renseigner)
 > I recall from EARLY FT4, we'd load as MFSK SUB-mode FT4, might be the same here but I'll wait for an official ADIF update  
 > Paolo IU Tre Unc
 
-À garder en tête : FT2 est annoncé comme très exigeant sur la synchro (horloge serrée). :contentReference[oaicite:0]{index=0}  
-Si LoTW/POTA ne reconnaissent pas encore FT2 chez toi, LoTW documente un mécanisme de “mode mapping” dans TQSL. :contentReference[oaicite:1]{index=1}  
-POTA rappelle aussi que ses modes/submodes suivent l’ADIF, et qu’en présence de MODE+SUBMODE, **SUBMODE prime** côté POTA. :contentReference[oaicite:2]{index=2}
+À garder en tête : FT2 est annoncé comme très exigeant sur la synchro (horloge serrée). 
+Si LoTW/POTA ne reconnaissent pas encore FT2 chez toi, LoTW documente un mécanisme de “mode mapping” dans TQSL.
+POTA rappelle aussi que ses modes/submodes suivent l’ADIF, et qu’en présence de MODE+SUBMODE, **SUBMODE prime** côté POTA. 
 
 ## Logging FT2 / QRZ : MODE vs SUBMODE (Facebook)
 
@@ -108,10 +108,10 @@ Avant d’uploader “en masse”, fais 2–3 QSOs test et regarde comment ton c
 > 73 de IU8LMC 🇮🇹  
 > DECODIUM 3.0 — ft2.it
 
-Pour contexte côté WSJT-X Improved 3.1.0 : FT2 est présenté comme **open-source**, compatible “on-air” avec FT2 IU8LMC, et “No code from IU8LMC was used”. :contentReference[oaicite:3]{index=3}
+Pour contexte côté WSJT-X Improved 3.1.0 : FT2 est présenté comme **open-source**, compatible “on-air” avec FT2 IU8LMC, et “No code from IU8LMC was used”.
 
 ## FYI licence : point soulevé publiquement
 
-Allégation vue dans une discussion publique : un dérivé distribué sans publier le “corresponding source” ne serait pas conforme GPLv3. :contentReference[oaicite:4]{index=4}
+Allégation vue dans une discussion publique : un dérivé distribué sans publier le “corresponding source” ne serait pas conforme GPLv3. 
 
 73 de F4EGM
