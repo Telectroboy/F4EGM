@@ -5,7 +5,8 @@ draft: false
 tags: ["radioamateur", "TYT", "TH-7800", "réparation", "électronique", "VHF", "UHF", "cross-band"]
 description: "Acheté 47€ sur Leboncoin (fdp + frais inclus), ce TYT TH-7800 ne s’allumait plus. Diagnostic : alimentation aval absente (rails à ~1.6–1.8 V) malgré un 5 V présent. Cause trouvée : Q30 (2SB1386) en défaut. Solution : contournement (bypass) après démontage complet et dessoudage de la SO-239."
 cover:
-  image: "https://github.com/user-attachments/assets/6e674037-93e5-45d7-812d-3f3b2c592fa6"
+  image: "https://github.com/user-attachments/assets/6243783c-4b93-41ac-8b8a-6b423930947e"
+
 
 ---
 
