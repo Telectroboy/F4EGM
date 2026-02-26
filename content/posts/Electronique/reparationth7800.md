@@ -5,7 +5,8 @@ draft: false
 tags: ["radioamateur", "TYT", "TH-7800", "réparation", "électronique", "VHF", "UHF", "cross-band"]
 description: "Acheté 47€ sur Leboncoin (fdp + frais inclus), ce TYT TH-7800 ne s’allumait plus. Diagnostic : alimentation aval absente (rails à ~1.6–1.8 V) malgré un 5 V présent. Cause trouvée : Q30 (2SB1386) en défaut. Solution : contournement (bypass) après démontage complet et dessoudage de la SO-239."
 cover:
-  image: 
+  image: "https://github.com/user-attachments/assets/6e674037-93e5-45d7-812d-3f3b2c592fa6"
+
 ---
 
 ## Contexte : un TH-7800 à 47€… mais en panne
@@ -105,10 +106,11 @@ La commande de Q30 se fait via :
 
 ### Mesures
 - Sortie de Q30 : seulement **~1,8 V** (au lieu d’alimenter correctement les étages aval)
-- Diagnostic direct : **court-circuit entre base et collecteur de Q30**
+- Alors que la tension sur la base de Q32 est de 0V et que la résistance R77 est OK.
+- Diagnostic direct : **Manque de gain ou défaut sur Q30**
+- Après mesure plus précise, j'ai constaté un court-circuit entre base et collecteur de ce transistor !
 
 ![IMG_2076](https://github.com/user-attachments/assets/040561ae-78e2-444c-8ccb-3551027fb9f3)
-
 
 ---
 
@@ -120,17 +122,17 @@ Vu que Q30 est **défectueux** et que je voulais valider rapidement le diagnosti
 - **Retirer R77 (470 Ω)**  
 Objectif : éviter d’injecter des niveaux indésirables vers Q32 / la logique de commande une fois Q30 contourné.
 
-
 ### Étape 2 — Bypasser Q30
 - Faire un **court-circuit entre collecteur et émetteur de Q30** (shunt C–E) pour valider le fonctionnement “alim aval toujours présente”.
+![BYPASS](https://github.com/user-attachments/assets/43526a83-afd1-4401-8fca-e53da910d6bf)
 
 Résultat immédiat :
 - **Ça fonctionne : le poste s’allume.**
-![BYPASS](https://github.com/user-attachments/assets/43526a83-afd1-4401-8fca-e53da910d6bf)
+![POWER ON!](https://github.com/user-attachments/assets/2207f91c-de00-4035-8b79-ac7b761e37df)
 
 ### Test de Q32
 - **Q32 testé : OK**  
-Donc la panne est bien localisée autour de **Q30**.
+Donc la panne est bien localisée sur **Q30** uniquement.
 
 ---
 
@@ -138,18 +140,16 @@ Donc la panne est bien localisée autour de **Q30**.
 
 Pour répéter : ces composants sont **sous le PCB**.
 
-### Ce que j’ai dû faire (ordre réaliste)
-1. **Photo avant démontage** (indispensable).
-2. Dépose capots, déconnexion HP, câbles internes, etc.
-3. Sortie de la carte principale du châssis.
+### Ce que j’ai dû faire 
+1. Dépose capots, déconnexion HP, câbles internes, etc.
+2. Retrait de la façade détachable
+3. **Photo avant démontage** (indispensable).
 4. **Dessoudage de la prise SO-239** (obligatoire pour libérer la carte).
-5. Extraction de la carte, accès à la face inférieure, intervention sur Q30/Q32/R77.
+5. Extraction de la carte RF, accès à la face inférieure, intervention sur Q30 et R77.
 
 ---
 
-## Spécifications du TYT TH-7800 (rappel utile)
-
-Table récap issue de la fiche produit (pratique pour contextualiser le poste dans l’article) :
+## Spécifications du TYT TH-7800
 
 | Élément | Valeur |
 |---|---|
@@ -175,6 +175,7 @@ Source fiche produit :
 ## Pourquoi ma carte RF s’appelle “TH-7900-RF-1.3” alors que le poste est un TH-7800 ?
 
 J’ai aussi relevé une référence sérigraphiée surprenante sur la carte RF : **TH-7900-RF-1.3**.
+![ref PCB](https://github.com/user-attachments/assets/3af6da64-beb0-4ec8-8d3e-0c677848b266)
 
 En pratique, ce n’est **pas forcément incohérent** : ces postes TYT sont clairement une **plateforme commune** déclinée en plusieurs modèles. Côté homologation FCC (dossier PODTH-9800), on trouve des documents où **TH-7800 et TH-7900 apparaissent comme “série modèle”** d’un même ensemble, avec une différence décrite comme portant sur le **nom de modèle et l’apparence**.
 
@@ -202,7 +203,7 @@ Dans mon cas ça ne me dérange pas car l'alimentation +12V est toujours commut�
 
 Je mettrai à jour cet article après validation “terrain”.
 
-![POWER ON!](https://github.com/user-attachments/assets/2207f91c-de00-4035-8b79-ac7b761e37df)
+
 
 ---
 
