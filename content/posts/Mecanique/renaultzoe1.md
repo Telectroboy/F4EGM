@@ -124,6 +124,9 @@ Autrement dit, **le rotor a le droit de bouger axialement dans certaines limites
 
 Le problème apparaît lorsque le **roulement arrière**, celui qui devrait justement pouvoir accompagner ce mouvement, **se bloque**. Dans le moteur que j’ai ouvert, il y avait de l’**oxydation**. Cet élément n’est pas secondaire ; il fait partie du scénario de panne. L’oxydation, selon son emplacement et son niveau, peut transformer un organe qui devrait coulisser légèrement en un organe pratiquement figé. Si le roulement arrière n’est plus libre axialement, alors le rotor, lui, continue malgré tout à se dilater lorsqu’il chauffe.
 ![oxyd](https://github.com/user-attachments/assets/2c224d88-78ca-41c7-b31d-306b5cc4de4c)
+![oxyd2](https://github.com/user-attachments/assets/444e5322-c951-4456-aff1-f9bcc261c4ff)
+
+
 
 Et c’est là que la logique du montage bascule. La dilatation thermique ne disparaît pas parce qu’un roulement est grippé. Elle se reporte. Si le **palier mobile** ne peut plus jouer son rôle, les contraintes vont se décharger ailleurs, en particulier sur le **palier fixe**, côté réducteur. Dans le cas présent, c’est exactement ce qui semble s’être produit : **le roulement arrière ne reculait plus, et c’est le roulement avant qui a commencé à se déplacer**.
 
@@ -162,6 +165,7 @@ Cette adaptation n’est pas anodine. Elle rappelle qu’une réparation sérieu
 # Loctite 638, Loctite 648 et logique de retenue
 
 Le choix d’un produit de retenue type **Loctite 638/648** répond ici à un besoin très concret : si le roulement de remplacement ne possède pas la rainure de retenue pour circlip, alors il faut reconstruire une fonction de maintien axial ou de tenue dans le carter. Un collage de frettage est une réponse classique dans l’industrie lorsqu’il s’agit de rattraper un montage ou de fiabiliser une retenue, à condition que l’on sache ce que l’on fait.
+![rainure](https://github.com/user-attachments/assets/7f5e371f-f795-4c65-8f37-78676d391c22)
 ![colle](https://github.com/user-attachments/assets/6e0a2cf9-7242-4bf9-b1f0-092cddbf6a6e)
 
 Cela implique toutefois un corollaire pratique : **pour démonter ultérieurement, il faut souvent chauffer**. Ce point est utile à mentionner, parce qu’il évite de considérer le collage comme une “astuce” sans conséquence. C’est un vrai choix d’assemblage, avec ses avantages et ses contraintes.
