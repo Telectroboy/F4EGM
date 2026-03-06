@@ -6,7 +6,7 @@ draft: false
 tags: ["linux", "kvm", "libvirt", "bridge", "debian", "idrac", "home-assistant", "virtualisation", "réseau"]
 
 cover:
-  image:"https://github.com/user-attachments/assets/c5ef579f-46ee-4e1b-8d0c-f1f3a43c7009"
+  image: "https://github.com/user-attachments/assets/c5ef579f-46ee-4e1b-8d0c-f1f3a43c7009"
 ------------------------------------------------------------------------------------------------------------
 
 # Incident réseau sur serveur KVM distant
