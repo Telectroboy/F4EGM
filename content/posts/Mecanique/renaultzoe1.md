@@ -201,7 +201,7 @@ La réparation n’a donc pas consisté simplement à changer “le roulement qu
 Autrement dit, ce que j’ai réparé, ce n’est pas seulement un moteur. C’est la cohérence entre **thermique**, **mécanique** et **mesure de position**.
 
 Vue du collecteur du rotor après nettoyage et correction de la surface. La bosse trahissait un problème depuis longtemps
-![Bague Collecteur](ttps://github.com/user-attachments/assets/d38e012d-7504-48a9-9355-0c1ff25a3bcf)
+![Bague Collecteur](https://github.com/user-attachments/assets/d38e012d-7504-48a9-9355-0c1ff25a3bcf)
 
 ---
 
