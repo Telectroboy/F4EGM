@@ -5,7 +5,6 @@ draft: false
 tags: ["Renault Zoe", "moteur électrique", "résolveur", "roulement", "diagnostic", "réparation", "véhicule électrique", "ingénierie"]
 cover:
   image: "https://github.com/user-attachments/assets/514a60e5-29e2-45d0-9426-e00d34899116"
-"
 ---
 
 # Autopsie complète d’un moteur de Renault Zoé 5AQ601
