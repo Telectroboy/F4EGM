@@ -11,8 +11,10 @@ cover:
 ## Quand un défaut de résolveur cache un roulement bloqué
 
 J’ai acheté cette **Renault Zoé de 2016 directement en panne en concession Renault**, avec l’idée de comprendre ce qui avait réellement condamné le moteur. Le diagnostic posé dans le réseau orientait vers une solution simple sur le plan administratif, mais radicale sur le plan technique : **remplacer l’ensemble du groupe motopropulseur**. Dans un atelier constructeur, cette approche se comprend facilement. Le temps passé à investiguer un moteur de traction est coûteux, les procédures sont fortement cadrées, et la sécurité liée à la haute tension pousse naturellement vers l’échange standard plutôt que vers l’autopsie détaillée.
+![Traction](https://github.com/user-attachments/assets/d4b26f3e-b3f8-4312-bb5b-a267f33df81a)
 
 Pourtant, ce type de conclusion laisse toujours une question en suspens : **quelle est la panne réelle ?** Un défaut électronique affiché par un calculateur n’est pas forcément la défaillance directe de l’organe incriminé. Très souvent, il ne fait que signaler qu’une information est devenue incohérente. Dans le cas présent, le véhicule remontait un **défaut de résolveur**, c’est-à-dire un problème sur le capteur chargé de mesurer la position du rotor du moteur. À première vue, cela pouvait faire penser à un capteur défaillant, à un souci de connectique, à un défaut de câblage ou à une électronique de lecture perturbée. Mais en avançant dans l’analyse, j’ai compris que cette panne racontait en réalité quelque chose de beaucoup plus intéressant : **ce n’était pas le résolveur qui était véritablement en cause, mais la mécanique du moteur elle-même.**
+ ![Défaut Résolveur](https://github.com/user-attachments/assets/16d58f01-2724-42e3-8e14-1af2a854d671)
 
 La conclusion finale a été la suivante : **un roulement bloqué par l’oxydation empêchait le déplacement axial normal du rotor lors de sa dilatation thermique, ce qui reportait les efforts sur l’autre palier, provoquait un déplacement parasite du rotor, puis un désalignement du résolveur, et enfin un défaut de position interprété comme un défaut capteur.** Dit autrement, le calculateur voyait bien une information incohérente, mais la source profonde de cette incohérence n’était pas électronique. Elle était mécanique.
 
@@ -47,12 +49,19 @@ Cette étape ne raconte pas encore la panne, mais elle conditionne toute la suit
 # Dépose du groupe motopropulseur
 
 Une fois la voiture sécurisée, j’ai pu attaquer la dépose du groupe motopropulseur. Le moteur de Zoé forme avec le réducteur un ensemble compact, dense, et pas particulièrement conçu pour être agréable à autopsier. Tant que ce groupe reste en place dans la voiture, on ne voit à peu près rien de ce qui compte vraiment. Il faut donc accepter de travailler à l’échelle du sous-ensemble complet : déconnexion des câbles haute tension, déconnexion des connecteurs de commande, libération des périphériques et des supports, puis extraction du groupe moteur-réducteur.
+![Moteur tombé](https://github.com/user-attachments/assets/fe139583-4aa1-42fe-993d-0781065fb08c)
+
 
 Cette étape est plus physique qu’intellectuelle, mais elle est importante parce qu’elle permet ensuite de basculer dans une vraie logique de compréhension. Tant que le moteur est dans la voiture, on reste prisonnier de la logique “pièce à remplacer”. Une fois sur l’établi, on peut enfin commencer à raisonner sur la mécanique réelle.
+
+![Depose Cardans](https://github.com/user-attachments/assets/aa644e7c-765c-44e5-9f80-cdabd4e60fa0)
+![Suspension groupe Moteur](https://github.com/user-attachments/assets/2db02919-cabd-4384-9f55-960f97e8e5bf)
 
 ---
 
 # Quelques rappels sur le moteur de la Zoé
+
+![Ensemble](https://github.com/user-attachments/assets/6f3a6a7e-7e9d-43d9-ad18-d932f2caaec2)
 
 La Renault Zoé appartient à une famille de véhicules électriques utilisant un **moteur synchrone à rotor bobiné**. Renault a beaucoup communiqué sur ce choix, en particulier pour souligner qu’il permettait d’éviter l’usage systématique d’aimants permanents à terres rares. Sur le plan du principe, cela signifie que le champ rotorique n’est pas fourni uniquement par des aimants fixes, mais par un rotor portant un enroulement alimenté. Dans la littérature électrotechnique générale, les **machines synchrones à rotor bobiné** sont bien connues, de même que les architectures classiques dans lesquelles l’alimentation du rotor passe par des **bagues et balais**, ou plus largement par un système de contact électrique sur la partie tournante.
 
@@ -64,8 +73,10 @@ Dans le cas de la Zoé, ces éléments ne peuvent pas être pensés séparément
 ---
 
 # Le résolveur : rôle, principe et sensibilité au montage
-
+![Bobinages Résolveur](https://github.com/user-attachments/assets/84ceca3e-878e-43fe-a585-06617bf29dc4)
 Le **résolveur** est le capteur qui donne au calculateur la **position instantanée du rotor**. Sur le plan physique, il s’agit d’un dispositif électromagnétique que l’on peut assimiler à une forme de **transformateur rotatif**. On excite un enroulement avec un signal alternatif, puis on récupère sur deux enroulements statoriques disposés à 90° deux tensions analogiques qui suivent respectivement les fonctions **sinus** et **cosinus** de la position angulaire.
+
+![RefRésolveur](https://github.com/user-attachments/assets/6f8526a8-23a1-48d9-869f-6dc513fedbf3)
 
 En théorie, le principe est simple. En pratique, cela signifie que toute la chaîne de commande dépend de la qualité de deux signaux analogiques qui doivent rester propres, équilibrés, bien déphasés et stables. Le calculateur peut ensuite reconstruire l’angle avec une relation du type :
 
@@ -82,6 +93,7 @@ C’est la raison pour laquelle un **défaut résolveur** peut parfaitement êtr
 # Premiers indices : le résolveur n’avait pas le profil d’un capteur vraiment mort
 
 Très tôt dans l’analyse, j’ai utilisé un **variateur industriel** comme source d’excitation pour faire des essais sur le résolveur. Le but n’était pas de faire tourner le moteur en charge, mais de disposer d’une excitation stable et de pouvoir **observer les voies SIN/COS en tournant le moteur à la main**. Cette méthode, très simple dans son principe, a été extrêmement utile.
+![Resolveur](https://github.com/user-attachments/assets/a94893ab-8467-47fa-949c-37ab147895f9)
 
 Elle m’a permis d’observer les niveaux de tension, de vérifier la présence des signaux, et surtout de constater quelque chose de très important : **les niveaux de tension SIN/COS étaient plus élevés avec un moteur correctement monté**, et, dans certaines configurations, le défaut disparaissait. Cette observation m’a tout de suite éloigné de l’hypothèse d’un résolveur purement détruit. Un capteur vraiment mort ne s’améliore pas parce que son environnement mécanique devient plus cohérent. En revanche, un capteur sain ou partiellement sain peut très bien devenir illisible si le **couplage magnétique** qu’il exploite n’est plus correctement assuré.
 
@@ -100,11 +112,15 @@ L’autre détail très important, qui confirme cette logique, est que **le coll
 Autrement dit, **le rotor a le droit de bouger axialement dans certaines limites**. Mais il doit bouger au bon endroit, de la bonne manière, et sous le contrôle du montage prévu pour cela.
 
 ![Eclaté Moteur](https://github.com/user-attachments/assets/43d58407-d6c4-4cc5-9ceb-88f91c37b893)
+![DocRENAULT](https://github.com/user-attachments/assets/7e9cdfb5-10ee-47e3-8ae5-c6f093f910f4)
+
+
 ---
 
 # Quand le montage prévu cesse de fonctionner : le rôle de l’oxydation
 
 Le problème apparaît lorsque le **roulement arrière**, celui qui devrait justement pouvoir accompagner ce mouvement, **se bloque**. Dans le moteur que j’ai ouvert, il y avait de l’**oxydation**. Cet élément n’est pas secondaire ; il fait partie du scénario de panne. L’oxydation, selon son emplacement et son niveau, peut transformer un organe qui devrait coulisser légèrement en un organe pratiquement figé. Si le roulement arrière n’est plus libre axialement, alors le rotor, lui, continue malgré tout à se dilater lorsqu’il chauffe.
+![oxyd](https://github.com/user-attachments/assets/2c224d88-78ca-41c7-b31d-306b5cc4de4c)
 
 Et c’est là que la logique du montage bascule. La dilatation thermique ne disparaît pas parce qu’un roulement est grippé. Elle se reporte. Si le **palier mobile** ne peut plus jouer son rôle, les contraintes vont se décharger ailleurs, en particulier sur le **palier fixe**, côté réducteur. Dans le cas présent, c’est exactement ce qui semble s’être produit : **le roulement arrière ne reculait plus, et c’est le roulement avant qui a commencé à se déplacer**.
 
@@ -123,6 +139,7 @@ C’est ce raisonnement qui a permis de sortir du diagnostic simpliste. Le défa
 # Les roulements : références, contraintes et choix de remplacement
 
 Les échanges et les observations m’ont permis d’identifier plusieurs références utiles. Côté transmission, le roulement d’origine était un **NTN 2TS2 - 6007NCM30PX31V71**, avec une **gorge extérieure pour circlip NR** et un montage adapté à une utilisation à haut régime, de l’ordre de **12 000 tr/min**. C’est important, parce qu’à cette vitesse il ne suffit pas de monter “un 6007 quelconque”. Le type de flasque, le jeu interne, la vitesse admissible et le mode de retenue dans le carter comptent réellement.
+![Roulement coté charbons](https://github.com/user-attachments/assets/fba2fe05-d9a9-4a0f-b0ee-5b156ef90991)
 
 Parmi les références envisagées ou utilisées en remplacement, on retrouve notamment :
 
@@ -142,6 +159,7 @@ Cette adaptation n’est pas anodine. Elle rappelle qu’une réparation sérieu
 # Loctite 638, Loctite 648 et logique de retenue
 
 Le choix d’un produit de retenue type **Loctite 638/648** répond ici à un besoin très concret : si le roulement de remplacement ne possède pas la rainure de retenue pour circlip, alors il faut reconstruire une fonction de maintien axial ou de tenue dans le carter. Un collage de frettage est une réponse classique dans l’industrie lorsqu’il s’agit de rattraper un montage ou de fiabiliser une retenue, à condition que l’on sache ce que l’on fait.
+![colle](https://github.com/user-attachments/assets/6e0a2cf9-7242-4bf9-b1f0-092cddbf6a6e)
 
 Cela implique toutefois un corollaire pratique : **pour démonter ultérieurement, il faut souvent chauffer**. Ce point est utile à mentionner, parce qu’il évite de considérer le collage comme une “astuce” sans conséquence. C’est un vrai choix d’assemblage, avec ses avantages et ses contraintes.
 
@@ -182,6 +200,9 @@ La réparation n’a donc pas consisté simplement à changer “le roulement qu
 
 Autrement dit, ce que j’ai réparé, ce n’est pas seulement un moteur. C’est la cohérence entre **thermique**, **mécanique** et **mesure de position**.
 
+Vue du collecteur du rotor après nettoyage et correction de la surface. La bosse trahissait un problème depuis longtemps
+![Bague Collecteur](ttps://github.com/user-attachments/assets/d38e012d-7504-48a9-9355-0c1ff25a3bcf)
+
 ---
 
 # Ce que cette panne m’a appris
@@ -216,20 +237,40 @@ Le résolveur n’était donc pas la cause première de la panne. Il en était l
 
 C’est précisément ce qui rend cette réparation intéressante : elle montre que sur un moteur de traction électrique, **la frontière entre mécanique et électronique n’existe pas vraiment**. L’une parle à travers l’autre. Et lorsque l’information devient fausse, il faut parfois commencer par regarder du côté du roulement.
 
+![CT](https://github.com/user-attachments/assets/71647c25-bb54-45ef-8249-e41e9dc268b7)
+
+Sur le trajet pour la revendre 2 ans plus tard!
+![Compteur](https://github.com/user-attachments/assets/d4cbeb4c-a408-4f4e-8dc7-4e14e1376119)
+
 ---
 
 # Références externes utiles
 
 Les points généraux sur la Zoé, les machines synchrones, le rotor bobiné, le résolveur et le calcul `atan2` peuvent être replacés dans un cadre plus large grâce aux ressources suivantes :
 
-- Renault Group, présentation du **moteur de Renault ZOE à rotor bobiné**
-- Renault Group, présentation de l’évolution des moteurs électriques du groupe
-- Wikipédia, **Renault Zoe**
-- Wikipédia, **Machine synchrone**
-- Wikipédia, **Rotor (électrotechnique)**
-- Wikipédia, **Résolveur (électrotechnique)**
-- Wikipédia, **atan2**
-- Tamagawa Seiki, documentation sur les **VR type resolver**
+- Renault Group, **Renault ZOE : moteur électrique à rotor bobiné**  
+  https://www.renaultgroup.com/magazine/energies-et-motorisation/le-moteur-de-renault-zoe-puissance-et-efficacite-energetique/
+
+- Renault Group, **Choix du rotor bobiné face aux aimants permanents**  
+  https://www.renaultgroup.com/en/magazine/energy-and-motorization/e7a-the-next-gen-electric-motor-developed-by-renault-and-valeo/
+
+- Wikipédia, **Renault Zoe**  
+  https://fr.wikipedia.org/wiki/Renault_Zoe
+
+- Wikipédia, **Machine synchrone**  
+  https://fr.wikipedia.org/wiki/Machine_synchrone
+
+- Wikipédia, **Rotor (électrotechnique)**  
+  https://fr.wikipedia.org/wiki/Rotor_%28%C3%A9lectrotechnique%29
+
+- Wikipédia, **Résolveur (électrotechnique)**  
+  https://fr.wikipedia.org/wiki/R%C3%A9solveur_%28%C3%A9lectrotechnique%29
+
+- Wikipédia, **atan2**  
+  https://fr.wikipedia.org/wiki/Atan2
+
+- Tamagawa Seiki, **VR type resolver**  
+  https://www.tamagawa-seiki.co.jp/products/resolver-synchro/vr-type-resolver-singlsyn-large.html
 
 ---
 
