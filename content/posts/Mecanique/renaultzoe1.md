@@ -7,7 +7,7 @@ cover:
   image: ""
 ---
 
-# Autopsie complète d’un moteur de Renault Zoé  
+# Autopsie complète d’un moteur de Renault Zoé 5AQ601
 ## Quand un défaut de résolveur cache un roulement bloqué
 
 J’ai acheté cette **Renault Zoé de 2016 directement en panne en concession Renault**, avec l’idée de comprendre ce qui avait réellement condamné le moteur. Le diagnostic posé dans le réseau orientait vers une solution simple sur le plan administratif, mais radicale sur le plan technique : **remplacer l’ensemble du groupe motopropulseur**. Dans un atelier constructeur, cette approche se comprend facilement. Le temps passé à investiguer un moteur de traction est coûteux, les procédures sont fortement cadrées, et la sécurité liée à la haute tension pousse naturellement vers l’échange standard plutôt que vers l’autopsie détaillée.
@@ -32,6 +32,9 @@ L’intérêt était double. D’un côté, il y avait une motivation évidente 
 Très rapidement, il m’est apparu que le défaut ne pouvait pas être traité correctement sans remonter à cette logique d’ensemble.
 
 J'ai d'abord commencé par reprendre le schéma de l'électronique moteur pour mieux comprendre les différents éléments, chargeur, onduleur, moteur, batterie...
+![SchémaElectronique](https://github.com/user-attachments/assets/18e0940c-7cc6-462d-99c3-be1de1b6028d)
+
+
 ![Schéma](https://github.com/user-attachments/assets/eaf1e4d1-d8a4-4dc4-83c0-0923f159fe42)
 
 ---
