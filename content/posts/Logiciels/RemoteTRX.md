@@ -1,7 +1,7 @@
 ---
 title: "remoteTRX1 : transformer un Raspberry Pi Zero W en passerelle radio distante"
 date: 2026-07-21
-draft: true
+draft: false
 description: "Tentative de réalisation d'une petite passerelle Web pour piloter et écouter un QMX+ ou un FT-991 à distance avec un Raspberry Pi Zero W."
 tags:
   - Raspberry Pi
