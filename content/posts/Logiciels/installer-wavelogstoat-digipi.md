@@ -10,6 +10,9 @@ tags:
   - WSJT-X
   - Wavelog
   - FT8
+cover:
+  image: "https://github.com/user-attachments/assets/056046c5-6652-41bd-81b4-b8bdc0b08666"
+
 ---
 
 Le but est d'envoyer automatiquement chaque QSO validé dans WSJT-X vers un journal Wavelog, sans export ni import manuel d'un fichier ADIF.
