@@ -1,6 +1,6 @@
 ---
 title: "Compiler Hamlib 4.7.2 sur DigiPi (ARMHF) pour supporter le Yaesu FTX-1"
-date: 2026-07-25
+date: 2026-07-24
 draft: false
 tags:
   - Hamlib
