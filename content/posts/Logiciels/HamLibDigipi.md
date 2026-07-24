@@ -9,6 +9,9 @@ tags:
   - Yaesu
   - FTX-1
   - WSJT-X
+cover:
+  image: "https://github.com/user-attachments/assets/8a9ff053-9feb-4779-ba4d-c3384b9610d4"
+
 ---
 
 # Compiler Hamlib 4.7.2 sur DigiPi (ARMHF)
