@@ -11,8 +11,9 @@ tags:
   - Hamlib
   - radioamateur
   - remote
-categories:
-  - Projets
+cover:
+  image: "https://github.com/user-attachments/assets/aceb6e01-cbb4-4684-b761-b1aa1396b25d"
+
 ---
 
 # remoteTRX1 : transformer un Raspberry Pi Zero W en passerelle radio distante
