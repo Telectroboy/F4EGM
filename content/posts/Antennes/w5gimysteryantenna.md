@@ -16,7 +16,7 @@ La **W5GI Mystery Antenna**, conçue par John P. Basilotto W5GI, est une antenne
 
 Cet article reprend les dimensions publiées pour la version multibande, les convertit en mètres et adapte la réalisation à du **RG58**, que W5GI indiquait comme utilisable électriquement à la place du RG8X.
 
-![Schéma général de la W5GI](<img width="1334" height="479" alt="image" src="https://github.com/user-attachments/assets/76d2cae2-da61-4b99-9399-73aa5a96a0ff" />)
+![Schéma général de la W5GI](https://github.com/user-attachments/assets/76d2cae2-da61-4b99-9399-73aa5a96a0ff)
 
 ## Dimensions de la version multibande
 
@@ -40,7 +40,7 @@ C'est le point à respecter soigneusement.
 
 À l'extrémité située **vers le bout de l'antenne**, l'âme et la tresse du RG58 sont reliées ensemble et raccordées au fil extérieur de 5,13 m.
 
-![Détail des raccordements RG58](<img width="1258" height="446" alt="image" src="https://github.com/user-attachments/assets/351be8fb-8ae8-4f30-a271-7f5198ce10a0" />)
+![Détail des raccordements RG58](https://github.com/user-attachments/assets/351be8fb-8ae8-4f30-a271-7f5198ce10a0)
 
 
 W5GI précise dans sa FAQ qu'il ne faut **pas appliquer le facteur de vélocité du RG58** à ces deux morceaux de coaxial. Les deux sections font donc bien **5,08 m de longueur physique**.
