@@ -7,9 +7,9 @@ description: "Construction en mètres d'une W5GI Mystery Antenna avec sections e
 tags: ["radioamateur", "antenne", "W5GI", "HF", "RG58", "DIY"]
 categories: ["Antennes"]
 cover:
-  image: <img width="736" height="540" alt="image" src="https://github.com/user-attachments/assets/7ea7a188-0350-4c49-8209-92a950fd9b08" />
+  image: "https://github.com/user-attachments/assets/7ea7a188-0350-4c49-8209-92a950fd9b08"
   alt: "Schéma de construction de l'antenne W5GI Mystery"
-  relative: true
+  relative: false
 ---
 
 La **W5GI Mystery Antenna**, conçue par John P. Basilotto W5GI, est une antenne filaire multibande d'environ 31 m. Elle ressemble à une G5RV, mais ses deux bras comportent chacun une section de câble coaxial qui fait partie de l'élément rayonnant. La conception est surtout pensée autour du **20 m**, tout en restant exploitable sur plusieurs bandes HF avec un coupleur si nécessaire.
