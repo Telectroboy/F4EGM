@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="500" viewBox="0 0 1400 500" role="img" aria-labelledby="title desc">
+  <title id="title">Schéma de la W5GI Mystery Antenna</title>
+  <desc id="desc">Antenne symétrique composée de fils et de deux sections RG58, alimentée au centre par une ligne symétrique.</desc>
+  <rect width="1400" height="500" fill="white"/>
+  <g stroke="#111" fill="none" stroke-width="5" stroke-linecap="round">
+    <line x1="80" y1="180" x2="270" y2="180"/>
+    <line x1="270" y1="180" x2="485" y2="180" stroke-width="16"/>
+    <line x1="485" y1="180" x2="700" y2="180"/>
+    <line x1="700" y1="180" x2="915" y2="180"/>
+    <line x1="915" y1="180" x2="1130" y2="180" stroke-width="16"/>
+    <line x1="1130" y1="180" x2="1320" y2="180"/>
+    <line x1="690" y1="190" x2="690" y2="405"/>
+    <line x1="710" y1="190" x2="710" y2="405"/>
+  </g>
+  <g fill="#111" font-family="sans-serif" text-anchor="middle">
+    <text x="175" y="145" font-size="28">Fil 5,13 m</text>
+    <text x="377" y="145" font-size="28">RG58 5,08 m</text>
+    <text x="592" y="145" font-size="28">Fil 5,23 m</text>
+    <text x="808" y="145" font-size="28">Fil 5,23 m</text>
+    <text x="1022" y="145" font-size="28">RG58 5,08 m</text>
+    <text x="1225" y="145" font-size="28">Fil 5,13 m</text>
+    <text x="700" y="448" font-size="28">Ligne symétrique, longueur électrique 1/2 onde sur 20 m</text>
+    <text x="700" y="65" font-size="36" font-weight="700">W5GI Mystery Antenna, environ 30,9 m</text>
+  </g>
+  <g fill="white" stroke="#111" stroke-width="4">
+    <circle cx="80" cy="180" r="14"/>
+    <circle cx="1320" cy="180" r="14"/>
+    <circle cx="700" cy="180" r="18"/>
+  </g>
+</svg>
