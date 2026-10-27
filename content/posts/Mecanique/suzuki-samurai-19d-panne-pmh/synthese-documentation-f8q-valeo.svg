@@ -30,5 +30,5 @@
   <text fill="#0d829a" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="bold" text-anchor="start" x="728" y="497">Compatibilité</text>
   <text fill="#132338" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" text-anchor="start" x="728" y="525">Référence cataloguée pour le Samurai 1.9 D.</text>
   <rect fill="#fff4e4" height="49" rx="10" ry="10" stroke="none" stroke-width="1" width="1235" x="62" y="688"/>
-  <text fill="#132338" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" text-anchor="start" x="82" y="719">650 Ω et 700 Ω : références documentaires différentes, pas deux mesures réalisées sur mon véhicule.</text>
+  <text fill="#132338" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" text-anchor="start" x="82" y="719">650 Ω (NT Renault) et 700 Ω (VALEO) : données documentaires ; mes mesures figurent ci-dessus.</text>
 </svg>

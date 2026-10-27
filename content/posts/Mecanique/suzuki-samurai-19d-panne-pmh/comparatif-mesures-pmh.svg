@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1260" height="544" viewBox="0 0 1260 544">
+<rect width="1260" height="544" fill="#ffffff" />
+<text x="56" y="63" fill="#132338" font-size="35" font-weight="bold" font-family="DejaVu Sans,Arial,sans-serif">Mesures sur les deux capteurs PMH</text>
+<text x="56" y="99" fill="#536477" font-size="18" font-family="DejaVu Sans,Arial,sans-serif">Comparaison de mes releves sur l ancien et le nouveau capteur</text>
+<rect x="54" y="138" width="548" height="233" rx="18" fill="#f9eeed" stroke="#d8c3c1" stroke-width="2"/>
+<rect x="652" y="138" width="554" height="233" rx="18" fill="#ebf6f2" stroke="#bfded2" stroke-width="2"/>
+<text x="86" y="187" fill="#73383a" font-size="24" font-weight="bold" font-family="DejaVu Sans,Arial,sans-serif">ANCIEN CAPTEUR</text>
+<text x="684" y="187" fill="#176148" font-size="24" font-weight="bold" font-family="DejaVu Sans,Arial,sans-serif">NOUVEAU VALEO 254017</text>
+<text x="85" y="286" fill="#732e30" font-size="66" font-weight="bold" font-family="DejaVu Sans,Arial,sans-serif">&gt; 2 MΩ</text>
+<text x="682" y="286" fill="#0c7051" font-size="67" font-weight="bold" font-family="DejaVu Sans,Arial,sans-serif">≈ 700 Ω</text>
+<text x="87" y="339" fill="#536477" font-size="18" font-family="DejaVu Sans,Arial,sans-serif">Tres sale, sans dommage apparent</text>
+<text x="683" y="339" fill="#536477" font-size="18" font-family="DejaVu Sans,Arial,sans-serif">Moteur fonctionnel apres remplacement</text>
+<rect x="54" y="405" width="1152" height="92" rx="16" fill="#eff4f8"/>
+<text x="82" y="444" fill="#132338" font-size="23" font-weight="bold" font-family="DejaVu Sans,Arial,sans-serif">Valeur du catalogue VALEO : 700 Ω</text>
+<text x="82" y="476" fill="#536477" font-size="18" font-family="DejaVu Sans,Arial,sans-serif">Le controle ohmique revele ici un ecart net ; il ne remplace pas un controle du signal en dynamique.</text>
+</svg>

@@ -1,126 +1,158 @@
 ---
-title: "Suzuki Samurai 1.9 D : une panne d'injection Lucas EPIC causée par le capteur PMH"
+title: "Suzuki Samurai 1.9 D : la pompe Lucas EPIC innocente, le capteur PMH coupé"
 date: 2026-10-27T21:30:00+01:00
+lastmod: 2026-10-27T22:30:00+01:00
 draft: false
 author: "F4EGM"
-description: "Retour d'expérience sur un Suzuki Samurai 1.9 D F8Q de 2001 : absence de démarrage, pompe Lucas EPIC suspectée, puis réparation avec un capteur PMH VALEO 254017 à 16 €."
-tags: ["Suzuki Samurai", "Renault F8Q", "Lucas EPIC", "capteur PMH", "injection diesel", "réparation"]
+description: "Suzuki Samurai 1.9 D F8Q de 2001 en panne : diagnostic de la pompe Lucas EPIC, capteur PMH ancien mesuré à plus de 2 MΩ, puis réparation avec un VALEO 254017 à 16 €. Photos et références réelles."
+tags: ["Suzuki Samurai", "Renault F8Q", "Lucas EPIC", "capteur PMH", "VALEO 254017", "injection diesel", "réparation"]
 ShowToc: true
 TocOpen: false
 cover:
   image: "couverture-samurai-pmh.png"
-  alt: "Schéma de principe : panne de démarrage du Suzuki Samurai 1.9 D et capteur PMH VALEO 254017"
+  alt: "Suzuki Samurai 1.9 D : diagnostic du capteur PMH et injection Lucas EPIC"
   relative: true
 ---
 
-Une panne de démarrage sur un **Suzuki Samurai 1.9 D de 2001**, équipé du moteur d'origine Renault **F8Q** et d'une pompe d'injection électronique **Lucas EPIC**, m'a d'abord orienté vers la pompe elle-même. Le gazole arrivait, mais je ne constatais pas de refoulement vers les injecteurs. Après plusieurs vérifications, le responsable s'est révélé être **le capteur de position du vilebrequin (PMH)**.
+Mon **Suzuki Samurai 1.9 D de 2001**, équipé du moteur diesel Renault **F8Q** et d'une pompe d'injection **Lucas EPIC**, refusait de redémarrer. Le gazole arrivait à la pompe, mais je ne constatais pas de débit vers les injecteurs. Tout orientait vers une panne de l'injection.
 
-**Résultat :** un **VALEO 254017**, acheté **16 € sur Amazon**, remplacé en quelques minutes. Depuis son remplacement, le moteur fonctionne de nouveau.
+Au final, il n'a fallu **ni remplacer ni faire réparer la pompe**. La panne venait du **capteur de position du vilebrequin (PMH)**. Un **VALEO 254017 acheté 16 € sur Amazon**, monté en quelques minutes, a permis au moteur de repartir.
 
-## Le véhicule et la panne
+La mesure électrique, effectuée sur l'ancien et le nouveau capteur, est particulièrement parlante : **plus de 2 MΩ pour le capteur hors service, contre environ 700 Ω pour le neuf**.
 
-| Élément | Identification |
+## Le véhicule et les symptômes
+
+| Élément | Référence / constat |
 |---|---|
-| Véhicule | Suzuki Samurai 1.9 D, première mise en circulation le 23 juillet 2001 |
+| Véhicule | Suzuki Samurai 1.9 D, mis en circulation le 23 juillet 2001 |
 | Type | SJS04 |
-| Moteur | Renault F8Q, référencé NF8Q dans certains catalogues de pièces Suzuki |
-| Injection | Pompe électronique Lucas EPIC, référence relevée R8640A111B |
-| Défaut | Arrêt / impossibilité de redémarrer, absence apparente de débit vers les injecteurs |
-| Cause confirmée par la réparation | Capteur PMH défectueux |
-| Réparation | Capteur VALEO 254017, 16 €, remplacement en quelques minutes |
+| Moteur | Renault F8Q diesel |
+| Pompe d'injection | Lucas EPIC, référence relevée **R8640A111B** |
+| Problème | Le moteur ne démarre plus ; gazole à l'arrivée de la pompe, aucun débit observé vers les injecteurs |
+| Pièce responsable | Capteur PMH / capteur de régime moteur |
+| Remplacement | **VALEO 254017**, 16 €, quelques minutes |
 
-![Suzuki Samurai de la même génération, photo illustrative d'un 1.9 TD de 2001](https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Suzuki_Samurai_II_1.9_TD_2001_%2814574149333%29.jpg/960px-Suzuki_Samurai_II_1.9_TD_2001_%2814574149333%29.jpg)
+![Mon Suzuki Samurai 1.9 D et sa remorque sur un pont artisanal en bois](samurai-pont-artisanal-premiere-vue.jpg)
 
-*Photo d'illustration d'un autre Suzuki Samurai, version **1.9 TD** et non mon 1.9 D. Auteur : [order_242, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Suzuki_Samurai_II_1.9_TD_2001_(14574149333).jpg), licence [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/). Image non retouchée.*
+*Mon Suzuki Samurai 1.9 D, photographié avec sa remorque sur un pont artisanal en rondins. Photo personnelle.*
 
-### Les symptômes observés
+![Vue générale de mon Suzuki Samurai et de sa remorque sur le pont](samurai-pont-artisanal-vue-generale.jpg)
 
-Le moteur ne redémarrait plus. Pourtant, l'alimentation en gazole et l'amorçage à la poire ne semblaient pas en cause. Les bougies de préchauffage avaient été contrôlées et l'antidémarrage paraissait fonctionner. En revanche, lors des essais, **le carburant ne semblait pas sortir de la pompe pour alimenter les injecteurs**.
+*Deuxième vue du même franchissement, montrant le 4×4, la remorque et l'ensemble du pont. Photo personnelle.*
 
-À la mise du contact, j'entendais un petit « tic ». Je pensais à l'électrovanne d'arrêt de la pompe, mais je n'avais pas identifié avec certitude l'organe à l'origine de ce bruit. Il aurait été abusif d'en conclure que l'électrovanne était bonne ou mauvaise.
+À la mise du contact, un petit *tic* était audible. J'avais pensé à l'électrovanne d'arrêt (*stop*) de la pompe, mais je n'avais pas déterminé avec certitude la provenance du bruit. Le simple fait d'entendre ce bruit ne permet pas de confirmer le fonctionnement de la commande d'injection.
 
-![Photographie d'un moteur Renault F8Q 1.9 diesel dans une Renault 19](https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Moteur_renault_19d.jpg/960px-Moteur_renault_19d.jpg)
+## La fausse piste de la pompe Lucas EPIC
 
-*Photo d'illustration d'un F8Q monté dans une Renault 19 en 1992 ; ce n'est ni mon moteur photographié ni le montage de pompe du Samurai. Auteur : [Manuel Lasnier, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Moteur_renault_19d.jpg), licence [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/). Image non retouchée.*
+L'EPIC est une pompe rotative à gestion électronique. Contrairement à une ancienne pompe mécanique, elle dépend de capteurs et d'électrovannes pilotées par un calculateur. Une anomalie peut donc donner l'impression que la pompe est défectueuse alors que le problème se situe à l'extérieur.
 
-## Pourquoi j'ai d'abord suspecté la pompe Lucas EPIC
+### Identification de la pompe
 
-Cette pompe ne se comporte pas comme une ancienne pompe diesel entièrement mécanique. Sur une Lucas EPIC, le calculateur pilote notamment le débit et l'avance au moyen d'électrovannes, en fonction des informations reçues de plusieurs capteurs.
+![Plaque réelle de la pompe Lucas EPIC R8640A111B](pompe-lucas-epic-r8640a111b.jpg)
 
-J'avais donc exploré la piste d'un problème interne de pompe, notamment celle du **capteur de position du rotor / tiroir de débit**. J'avais déposé puis reposé mécaniquement le petit bloc maintenu par deux vis, sans toucher au noyau ni aux cales. Cette intervention n'a pas résolu la panne.
+*Photo personnelle : plaque de la pompe montée sur mon Samurai, portant la référence **Lucas R8640A111B**, EPIC H11.027. L'image a été remise à l'horizontale pour faciliter la lecture.*
 
-**À ne pas confondre :** le capteur de position interne de la Lucas EPIC et le **capteur PMH du moteur** sont deux organes différents. La documentation Renault indique que les capteurs internes de position des tiroirs nécessitent des opérations spécialisées de calibration. **Je déconseille donc d'ouvrir la pompe pour un non-démarrage avant d'avoir contrôlé le signal PMH.**
+### Le capteur de rotor que j'avais suspecté
 
-## Le rôle du capteur PMH dans l'injection
+Lors des recherches, j'ai démonté le bloc du capteur de position du rotor, fixé par deux vis. Il porte la référence **Lucas 9160-114A**. Ce capteur fait partie de la pompe EPIC : il ne faut pas le confondre avec le capteur PMH du moteur.
 
-Le PMH est un capteur de régime et de position du vilebrequin. Son signal permet au calculateur de connaître la rotation du moteur et son repère angulaire. Sur cette génération d'injection électronique, une information de régime absente ou inexploitable peut perturber la commande d'injection.
+![Référence 9160-114A relevée sur le capteur de rotor de la pompe](capteur-rotor-epic-9160-114a.jpg)
 
-![Schéma de principe du capteur PMH, du calculateur et de la pompe Lucas EPIC](chaine-pmh-injection.png)
+*Photo personnelle : étiquette **9160-114A** sur le capteur de position de rotor de la pompe Lucas EPIC. L'étiquette correspond à une référence proposée pour les pompes EPIC phase III, dont la R8640A111B : [fiche technique du fournisseur](https://www.liron.fr/capteur-rotor-lucas-epic-iii-9160-114a-rp-c2x40472778).*
 
-*Schéma fonctionnel original. Il explique la relation entre les organes, mais ne représente pas le câblage réel du Samurai. L'absence de commande d'injection est une interprétation compatible avec les symptômes, pas une mesure électrique que j'aurais faite sur ce véhicule.*
+**Un essai pouvait induire en erreur.** En ouvrant ce logement, puis en actionnant le démarreur, du gazole en sortait. J'ai pensé que cela pouvait signifier que la vanne de stop était ouverte. En réalité, **cet écoulement ne suffit pas à démontrer que l'électrovanne d'arrêt fonctionne correctement**, ni que la pompe refoule vers les injecteurs. Il indique seulement que du carburant était présent dans la partie ouverte de la pompe lors de l'essai.
 
-![Capteur de vilebrequin inductif générique ouvert et représenté en coupe](https://upload.wikimedia.org/wikipedia/commons/7/7c/Crankshaft_sensor.png)
+> **Attention :** je rapporte cet essai pour expliquer le diagnostic, **pas comme une méthode à reproduire**. Ouvrir la pompe expose à des fuites et à l'introduction d'impuretés. Le fournisseur précise que le capteur de rotor 9160-114A nécessite un paramétrage au banc après remplacement.
 
-*Illustration générique d'un capteur inductif : (1) bobine, (2) noyau en fer doux, (3) aimant, (4) connexion électrique. Ce n'est **pas** une coupe du VALEO 254017. Auteur : [Tamasflex, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Crankshaft_sensor.png), licence [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/). Image non retouchée.*
+## Le capteur PMH était le véritable responsable
 
-## La pièce : VALEO 254017
+Le capteur PMH est fixé sur un support face au **volant moteur**, à proximité de la jonction moteur-boîte. Il renseigne le calculateur sur le régime et la position du vilebrequin. Sur l'injection Lucas EPIC, une absence de signal exploitable peut empêcher une commande d'injection normale.
 
-![Photographie de la pièce VALEO 254017, capteur PMH deux broches avec bride métallique](https://media.pkwteile.de/360_photos/9386186/h-preview.jpg)
+![Photo réelle du nouveau capteur PMH en place face au volant moteur](pmh-nouveau-detail.jpg)
 
-*Photographie commerciale du **VALEO 254017** diffusée sur [Piècesauto24](https://www.piecesauto24.com/valeo/9386186). Elle montre la référence de remplacement, pas le capteur que j'ai déposé. Image externe, propriété de son ayant droit ; autorisation de reproduction non vérifiée.*
+*Photo personnelle : **nouveau VALEO 254017 monté** sur mon Samurai, en regard du volant moteur. Le capteur est la pièce noire au centre de l'image, près de son faisceau et de sa fixation.*
 
-J'ai retenu le **VALEO 254017**, annoncé compatible avec le Samurai 1.9 D / NF8Q dans les catalogues de pièces. Il se présente comme un capteur **inductif à deux voies**, avec prise ronde, sans câble intégré. La fiche commerciale indique une résistance nominale de **700 Ω**.
+[Voir la photo originale en plan large de l'emplacement du capteur](pmh-nouveau-vue-ensemble.jpg).
 
-![Synthèse illustrée de la fiche technique du VALEO 254017](fiche-valeo-254017.png)
+![Schéma de principe : capteur PMH, calculateur et injection Lucas EPIC](chaine-pmh-injection.png)
 
-*Dessin original indicatif : pour voir la forme exacte de la pièce, consulter la [fiche produit VALEO 254017 chez Oscaro](https://www.oscaro.com/generateur-dimpulsions-vilebrequin-valeo-254017-9246948-833-p). La mention « 12 V » dans les catalogues correspond à l'application automobile ; **elle ne signifie pas qu'il faut alimenter directement les deux broches de ce capteur inductif en 12 V.***
+*Schéma fonctionnel original, non contractuel : il ne s'agit pas du câblage électrique spécifique au Suzuki SJS04.*
 
-Quelques références constructeur rapprochées du VALEO 254017 dans les catalogues : **Suzuki 33957-84A02-000**, **Renault 8201040861**. Ces équivalences servent à rechercher la pièce, mais ne remplacent pas la vérification du connecteur et du montage sur le véhicule concerné.
+### Les mesures qui ont tranché
 
-## Ce qu'apporte la documentation technique
+J'ai mesuré la résistance électrique des deux capteurs :
 
-J'ai retrouvé la **note technique Renault NT 3163A, janvier 1999**, relative au moteur **F8Q 622** équipé de la pompe **Lucas EPIC**. Ce document concerne une application Renault : il éclaire le fonctionnement de l'injection, **mais ne constitue pas le manuel d'atelier spécifique au Suzuki SJS04**.
+| Mesure aux deux bornes | Valeur relevée |
+|---|---:|
+| **Ancien PMH** | **Plus de 2 MΩ** |
+| **Nouveau PMH VALEO 254017** | **Environ 700 Ω** |
+| **Valeur donnée par la fiche VALEO** | **700 Ω** |
 
-Dans ce document :
+![Comparaison des mesures réelles sur le capteur défectueux et sur le nouveau](comparatif-mesures-pmh.png)
 
-- **Page 13-2 :** la résistance du capteur de régime est indiquée à **environ 650 Ω** pour cette application.
-- **Pages 13-7 et 13-8 :** le capteur de régime / PMH est identifié séparément de la pompe d'injection EPIC.
-- **Page 13-10 :** un défaut de capteur de régime figure parmi les anomalies susceptibles d'allumer le témoin d'injection.
-- **Page 13-3 :** les capteurs de position internes des tiroirs de la pompe EPIC sont décrits comme des organes dont la position est calibrée avec un équipement spécialisé.
+Le vieux capteur était **très sale**, mais ne présentait **aucune détérioration évidente à l'œil nu**. Son absence de continuité normale ne pouvait pas être déduite de son apparence. En comparaison, la valeur du capteur neuf correspond à la résistance indiquée dans le catalogue du fabricant.
 
-![Extraits documentaires sous forme de synthèse redessinée](synthese-documentation-f8q-valeo.png)
+Cette mesure sur l'ancien capteur est **compatible avec une coupure du bobinage ou un problème de continuité électrique**. Elle ne permet pas de localiser précisément la rupture à l'intérieur de la pièce. Dans mon cas, le redémarrage après remplacement confirme la piste du PMH.
 
-*Synthèse originale de deux sources : [NT Renault 3163A, moteur F8Q 622 / Lucas EPIC](https://pdfcoffee.com/3163a-particularites-moteur-f8q-622-pdf-free.html) et [fiche VALEO 254017](https://www.oscaro.com/generateur-dimpulsions-vilebrequin-valeo-254017-9246948-833-p). Les planches originales Renault ne sont pas reproduites.*
+Le contrôle à l'ohmmètre est utile pour déceler une coupure franche comme ici. **Une résistance proche de 700 Ω ne suffit toutefois pas à prouver qu'un capteur produit un signal correct pendant le lancement du moteur** : un contrôle dynamique peut rester nécessaire en cas de panne intermittente.
 
-Il faut éviter de transformer ces **650 Ω** et **700 Ω** en un seuil universel de diagnostic. Le premier chiffre vient d'un document d'atelier pour une application F8Q précise ; le second est une caractéristique catalogue de la référence VALEO. **Je n'ai pas effectué de relevé comparatif publié de résistance sur mon ancien capteur et sur le nouveau.**
+### La pièce choisie : VALEO 254017
 
-## Comment vérifier cette piste avant de démonter la pompe
+![Photographie commerciale du capteur de vilebrequin VALEO 254017](https://media.pkwteile.de/360_photos/9386186/h-preview.jpg)
 
-Pour un véhicule présentant les mêmes symptômes, l'ordre de vérification le plus logique est le suivant :
+*Photo catalogue du **VALEO 254017** : [Piècesauto24](https://www.piecesauto24.com/valeo/9386186). Image distante, droits de republication non vérifiés ; la photo n'est pas copiée dans les fichiers du site.*
 
-1. Vérifier que le démarreur entraîne correctement le moteur, puis contrôler l'alimentation électrique générale et l'arrivée de gazole, sans intervenir sur les conduites haute pression moteur tournant.
-2. Repérer le **capteur PMH près du volant moteur / de la jonction moteur-boîte**. Sa position exacte et l'accès peuvent varier selon le montage ; vérifier sur le véhicule avant toute dépose.
-3. Contact coupé et capteur débranché, mesurer la résistance entre ses **deux broches**. Une coupure franche ou un court-circuit constituent des indices ; une valeur voisine de la nominale **ne prouve pas à elle seule que le capteur fonctionne au démarrage**.
-4. Si le doute subsiste, contrôler le signal pendant l'entraînement au démarreur avec un oscilloscope adapté, ainsi que l'état du connecteur et du faisceau.
-5. Ne s'intéresser aux organes internes de la Lucas EPIC qu'après avoir éliminé ces causes externes simples.
+Le modèle commandé est un **capteur inductif deux broches**, sans câble intégré, avec une prise ronde. Sa **résistance nominale est de 700 Ω**, ce qui concorde avec ma mesure sur la pièce neuve. Le VALEO 254017 figure aussi dans les catalogues pour le Suzuki Samurai 1.9 D (NF8Q) de cette période.
 
-Je n'ai pas relevé ni conservé de valeur électrique de l'ancien capteur dans ce cas précis : **le diagnostic est confirmé ici par le retour au fonctionnement après remplacement**.
+![Fiche illustrée de la référence VALEO 254017](fiche-valeo-254017.png)
 
-## Remplacement et résultat
+*Illustration technique originale ; elle n'est pas un dessin constructeur. La mention catalogue « 12 V » désigne l'application véhicule, pas une tension à appliquer sur les deux bornes d'un capteur inductif passif.*
 
-J'ai commandé le **VALEO 254017 sur Amazon pour 16 €**. Le changement a pris **quelques minutes** et, une fois le capteur remplacé, **le moteur a de nouveau fonctionné**. Je n'ai eu à remplacer ni la pompe Lucas EPIC ni le calculateur d'injection.
+## Ce que dit la documentation Renault
 
-Ce retour d'expérience est intéressant pour une raison précise : l'absence apparente de refoulement de gazole peut orienter à tort vers la pompe elle-même, alors que **l'information de régime moteur** fait partie des conditions nécessaires au fonctionnement de l'injection électronique.
+La **note technique Renault NT 3163A**, publiée en janvier 1999, traite le **F8Q 622 avec pompe Lucas EPIC**. Elle n'est pas le manuel d'atelier du Samurai SJS04, mais apporte des repères utiles :
 
-**Conclusion :** sur un Samurai 1.9 D / F8Q avec Lucas EPIC qui refuse de démarrer, je commencerais par contrôler le capteur PMH et son faisceau **avant** d'envisager une réparation de pompe d'injection.
+- **Page 13-2** : résistance du capteur de régime de cette application Renault, **environ 650 Ω**.
+- **Pages 13-7 et 13-8** : distinction entre le **capteur PMH du moteur** et la **pompe Lucas EPIC**.
+- **Page 13-10** : mention des anomalies de régime moteur parmi les défauts d'injection.
+- **Page 13-3** : capteurs internes de position de la pompe, dont les interventions requièrent des précautions et des opérations spécialisées.
 
-## Sources et crédits
+![Synthèse des informations documentaires Renault et VALEO](synthese-documentation-f8q-valeo.png)
 
-- [Renault, NT 3163A (janvier 1999), F8Q 622 / Lucas EPIC](https://pdfcoffee.com/3163a-particularites-moteur-f8q-622-pdf-free.html), sections 13-2, 13-3, 13-7, 13-8 et 13-10. Document technique comparatif, reproduction des planches non autorisée sans accord.
-- [VALEO 254017 : fiche technique chez Oscaro](https://www.oscaro.com/generateur-dimpulsions-vilebrequin-valeo-254017-9246948-833-p), technologie, connectique et résistance catalogue.
-- [Catalogue Suzuki Samurai 1.9 D / NF8Q chez Piècesauto](https://www.piecesauto.fr/marque-automobile/pieces-detachees-suzuki/samurai-sj/25511/15032/capteur-pmh.html), plage d'application et référence de capteur.
-- [Équivalences constructeur VALEO 254017 chez Motointegrator](https://www.motointegrator.fr/produits/1400974-capteur-de-vilebrequin-valeo-254017).
-- Photos libres Wikimedia Commons : [Suzuki Samurai 1.9 TD 2001](https://commons.wikimedia.org/wiki/File:Suzuki_Samurai_II_1.9_TD_2001_(14574149333).jpg) (order_242, CC BY-SA 2.0), [moteur Renault F8Q](https://commons.wikimedia.org/wiki/File:Moteur_renault_19d.jpg) (Manuel Lasnier, CC BY-SA 2.5), et [coupe générique d'un capteur inductif](https://commons.wikimedia.org/wiki/File:Crankshaft_sensor.png) (Tamasflex, CC BY-SA 3.0).
-- [Piècesauto24 : photographie commerciale du VALEO 254017](https://www.piecesauto24.com/valeo/9386186). La photographie est appelée depuis le serveur tiers, sans copie locale ; son autorisation de republication n'est pas établie.
-- [Photographies de la pompe d'injection R8640A111B chez Eurofrance](https://eurofrance.cz/vstrikovaci-cerpadlo-delphi-r8640a111b-7700115073-epic-19d-f8q-renault.html) (illustration d'une pompe portant la même référence, sans copie des photos).
-- Schémas et synthèses graphiques : illustrations originales réalisées pour cet article, **non assimilables à des extraits graphiques constructeur**.
+*Synthèse graphique originale, non extraite du document constructeur. Source : [NT Renault 3163A, moteur F8Q 622](https://pdfcoffee.com/3163a-particularites-moteur-f8q-622-pdf-free.html), et fiche [VALEO 254017](https://www.piecesauto24.com/valeo/9386186).*
+
+Les **650 Ω** de la note Renault et les **700 Ω** de la fiche VALEO sont **deux données documentaires**, applicables à des références ou configurations différentes. Mes propres mesures sont bien celles présentées plus haut : **plus de 2 MΩ** sur l'ancien et **environ 700 Ω** sur le nouveau.
+
+![Vue de principe d'un capteur PMH inductif en coupe](https://upload.wikimedia.org/wikipedia/commons/7/7c/Crankshaft_sensor.png)
+
+*Coupe générique d'un capteur inductif, et non coupe du VALEO 254017 : bobine, noyau, aimant et raccordement. [Tamasflex, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Crankshaft_sensor.png), [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/).*
+
+## Réparation et résultat
+
+J'ai acheté le **VALEO 254017 sur Amazon pour 16 €**. La dépose de l'ancien capteur et la pose du nouveau n'ont pris que **quelques minutes**. Une fois le capteur remonté et connecté, **le moteur a redémarré et fonctionne de nouveau**.
+
+La pompe Lucas EPIC **R8640A111B** est restée en place. Il n'a pas été nécessaire de la remplacer.
+
+### Comment j'aborderais aujourd'hui la même panne
+
+Sur un Samurai F8Q avec injection EPIC et moteur qui ne démarre plus, je vérifierais désormais le **PMH et sa connectique avant de déposer le moindre composant interne de la pompe** :
+
+1. Contrôler l'état du connecteur du capteur et de son faisceau, contact coupé.
+2. Capteur débranché, mesurer sa résistance entre les deux broches ; une valeur de plusieurs mégohms comme ici est anormale pour la référence VALEO 254017.
+3. Vérifier l'implantation et la fixation du capteur en regard du volant moteur.
+4. Si la résistance paraît normale, rechercher une panne de faisceau ou mesurer le signal au démarreur avec un oscilloscope adapté.
+5. Ensuite seulement, si nécessaire, poursuivre le diagnostic vers le calculateur, la commande de stop ou la pompe.
+
+Cette méthode ne remplace pas un diagnostic complet et ne signifie pas que toutes les pannes de Lucas EPIC proviennent du PMH. Elle aurait simplement permis, dans mon cas, d'éviter de commencer par le démontage de la pompe.
+
+**Bilan : une panne immobilisante, une pièce à 16 €, et quelques minutes pour remettre en route le Samurai. Le capteur HS ne paraissait pas cassé ; c'est la mesure de résistance qui a fait la différence.**
+
+## Sources, documents et crédits photographiques
+
+- [Renault, note technique NT 3163A (1999), F8Q 622 et Lucas EPIC](https://pdfcoffee.com/3163a-particularites-moteur-f8q-622-pdf-free.html), pages 13-2, 13-3, 13-7, 13-8, 13-10. Application Renault distincte du montage Suzuki.
+- [VALEO 254017, fiche catalogue Piècesauto24](https://www.piecesauto24.com/valeo/9386186) : capteur inductif, deux broches, 700 Ω.
+- [Suzuki Samurai 1.9 D : catalogue des capteurs PMH](https://www.pieces24.be/suzuki/samurai-sj/25511/15032/capteur-pmh), application NF8Q.
+- [Lucas EPIC III, capteur rotor 9160-114A](https://www.liron.fr/capteur-rotor-lucas-epic-iii-9160-114a-rp-c2x40472778), référence et nécessité de paramétrage au banc.
+- Photographies personnelles : **mon Suzuki Samurai avec sa remorque sur un pont artisanal (deux vues), le capteur PMH monté, la plaque de pompe Lucas EPIC et la référence du capteur de rotor**. Certaines vues techniques ont été recadrées ou réorientées.
+- Illustration Wikimedia Commons : [coupe de capteur inductif](https://commons.wikimedia.org/wiki/File:Crankshaft_sensor.png) (Tamasflex, CC BY-SA 3.0).
+- Schémas, figures et synthèses : dessins originaux créés pour cet article, non reproductions de planches Renault.
