@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 720" role="img" aria-label="Diagramme de diagnostic huile dans le liquide de refroidissement">
+<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9Z" fill="#405873"/></marker></defs>
+<rect width="1400" height="720" rx="32" fill="#f8fafc"/>
+<text x="66" y="78" font-family="DejaVu Sans,Arial,sans-serif" font-size="36" font-weight="700" fill="#172a40">Huile dans le liquide de refroidissement</text>
+<text x="66" y="115" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#435770">Deux pistes à départager ; aucun diagnostic encore établi sur ce Samurai</text>
+<g font-family="DejaVu Sans,Arial,sans-serif" font-size="24" text-anchor="middle">
+ <rect x="430" y="160" width="540" height="95" rx="18" fill="#dbeafe" stroke="#8ab6ec" stroke-width="2"/>
+ <text x="700" y="199" fill="#1b3753" font-weight="700">1. Confirmer la contamination</text><text x="700" y="228" font-size="17" fill="#39556e">Dépôt gras, niveau huile, niveau LDR, historique</text>
+ <path d="M700 257 V300" stroke="#405873" stroke-width="3" marker-end="url(#arrow)" fill="none"/>
+ <rect x="430" y="306" width="540" height="92" rx="18" fill="#e2e8f0" stroke="#a7b5c5" stroke-width="2"/>
+ <text x="700" y="345" font-weight="700" fill="#1b3753">2. Contrôler le circuit à froid</text><text x="700" y="373" font-size="17" fill="#39556e">Essai de pression LDR, durites et signes de gaz</text>
+ <path d="M700 400 V452" stroke="#405873" stroke-width="3" marker-end="url(#arrow)" fill="none"/>
+ <path d="M700 440 H310 V477" stroke="#405873" stroke-width="3" marker-end="url(#arrow)" fill="none"/>
+ <path d="M700 440 H1090 V477" stroke="#405873" stroke-width="3" marker-end="url(#arrow)" fill="none"/>
+ <rect x="80" y="480" width="470" height="166" rx="20" fill="#eff6ff" stroke="#9db8d9" stroke-width="2"/>
+ <text x="315" y="524" font-weight="700" fill="#1d466f">Piste échangeur eau / huile</text>
+ <text x="315" y="566" font-size="18" fill="#344f6b">Confirmer sa présence</text><text x="315" y="594" font-size="18" fill="#344f6b">et l'isoler ou le tester déposé</text><text x="315" y="621" font-size="17" fill="#344f6b">sans interrompre le circuit d'huile</text>
+ <rect x="850" y="480" width="470" height="166" rx="20" fill="#fff7ed" stroke="#ddb889" stroke-width="2"/>
+ <text x="1085" y="524" font-weight="700" fill="#854d0e">Piste joint / culasse / bloc</text>
+ <text x="1085" y="566" font-size="18" fill="#79511e">Gaz de combustion dans le LDR,</text><text x="1085" y="594" font-size="18" fill="#79511e">compression / fuite cylindres,</text><text x="1085" y="621" font-size="17" fill="#79511e">puis examen ciblé</text>
+</g>
+<text x="70" y="680" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#42526a">Schéma de raisonnement, non procédure constructeur. Travailler moteur froid et respecter la pression de test prescrite.</text>
+</svg>
