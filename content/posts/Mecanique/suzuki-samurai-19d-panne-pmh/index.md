@@ -13,8 +13,9 @@ cover:
   alt: "Suzuki Samurai 1.9 D : diagnostic du capteur PMH et injection Lucas EPIC"
   relative: true
 ---
+Mon père est tombé en panne avec son Suzuki Samurai de 2001 équipé d'un moteur Renault 1.9D F8Q avec pompe a gasoil EPIC Lucas Phase 3 'III'
 
-Mon **Suzuki Samurai 1.9 D de 2001**, équipé du moteur diesel Renault **F8Q** et d'une pompe d'injection **Lucas EPIC**, refusait de redémarrer. Le gazole arrivait à la pompe, mais je ne constatais pas de débit vers les injecteurs. Tout orientait vers une panne de l'injection.
+Le **Suzuki Samurai 1.9 D de 2001**, équipé du moteur diesel Renault **F8Q** et d'une pompe d'injection **Lucas EPIC**, refusait de redémarrer. Le gazole arrivait à la pompe, mais je ne constatais pas de débit vers les injecteurs. Tout orientait vers une panne de l'injection.
 
 Au final, il n'a fallu **ni remplacer ni faire réparer la pompe**. La panne venait du **capteur de position du vilebrequin (PMH)**. Un **VALEO 254017 acheté 16 € sur Amazon**, monté en quelques minutes, a permis au moteur de repartir.
 
@@ -32,11 +33,11 @@ La mesure électrique, effectuée sur l'ancien et le nouveau capteur, est partic
 | Pièce responsable | Capteur PMH / capteur de régime moteur |
 | Remplacement | **VALEO 254017**, 16 €, quelques minutes |
 
-![Mon Suzuki Samurai 1.9 D et sa remorque sur un pont artisanal en bois](samurai-pont-artisanal-premiere-vue.jpg)
+![Suzuki Samurai 1.9 D et sa remorque sur un pont artisanal en bois](samurai-pont-artisanal-premiere-vue.jpg)
 
-*Mon Suzuki Samurai 1.9 D, photographié avec sa remorque sur un pont artisanal en rondins. Photo personnelle.*
+*Suzuki Samurai 1.9 D, photographié avec sa remorque sur un pont artisanal en rondins. Photo personnelle.*
 
-![Vue générale de mon Suzuki Samurai et de sa remorque sur le pont](samurai-pont-artisanal-vue-generale.jpg)
+![Vue générale du Suzuki Samurai et de sa remorque sur le pont](samurai-pont-artisanal-vue-generale.jpg)
 
 *Deuxième vue du même franchissement, montrant le 4×4, la remorque et l'ensemble du pont. Photo personnelle.*
 
@@ -50,7 +51,7 @@ L'EPIC est une pompe rotative à gestion électronique. Contrairement à une anc
 
 ![Plaque réelle de la pompe Lucas EPIC R8640A111B](pompe-lucas-epic-r8640a111b.jpg)
 
-*Photo personnelle : plaque de la pompe montée sur mon Samurai, portant la référence **Lucas R8640A111B**, EPIC H11.027. L'image a été remise à l'horizontale pour faciliter la lecture.*
+*Photo personnelle : plaque de la pompe montée sur le Samurai, portant la référence **Lucas R8640A111B**, EPIC H11.027. L'image a été remise à l'horizontale pour faciliter la lecture.*
 
 ### Le capteur de rotor que j'avais suspecté
 
@@ -70,7 +71,7 @@ Le capteur PMH est fixé sur un support face au **volant moteur**, à proximité
 
 ![Photo réelle du nouveau capteur PMH en place face au volant moteur](pmh-nouveau-detail.jpg)
 
-*Photo personnelle : **nouveau VALEO 254017 monté** sur mon Samurai, en regard du volant moteur. Le capteur est la pièce noire au centre de l'image, près de son faisceau et de sa fixation.*
+*Photo personnelle : **nouveau VALEO 254017 monté** sur le Samurai, en regard du volant moteur. Le capteur est la pièce noire au centre de l'image, près de son faisceau et de sa fixation.*
 
 [Voir la photo originale en plan large de l'emplacement du capteur](pmh-nouveau-vue-ensemble.jpg).
 
