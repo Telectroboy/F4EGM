@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xlink="http://www.w3.org/1999/xlink" baseProfile="full" height="680px" version="1.1" viewBox="0 0 1360 680" width="1360px">
+  <defs/>
+  <rect fill="#ffffff" height="680" width="1360" x="0" y="0"/>
+  <text fill="#132338" font-family="DejaVu Sans,Arial,sans-serif" font-size="43" font-weight="bold" text-anchor="start" x="65" y="82">Pièce utilisée : VALEO 254017</text>
+  <text fill="#536477" font-family="DejaVu Sans,Arial,sans-serif" font-size="23" font-weight="normal" text-anchor="start" x="65" y="120">Capteur PMH / capteur de régime du vilebrequin</text>
+  <rect fill="#f4f7f9" height="465" rx="24" ry="24" stroke="#dce4e9" stroke-width="2" width="590" x="65" y="155"/>
+  <text fill="#536477" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="normal" text-anchor="start" x="107" y="199">Dessin indicatif</text>
+  <polygon fill="#aab9c2" points="170,341 497,286 523,310 206,385" stroke="#7a939f" stroke-width="4"/>
+  <polygon fill="#97a9b4" points="185,403 500,457 517,433 205,360" stroke="#728994" stroke-width="4"/>
+  <ellipse cx="199" cy="355" fill="#e2e9ed" rx="14" ry="9" stroke="#627887" stroke-width="3"/>
+  <ellipse cx="490" cy="302" fill="#e2e9ed" rx="14" ry="9" stroke="#627887" stroke-width="3"/>
+  <ellipse cx="203" cy="397" fill="#e2e9ed" rx="14" ry="9" stroke="#627887" stroke-width="3"/>
+  <ellipse cx="494" cy="445" fill="#e2e9ed" rx="14" ry="9" stroke="#627887" stroke-width="3"/>
+  <rect fill="#262c33" height="122" rx="28" ry="28" stroke="#47515b" stroke-width="3" width="258" x="215" y="313"/>
+  <ellipse cx="474" cy="376" fill="#171d24" rx="32" ry="58" stroke="#64727d" stroke-width="5"/>
+  <circle cx="490" cy="376" fill="#c1d1d9" r="8"/>
+  <polygon fill="#303b45" points="216,340 152,333 149,402 220,409" stroke="#657786" stroke-width="4"/>
+  <rect fill="#202b35" height="65" rx="11" ry="11" stroke="#657786" stroke-width="3" width="74" x="103" y="338"/>
+  <path d="M90 490 L203 416" fill="none" stroke="#d77d1b" stroke-width="3"/>
+  <text fill="#132338" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="normal" text-anchor="start" x="93" y="522">Connecteur</text>
+  <path d="M513 409 L547 500" fill="none" stroke="#d77d1b" stroke-width="3"/>
+  <text fill="#132338" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" font-weight="normal" text-anchor="middle" x="545" y="528">Tête de lecture</text>
+  <rect fill="#f4f7f9" height="64" rx="13" ry="13" stroke="none" stroke-width="1" width="600" x="699" y="168"/>
+  <text fill="#536477" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" font-weight="bold" text-anchor="start" x="722" y="193">TYPE</text>
+  <text fill="#132338" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="bold" text-anchor="start" x="722" y="219">Inductif, 2 broches</text>
+  <rect fill="#f4f7f9" height="64" rx="13" ry="13" stroke="none" stroke-width="1" width="600" x="699" y="244"/>
+  <text fill="#536477" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" font-weight="bold" text-anchor="start" x="722" y="269">PRISE</text>
+  <text fill="#132338" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="bold" text-anchor="start" x="722" y="295">Ronde, sans câble</text>
+  <rect fill="#f4f7f9" height="64" rx="13" ry="13" stroke="none" stroke-width="1" width="600" x="699" y="320"/>
+  <text fill="#536477" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" font-weight="bold" text-anchor="start" x="722" y="345">RÉSISTANCE NOMINALE</text>
+  <text fill="#132338" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="bold" text-anchor="start" x="722" y="371">700 Ω (fiche produit)</text>
+  <rect fill="#f4f7f9" height="64" rx="13" ry="13" stroke="none" stroke-width="1" width="600" x="699" y="396"/>
+  <text fill="#536477" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" font-weight="bold" text-anchor="start" x="722" y="421">TENSION INDIQUÉE</text>
+  <text fill="#132338" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="bold" text-anchor="start" x="722" y="447">12 V (réseau véhicule)</text>
+  <rect fill="#f4f7f9" height="64" rx="13" ry="13" stroke="none" stroke-width="1" width="600" x="699" y="472"/>
+  <text fill="#536477" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" font-weight="bold" text-anchor="start" x="722" y="497">EAN</text>
+  <text fill="#132338" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="bold" text-anchor="start" x="722" y="523">3276422540173</text>
+  <rect fill="#eaf6fa" height="64" rx="13" ry="13" stroke="none" stroke-width="1" width="600" x="699" y="548"/>
+  <text fill="#536477" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" font-weight="bold" text-anchor="start" x="722" y="573">COÛT DE MA RÉPARATION</text>
+  <text fill="#147e65" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="bold" text-anchor="start" x="722" y="599">16 € · Amazon</text>
+  <text fill="#ba3c4b" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" font-weight="normal" text-anchor="start" x="700" y="654">La valeur 12 V n’est pas une consigne d’alimentation du capteur passif.</text>
+</svg>

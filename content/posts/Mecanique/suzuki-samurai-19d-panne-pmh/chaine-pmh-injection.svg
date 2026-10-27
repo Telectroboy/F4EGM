@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xlink="http://www.w3.org/1999/xlink" baseProfile="full" height="680px" version="1.1" viewBox="0 0 1360 680" width="1360px">
+  <defs/>
+  <rect fill="#ffffff" height="680" width="1360" x="0" y="0"/>
+  <text fill="#132338" font-family="DejaVu Sans,Arial,sans-serif" font-size="35" font-weight="bold" text-anchor="start" x="62" y="79">Pourquoi un PMH peut empêcher le démarrage</text>
+  <text fill="#536477" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="normal" text-anchor="start" x="62" y="119">Schéma fonctionnel simplifié · non extrait d’un plan électrique Suzuki</text>
+  <rect fill="#f4f7f9" height="290" rx="18" ry="18" stroke="#dce4e9" stroke-width="2" width="274" x="62" y="178"/>
+  <rect fill="#d9edf1" height="40" rx="13" ry="13" stroke="none" stroke-width="1" width="58" x="86" y="197"/>
+  <text fill="#0d829a" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="bold" text-anchor="middle" x="115" y="225">01</text>
+  <text fill="#132338" font-family="DejaVu Sans,Arial,sans-serif" font-size="23" font-weight="bold" text-anchor="start" x="85" y="293">VOLANT MOTEUR</text>
+  <text fill="#536477" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" font-weight="normal" text-anchor="start" x="85" y="341">Une cible tourne avec le</text>
+  <text fill="#536477" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" font-weight="normal" text-anchor="start" x="85" y="371">vilebrequin.</text>
+  <line stroke="#0d829a" stroke-linecap="round" stroke-width="7" x1="337" x2="381" y1="325" y2="325"/>
+  <polygon fill="#0d829a" points="380,315 392,325 380,336"/>
+  <rect fill="#f4f7f9" height="290" rx="18" ry="18" stroke="#dce4e9" stroke-width="2" width="274" x="390" y="178"/>
+  <rect fill="#d9edf1" height="40" rx="13" ry="13" stroke="none" stroke-width="1" width="58" x="414" y="197"/>
+  <text fill="#0d829a" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="bold" text-anchor="middle" x="443" y="225">02</text>
+  <text fill="#132338" font-family="DejaVu Sans,Arial,sans-serif" font-size="23" font-weight="bold" text-anchor="start" x="413" y="293">CAPTEUR PMH</text>
+  <text fill="#536477" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" font-weight="normal" text-anchor="start" x="413" y="341">Un signal alternatif fournit</text>
+  <text fill="#536477" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" font-weight="normal" text-anchor="start" x="413" y="371">le régime et le repère.</text>
+  <line stroke="#0d829a" stroke-linecap="round" stroke-width="7" x1="665" x2="709" y1="325" y2="325"/>
+  <polygon fill="#0d829a" points="708,315 720,325 708,336"/>
+  <rect fill="#f4f7f9" height="290" rx="18" ry="18" stroke="#dce4e9" stroke-width="2" width="274" x="718" y="178"/>
+  <rect fill="#d9edf1" height="40" rx="13" ry="13" stroke="none" stroke-width="1" width="58" x="742" y="197"/>
+  <text fill="#0d829a" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="bold" text-anchor="middle" x="771" y="225">03</text>
+  <text fill="#132338" font-family="DejaVu Sans,Arial,sans-serif" font-size="23" font-weight="bold" text-anchor="start" x="741" y="293">CALCULATEUR</text>
+  <text fill="#536477" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" font-weight="normal" text-anchor="start" x="741" y="341">Exploite les informations</text>
+  <text fill="#536477" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" font-weight="normal" text-anchor="start" x="741" y="371">pour gérer l’injection.</text>
+  <line stroke="#0d829a" stroke-linecap="round" stroke-width="7" x1="993" x2="1037" y1="325" y2="325"/>
+  <polygon fill="#0d829a" points="1036,315 1048,325 1036,336"/>
+  <rect fill="#f4f7f9" height="290" rx="18" ry="18" stroke="#dce4e9" stroke-width="2" width="274" x="1046" y="178"/>
+  <rect fill="#d9edf1" height="40" rx="13" ry="13" stroke="none" stroke-width="1" width="58" x="1070" y="197"/>
+  <text fill="#0d829a" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="bold" text-anchor="middle" x="1099" y="225">04</text>
+  <text fill="#132338" font-family="DejaVu Sans,Arial,sans-serif" font-size="23" font-weight="bold" text-anchor="start" x="1069" y="293">POMPE EPIC</text>
+  <text fill="#536477" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" font-weight="normal" text-anchor="start" x="1069" y="341">Pilote le débit et</text>
+  <text fill="#536477" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" font-weight="normal" text-anchor="start" x="1069" y="371">l’avance d’injection.</text>
+  <circle cx="199" cy="432" fill="none" r="24" stroke="#0d829a" stroke-width="5"/>
+  <line stroke="#0d829a" stroke-linecap="round" stroke-width="6" x1="227.0" x2="235.0" y1="432.0" y2="432.0"/>
+  <line stroke="#0d829a" stroke-linecap="round" stroke-width="6" x1="213.0" x2="217.0" y1="456.24871130596426" y2="463.1769145362398"/>
+  <line stroke="#0d829a" stroke-linecap="round" stroke-width="6" x1="185.0" x2="181.0" y1="456.24871130596426" y2="463.1769145362398"/>
+  <line stroke="#0d829a" stroke-linecap="round" stroke-width="6" x1="171.0" x2="163.0" y1="432.0" y2="432.0"/>
+  <line stroke="#0d829a" stroke-linecap="round" stroke-width="6" x1="185.0" x2="181.0" y1="407.75128869403574" y2="400.8230854637602"/>
+  <line stroke="#0d829a" stroke-linecap="round" stroke-width="6" x1="213.0" x2="217.0" y1="407.75128869403574" y2="400.8230854637602"/>
+  <path d="M471 432 h27 l16 -23 l16 45 l16 -23 h27" fill="none" stroke="#0d829a" stroke-linecap="round" stroke-width="5"/>
+  <rect fill="none" height="51" rx="8" ry="8" stroke="#0d829a" stroke-width="4" width="62" x="833" y="406"/>
+  <line stroke="#0d829a" stroke-linecap="round" stroke-width="3" x1="820" x2="832" y1="416" y2="416"/>
+  <line stroke="#0d829a" stroke-linecap="round" stroke-width="3" x1="820" x2="832" y1="432" y2="432"/>
+  <line stroke="#0d829a" stroke-linecap="round" stroke-width="3" x1="820" x2="832" y1="448" y2="448"/>
+  <circle cx="1166" cy="430" fill="none" r="25" stroke="#0d829a" stroke-width="4"/>
+  <line stroke="#0d829a" stroke-linecap="round" stroke-width="5" x1="1191" x2="1219" y1="430" y2="430"/>
+  <rect fill="#fff4e4" height="115" rx="16" ry="16" stroke="#f0d8af" stroke-width="2" width="1258" x="62" y="507"/>
+  <rect fill="#d77d1b" height="66" rx="13" ry="13" stroke="none" stroke-width="1" width="216" x="84" y="530"/>
+  <text fill="#ffffff" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="bold" text-anchor="middle" x="192" y="571">SIGNAL ABSENT</text>
+  <text fill="#132338" font-family="DejaVu Sans,Arial,sans-serif" font-size="23" font-weight="bold" text-anchor="start" x="326" y="552">Le calculateur peut ne pas autoriser le débit d’injection.</text>
+  <text fill="#536477" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" text-anchor="start" x="326" y="589">Interprétation compatible avec la panne constatée, sans mesure du signal à l’oscilloscope.</text>
+</svg>
