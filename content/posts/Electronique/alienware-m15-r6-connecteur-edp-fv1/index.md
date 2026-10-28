@@ -21,9 +21,17 @@ Après vérification de l'absence de court-circuit, remplacement de FV1 et réin
 
 La référence réglementaire inscrite sur la machine est **P109F001**. Elle correspond à la gamme **Dell Alienware m15 R6** (modèle réglementaire P109F), lancée en 2021. Ce portable de 15,6 pouces a existé avec des processeurs Intel Core de 11e génération, des cartes graphiques NVIDIA GeForce RTX et plusieurs dalles eDP : Full HD 165 Hz, Full HD 360 Hz ou QHD 240 Hz selon la configuration. [Dell documente ces variantes](https://www.dell.com/support/manuals/en-ae/alienware-m15-r6-laptop/alienware-m15-r6-setup-and-specifications/display?guid=guid-57f3fe94-a77a-4c15-a28d-891f6e2f333a&lang=en-us).
 
+La dalle LCD montée sur cet exemplaire porte la référence **B156HAN12.1**.
+
 La carte photographiée présente le début de marquage **LA-K45**. Deux schémas Compal, **LA-K452P** et **LA-K455P**, comportent les mêmes repères dans cette zone : `JEDP1`, `FV1`, `QV4`, `QV5`, `QV6`, `DV7` et `DV8`. Ils sont utiles au diagnostic, mais la photographie ne montre pas assez du marquage pour trancher entre les versions. Je ne prétends donc pas avoir identifié le suffixe exact de la carte.
 
 {{< figure src="photos/06-nouveau-connecteur-fv1.webp" caption="Zone eDP de la carte mère. Le connecteur JEDP1 est en place ; la sérigraphie FV1 et les composants QV4, QV5, QV6, DV7 et DV8 sont visibles à proximité." >}}
+
+## Dépose de la dalle LCD sans la casser
+
+La dalle est fixée au fond en aluminium du capot par un **adhésif double-face noir**. Pour la démonter, il faut d'abord repérer les **deux languettes qui dépassent en bas de l'écran**, puis tirer progressivement dessus pour extraire l'adhésif qui retient la dalle.
+
+**Ne pas tenter de décoller la dalle en faisant levier contre le fond en aluminium tant que cet adhésif est en place.** Sans extraction préalable par les languettes, la dalle risque de se briser pendant le démontage.
 
 ## Le connecteur et la nappe ont chauffé
 
@@ -53,7 +61,7 @@ La dépose s'est faite en travaillant sur la carte mère, avec contrôle visuel 
 
 Le connecteur neuf est ensuite aligné puis ressoudé. Sur une telle implantation, la simple apparence d'une rangée de contacts ne suffit pas : il faut contrôler les ponts de soudure, la tenue des ancrages et, lorsque c'est accessible, la continuité des lignes concernées.
 
-{{< figure src="photos/04-nouveau-connecteur-vue-rapprochee.webp" caption="Nouveau connecteur 40 contacts mis en place et soudé sur la carte." >}}
+{{< figure src="photos/04-nouveau-connecteur-vue-rapprochee.webp" caption="Nouveau connecteur 40 contacts mis en place et présenté sur la carte avant brasage." >}}
 
 ## Pourquoi le fusible FV1 bloquait encore l'affichage
 
@@ -65,7 +73,7 @@ Le schéma de la zone eDP place FV1 entre le rail **`+19VB`** et l'alimentation 
 
 {{< figure src="schemas/schema-fonctionnel-alimentation-edp.svg" caption="Cheminement fonctionnel simplifié de l'alimentation et des signaux eDP. Les repères sont issus de la réparation et des schémas Compal ; ce n'est pas un plan de brochage JEDP1." >}}
 
-Ce montage clarifie également un point : **la présence du 19 V et d'un fusible sur le positif ne suffit pas à conclure que la carte mère découpe le rétroéclairage par le négatif**. Les lignes `ENBKL` et `EDP_PWM` assurent la commande du rétroéclairage, mais la régulation effective du courant des LED dépend du circuit de la dalle. Il faudrait sa référence et son schéma pour en préciser l'architecture.
+Ce montage clarifie également un point : **la présence du 19 V et d'un fusible sur le positif ne suffit pas à conclure que la carte mère découpe le rétroéclairage par le négatif**. Les lignes `ENBKL` et `EDP_PWM` assurent la commande du rétroéclairage, mais la régulation effective du courant des LED dépend du circuit de la dalle. La référence de la dalle est connue (**B156HAN12.1**), mais il faudrait son schéma électronique interne pour en préciser l'architecture.
 
 Le remplacement du fusible n'a été envisagé qu'après la recherche de court-circuit. **Un pontage permanent de FV1 serait à proscrire** : le fusible est là pour limiter les conséquences d'une surintensité sur cette liaison.
 
