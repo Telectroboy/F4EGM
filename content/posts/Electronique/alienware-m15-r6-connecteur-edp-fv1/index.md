@@ -4,7 +4,6 @@ date: 2026-10-28
 draft: false
 description: "Réparation d'un Alienware m15 R6 P109F001 : connecteur LCD I-PEX 40 broches carbonisé, nappe eDP remplacée, fusible FV1 ouvert, microsoudure et retour de l'affichage sous Windows."
 slug: "alienware-m15-r6-connecteur-edp-fv1"
-categories: ["Electronique"]
 tags: ["Alienware", "Dell", "réparation", "eDP", "LCD", "rétroéclairage", "microsoudure", "I-PEX", "fusible", "BIOS"]
 showToc: true
 TocOpen: true
