@@ -6,7 +6,6 @@ author: "F4EGM"
 description: "Dual Watch analogique RX/TX pour OpenGD77 : fonctionnement, essais sur UV-390 GPS, captures d'écran, firmware V8.1, sources et compilation Debian 13."
 summary: "Écoute alternée de la sortie et de l'entrée d'un transpondeur, avec indicateur DW:R / DW:T et mémorisation par canal. Code et firmware V8.1 disponibles."
 slug: "opengd77-dual-watch-v81-uv390-gps"
-categories: ["Radioamateur"]
 tags: ["OpenGD77", "TYT UV-390 GPS", "MD-UV390", "firmware", "Dual Watch", "VHF", "UHF", "F4EGM"]
 ShowToc: true
 TocOpen: true
