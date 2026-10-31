@@ -1,6 +1,6 @@
 ---
 title: "OpenGD77 : Dual Watch RX/TX par canal sur mon TYT UV-390 GPS (V8.1)"
-date: 2026-11-01
+date: 2026-10-31
 draft: false
 author: "F4EGM"
 description: "Dual Watch analogique RX/TX pour OpenGD77 : fonctionnement, essais sur UV-390 GPS, captures d'écran, firmware V8.1, sources et compilation Debian 13."
