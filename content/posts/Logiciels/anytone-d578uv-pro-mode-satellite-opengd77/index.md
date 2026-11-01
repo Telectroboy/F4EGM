@@ -5,7 +5,7 @@ draft: false
 description: "Reverse engineering du firmware GD32, réutilisation de PLAN13 et de l’APRS OpenGD77, cartographie Flash/NAND et mesures mémoire d’un portage satellite encore expérimental."
 slug: "anytone-d578uv-pro-mode-satellite-opengd77"
 cover:
-  image = "cover.webp"
+  image: "cover.webp"
 ---
 
 ![Concept du mode Satellite pour AnyTone D578UV PRO, avec radio mobile, satellite et Terre](cover.webp)
