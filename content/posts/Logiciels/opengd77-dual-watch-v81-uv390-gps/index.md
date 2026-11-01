@@ -103,13 +103,13 @@ Cette sauvegarde n'est **pas** effectuée pendant l'alternance RX/TX : l'écritu
 
 La compilation ARM V8.1 s'est terminée correctement. J'ai conservé les trois artefacts transmis pour cette version : le binaire, l'ELF et le fichier MAP. Leur empreinte SHA-256 a été revérifiée.
 
-**[Télécharger la release V8.1 complète (BIN + ELF + MAP + empreintes)](downloads/F4EGM_OpenGD77_DualWatch_V81_release_UV390_GPS.zip)**
+**[Télécharger la release V8.1 complète (BIN + ELF + MAP + empreintes)](https://github.com/Telectroboy/OpenGD77_Mods/releases/tag/DW_V8.1)**
 
 | Fichier | Rôle | Taille |
 |:---|:---|---:|
-| [BIN V8.1](downloads/OpenGD77_MDUV380_R20260131_F4EGM_DW_V8_1_EXPERIMENTAL.bin) | Firmware destiné au chargeur compatible OpenGD77 | 806 828 octets |
-| [ELF V8.1](downloads/OpenGD77_MDUV380_R20260131_F4EGM_DW_V8_1_EXPERIMENTAL.elf) | Analyse et symboles de compilation | 5 090 912 octets |
-| [MAP V8.1](downloads/OpenGD77_MDUV380_R20260131_F4EGM_DW_V8_1_EXPERIMENTAL.map) | Carte de liaison et emplacement des sections | 4 208 197 octets |
+| [BIN V8.1] | Firmware destiné au chargeur compatible OpenGD77 | 806 828 octets |
+| [ELF V8.1] | Analyse et symboles de compilation | 5 090 912 octets |
+| [MAP V8.1] | Carte de liaison et emplacement des sections | 4 208 197 octets |
 
 **SHA-256 du BIN :**
 
@@ -119,9 +119,6 @@ La compilation ARM V8.1 s'est terminée correctement. J'ai conservé les trois a
 
 La compilation laisse **106 732 octets de marge Flash** avant la zone réservée au codec AMBE (zone vérifiée à `0xFF` dans l'audit). Les bibliothèques et données de codec propriétaires ne sont pas distribuées dans ce paquet ; le chargeur utilisé doit respecter la procédure de préparation du firmware adaptée à ce modèle.
 
-## Sources d'origine et différences avec la V8.1
-
-**[Télécharger les sources de référence, le diff et les scripts de reconstruction](downloads/F4EGM_OpenGD77_V81_sources_et_diff.zip)**
 
 Le point de départ est un **fork non officiel d'OpenGD77**, conservé au commit :
 
