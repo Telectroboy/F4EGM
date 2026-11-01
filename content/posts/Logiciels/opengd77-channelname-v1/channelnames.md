@@ -6,8 +6,6 @@ slug: "opengd77-aprs-channel-name"
 description: "Modification d'OpenGD77 permettant d'émettre le nom du canal mémorisé dans la balise APRS. Essai TX validé sur TYT MD-UV390 GPS et visible sur APRS.fi."
 summary: "OpenGD77 APRS Channel Name RC1 : fonctionnement, configuration et validation réelle en émission sur TYT MD-UV390 GPS, avec capture APRS.fi."
 author: "F4EGM"
-categories:
-  - "Radioamateur"
 tags:
   - "OpenGD77"
   - "APRS"
@@ -28,7 +26,7 @@ Cette modification, appelée **APRS Channel Name RC1**, a été **testée sur un
 
 ## Validation en émission : capture APRS.fi
 
-![Capture APRS.fi montrant la balise F4EGM-7 et le texte F5ZCE Bascule toff +000 TYT UV390GPS](aprsfi-f4egm-7-channel-name.png)
+![Capture APRS.fi montrant la balise F4EGM-7 et le texte F5ZCE Bascule toff +000 TYT UV390GPS](aprsfi.png)
 
 *Capture APRS.fi fournie après l'essai en émission sur TYT MD-UV390 GPS.*
 
@@ -94,10 +92,8 @@ Dans le format habituel, une application APRS peut rechercher une fréquence num
 - **Réception et affichage APRS.fi :** validés, capture ci-dessus.
 - **QSY automatique par les clients APRS :** non validé et non garanti avec ce format textuel.
 
-Il reste possible de conserver l'appellation **RC1** tout en indiquant explicitement que le fonctionnement TX a été vérifié sur le poste. Le test en conditions réelles est acquis pour la trame présentée, sans constituer une validation exhaustive des autres configurations.
-
 ## Documentation
 
 Le [guide utilisateur OpenGD77](https://github.com/LibreDMR/OpenGD77_UserGuide/blob/master/OpenGD77_User_Guide.md) présente les options APRS et le comportement QSY d'origine.
 
-<!-- Ajouter ici l'URL de la release GitHub Channel Name APRS lorsqu'elle sera publiée. -->
+[Release GitHub !!!](https://github.com/Telectroboy/OpenGD77_Mods/releases/tag/APRSChanName_V1)
