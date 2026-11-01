@@ -5,7 +5,6 @@ draft: false
 description: "Modification OpenGD77 R20260131-DWAPRSG : écoute alternée RX/TX et report des balises APRS automatiques pendant la réception. Tests réels sur TYT UV-390 GPS."
 summary: "Deux modifications d'OpenGD77 testées sur UV-390 GPS : Dual Watch RX/TX et APRS Guard pour ne plus interrompre la réception par une balise automatique."
 tags: ["OpenGD77", "TYT UV-390", "APRS", "SmartBeaconing", "Dual Watch", "Firmware"]
-categories: ["Logiciels"]
 author: "F4EGM"
 slug: "opengd77-dwaprsg-v2"
 ShowToc: true
@@ -18,7 +17,6 @@ La version combinée affiche **`R20260131-DWAPRSG`** et repose sur **OpenGD77 R2
 
 **[Télécharger le firmware et consulter les fichiers de la release DWAPRSG V2 sur GitHub](https://github.com/Telectroboy/OpenGD77_Mods/releases/tag/DWAPRSG_V2)**
 
-Les binaires et les sources sont hébergés sur GitHub et non sur ce site, afin de limiter l'espace utilisé sur l'hébergement OVH.
 
 ## 1. Dual Watch RX/TX : surveiller les deux fréquences du canal
 
