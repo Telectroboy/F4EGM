@@ -7,8 +7,10 @@ slug: "anytone-d578uv-pro-mode-satellite-opengd77"
 cover:
   image: "cover.webp"
 ---
+![Photo du D578 provenant de la documentation d'origine constructeur.](https://github.com/user-attachments/assets/e1812694-bc1d-4ef7-96be-d9d9aaf09cea)
 
 ![Concept du mode Satellite pour AnyTone D578UV PRO, avec radio mobile, satellite et Terre](cover.webp)
+
 
 *Illustration conceptuelle. L’écran représenté n’est pas une photographie d’un firmware déjà installé sur le D578.*
 
@@ -224,7 +226,46 @@ Ce projet vise d’abord les **satellites à répéteur FM** et ceux qui transpo
 | Comparaison statique D578 PRO/PLUS et D878 | **Vérifiée sur les fichiers fournis** |
 | PLAN13 sélectionné, prédiction fractionnée et conservation du prochain passage | **Testée hors poste** |
 | Empreinte des objets ARM OpenGD77 | **Mesurée, avant liaison** |
-| Interface Satellite d’OpenGD77 sur l’écran D578 | **Non réalisée** |
+| Interface Satellite d’OpenGD77 sur l’écran D578 | **En cours** |
+![Les trois écrans fonctionnent en simulation](https://github.com/user-attachments/assets/52071b52-b5a8-4f19-ac06-44e0ea68f329)
+Rendu logique 128 × 64 pixels, agrandi pour la lecture. Les polices et couleurs sont simulées ; ce n'est pas une capture du LCD AnyTone.
+Le calcul utilise un TLE historique et des fréquences de démonstration. Les trois écrans ont été testés avec le moteur PLAN13 issu de la Phase 9.
+
+Le désassemblage du D578UV PRO GD V1.20 a permis d'identifier une séquence d'initialisation de l'afficheur et plusieurs routines de commande.
+Adresse du firmware PRO	Fonction identifiée
+0x080385F6	Émission d'un paramètre de configuration LCD
+0x0803861A	Commande 0x36, orientation de l'affichage
+0x080386F2	Commande 0x3A, format des pixels
+0x080386F8	Paramètre 0x55, compatible avec le format RGB565
+0x08038700	Commande 0x2C, écriture en mémoire graphique
+0x08038704	Commande 0x2A, définition de la fenêtre horizontale
+0x08038722	Commande 0x2B, définition de la fenêtre verticale
+0x0808B5B2	Routine d'envoi d'une commande LCD
+0x0808B636	Routine d'envoi de données LCD
+
+Les appels ARM vers les deux dernières routines sont effectivement présents dans le binaire, avec des commandes cohérentes avec le protocole des contrôleurs TFT de cette famille.
+
+Nous avons donc trouvé un point d'entrée nettement plus concret pour l'affichage réel. Il reste à vérifier la convention d'appel, les paramètres des fonctions graphiques de plus haut niveau et les éventuelles différences de la branche PLUS.
+Une deuxième découverte : les fonctions de dessin sont communes au PRO et au PLUS
+Les deux firmwares GD32 utilisent la même routine de définition d'une fenêtre graphique à 0x08021222. Son désassemblage montre la succession :
+0x2A → coordonnées de la fenêtre
+0x2B → coordonnées de la fenêtre
+0x2C → envoi des pixels
+
+
+Les routines d'envoi sont situées à des adresses légèrement différentes :
+Fonction	PRO GD V1.20	PLUS GD V2.08
+Écrire un octet sur le bus LCD	0x0808B594	0x0808B6A8
+Envoyer une commande LCD	0x0808B5B2	0x0808B6C6
+Envoyer une donnée LCD	0x0808B636	0x0808B74A
+Définir la fenêtre graphique	0x08021222	0x08021222
+Routine de rendu rectangulaire	0x0802126E	0x0802126E
+
+Le code de la routine rectangulaire montre un argument supplémentaire passé sur la pile, compatible avec le passage d'une valeur de pixel ou d'un paramètre graphique. Sa signification exacte doit encore être confirmée.
+
+C'est une bonne nouvelle : nous pouvons construire un adaptateur réutilisant les mécanismes LCD déjà présents, au lieu d'écrire un pilote complet pour le contrôleur. Pour l'instant, ces adresses sont des points d'entrée candidats identifiés statiquement, pas des fonctions dont l'appel depuis notre extension est validé sur matériel.
+
+
 | Correction Doppler appliquée au RX/TX du D578 | **Non réalisée** |
 | Émission APRS satellite depuis le D578 | **Non réalisée** |
 | Emplacement Flash supplémentaire sûr | **Non identifié** |
